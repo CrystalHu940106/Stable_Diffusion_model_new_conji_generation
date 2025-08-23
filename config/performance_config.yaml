@@ -1,0 +1,116 @@
+# Performance Optimization Configuration
+# Based on professional recommendations for Stable Diffusion training
+
+# Batch Size Optimization
+batch_size:
+  gpu_8gb_plus: 16
+  gpu_4_8gb: 8
+  gpu_2_4gb: 4
+  mps_cpu: 2
+
+# Training Acceleration
+training:
+  epochs: 25                    # Increased for better quality
+  mixed_precision: true         # Use AMP for GPU training
+  gradient_accumulation: 4      # Effective batch size = batch_size * accumulation
+  validation_frequency: 5       # Validate every 5 epochs for speed
+  
+  # Learning Rate Schedule
+  learning_rate:
+    vae: 1e-4
+    unet: 1e-5
+    scheduler: "cosine_annealing"
+    warmup_epochs: 2
+  
+  # EMA for Model Quality
+  ema:
+    enabled: true
+    decay: 0.9999
+  
+  # Gradient Clipping
+  gradient_clipping: 1.0
+
+# Generation Quality
+generation:
+  # Guidance Scale Optimization
+  guidance_scale:
+    default: 9.0
+    range: [7.0, 12.0]
+    creative: 10.0
+    traditional: 9.0
+  
+  # Inference Steps
+  inference_steps:
+    standard: 50
+    high_quality: 75
+    fast: 25
+  
+  # Seed Management
+  seed_management: true
+  reproducible_generation: true
+
+# Memory Optimization
+memory:
+  pin_memory: true
+  num_workers: 4
+  prefetch_factor: 2
+  
+  # Mixed Precision
+  amp:
+    enabled: true
+    dtype: "float16"
+    scaler: true
+
+# Data Loading
+data:
+  max_samples: 2000            # Increased for better training
+  image_size: 128
+  normalization:
+    mean: [0.5, 0.5, 0.5]
+    std: [0.5, 0.5, 0.5]
+  
+  # Augmentation (optional)
+  augmentation:
+    enabled: false
+    horizontal_flip: false      # Kanji should not be flipped
+    rotation: false             # Kanji should maintain orientation
+
+# Model Architecture
+model:
+  vae:
+    hidden_dims: [128, 256, 512, 1024]
+    latent_channels: 4
+  
+  unet:
+    model_channels: 256
+    num_res_blocks: 3
+    channel_mult: [1, 2, 4, 8, 16]
+    num_heads: 16
+    attention_resolutions: [8, 16]
+  
+  scheduler:
+    num_train_timesteps: 1000
+    beta_start: 0.0001
+    beta_end: 0.02
+
+# Checkpoint Strategy
+checkpoints:
+  save_frequency: 10           # Save every 10 epochs
+  keep_best: 3                 # Keep top 3 models
+  save_ema: true               # Save EMA models
+  
+# Monitoring
+monitoring:
+  log_frequency: 100           # Log every 100 steps
+  save_metrics: true
+  plot_training_curves: true
+  
+# Performance Tips
+tips:
+  - "Use EMA models for validation and inference"
+  - "Adjust batch size based on available GPU memory"
+  - "Use gradient accumulation for effective larger batch sizes"
+  - "Enable mixed precision training on GPU for 2x speedup"
+  - "Reduce validation frequency during training for speed"
+  - "Use guidance_scale 7-12 for optimal quality"
+  - "Train for at least 20 epochs for good results"

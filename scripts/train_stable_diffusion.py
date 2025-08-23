@@ -17,6 +17,56 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 from scripts.stable_diffusion_kanji import VAE, UNet2DConditionModel, DDPMScheduler, StableDiffusionPipeline
 
+def get_optimal_batch_size(device):
+    """智能选择最优批处理大小"""
+    if torch.cuda.is_available():
+        gpu_memory = torch.cuda.get_device_properties(0).total_memory / (1024**3)  # GB
+        if gpu_memory > 8:
+            return 16
+        elif gpu_memory > 4:
+            return 8
+        else:
+            return 4
+    elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+        return 4
+    else:
+        return 2
+
+class EMAModel:
+    """指数移动平均模型"""
+    def __init__(self, model, decay=0.9999):
+        self.model = model
+        self.decay = decay
+        self.shadow = {}
+        self.backup = {}
+        self.register()
+
+    def register(self):
+        for name, param in self.model.named_parameters():
+            if param.requires_grad:
+                self.shadow[name] = param.data.clone()
+
+    def update(self):
+        for name, param in self.model.named_parameters():
+            if param.requires_grad:
+                assert name in self.shadow
+                new_average = (1.0 - self.decay) * param.data + self.decay * self.shadow[name]
+                self.shadow[name] = new_average.clone()
+
+    def apply_shadow(self):
+        for name, param in self.model.named_parameters():
+            if param.requires_grad:
+                assert name in self.shadow
+                self.backup[name] = param.data
+                param.data = self.shadow[name]
+
+    def restore(self):
+        for name, param in self.model.named_parameters():
+            if param.requires_grad:
+                assert name in self.backup
+                param.data = self.backup[name]
+        self.backup = {}
+
 class KanjiDataset(Dataset):
     def __init__(self, dataset_path, transform=None, max_samples=None):
         self.dataset_path = Path(dataset_path)
@@ -88,9 +138,23 @@ class StableDiffusionTrainer:
         # Loss functions
         self.mse_loss = nn.MSELoss()
         
+        # EMA models for better quality
+        self.vae_ema = EMAModel(self.vae)
+        self.unet_ema = EMAModel(self.unet)
+        
+        # Mixed precision training (GPU only)
+        self.use_amp = torch.cuda.is_available()
+        if self.use_amp:
+            self.scaler = torch.cuda.amp.GradScaler()
+        
+        # Gradient accumulation
+        self.accumulation_steps = 4
+        
         print(f"🚀 Trainer initialized on {device}")
         print(f"   VAE parameters: {sum(p.numel() for p in self.vae.parameters()):,}")
         print(f"   UNet parameters: {sum(p.numel() for p in self.unet.parameters()):,}")
+        print(f"   Mixed Precision: {'✅' if self.use_amp else '❌'}")
+        print(f"   Gradient Accumulation: {self.accumulation_steps} steps")
     
     def encode_text(self, prompts):
         """Encode text prompts to embeddings"""
@@ -105,8 +169,8 @@ class StableDiffusionTrainer:
         
         return text_embeddings
     
-    def train_step(self, images, prompts, timesteps):
-        """Single training step with improved loss calculation"""
+    def train_step(self, images, prompts, timesteps, step_idx):
+        """Single training step with mixed precision and gradient accumulation"""
         batch_size = images.shape[0]
         
         # Encode images to latent space with KL loss
@@ -132,28 +196,54 @@ class StableDiffusionTrainer:
         # Total loss with KL divergence
         total_loss = noise_loss + 0.1 * recon_loss + 0.01 * kl_loss
         
-        # Backward pass
-        self.vae_optimizer.zero_grad()
-        self.unet_optimizer.zero_grad()
+        # Scale loss for gradient accumulation
+        total_loss = total_loss / self.accumulation_steps
         
-        total_loss.backward()
+        # Backward pass with mixed precision
+        if self.use_amp:
+            self.scaler.scale(total_loss).backward()
+        else:
+            total_loss.backward()
         
-        # Gradient clipping
-        torch.nn.utils.clip_grad_norm_(self.vae.parameters(), max_norm=1.0)
-        torch.nn.utils.clip_grad_norm_(self.unet.parameters(), max_norm=1.0)
-        
-        self.vae_optimizer.step()
-        self.unet_optimizer.step()
+        # Gradient accumulation
+        if (step_idx + 1) % self.accumulation_steps == 0:
+            if self.use_amp:
+                # Gradient clipping
+                self.scaler.unscale_(self.vae_optimizer)
+                self.scaler.unscale_(self.unet_optimizer)
+                torch.nn.utils.clip_grad_norm_(self.vae.parameters(), max_norm=1.0)
+                torch.nn.utils.clip_grad_norm_(self.unet.parameters(), max_norm=1.0)
+                
+                # Optimizer step
+                self.scaler.step(self.vae_optimizer)
+                self.scaler.step(self.unet_optimizer)
+                self.scaler.update()
+            else:
+                # Gradient clipping
+                torch.nn.utils.clip_grad_norm_(self.vae.parameters(), max_norm=1.0)
+                torch.nn.utils.clip_grad_norm_(self.unet.parameters(), max_norm=1.0)
+                
+                # Optimizer step
+                self.vae_optimizer.step()
+                self.unet_optimizer.step()
+            
+            # Zero gradients
+            self.vae_optimizer.zero_grad()
+            self.unet_optimizer.zero_grad()
+            
+            # Update EMA models
+            self.vae_ema.update()
+            self.unet_ema.update()
         
         return {
-            'total_loss': total_loss.item(),
+            'total_loss': total_loss.item() * self.accumulation_steps,
             'noise_loss': noise_loss.item(),
             'recon_loss': recon_loss.item(),
             'kl_loss': kl_loss.item()
         }
     
     def train_epoch(self, dataloader, epoch):
-        """Train for one epoch"""
+        """Train for one epoch with optimized settings"""
         self.vae.train()
         self.unet.train()
         
@@ -172,7 +262,7 @@ class StableDiffusionTrainer:
             timesteps = torch.randint(0, self.scheduler.num_train_timesteps, (images.shape[0],), device=self.device)
             
             # Training step
-            losses = self.train_step(images, prompts, timesteps)
+            losses = self.train_step(images, prompts, timesteps, batch_idx)
             
             # Update metrics
             total_loss += losses['total_loss']
@@ -215,7 +305,10 @@ class StableDiffusionTrainer:
         }
     
     def validate(self, dataloader):
-        """Validate the model"""
+        """Validate the model using EMA models"""
+        self.vae_ema.apply_shadow()
+        self.unet_ema.apply_shadow()
+        
         self.vae.eval()
         self.unet.eval()
         
@@ -251,6 +344,10 @@ class StableDiffusionTrainer:
                 total_recon_loss += recon_loss.item()
                 total_kl_loss += kl_loss.item()
         
+        # Restore original models
+        self.vae_ema.restore()
+        self.unet_ema.restore()
+        
         # Calculate averages
         num_batches = len(dataloader)
         avg_loss = total_loss / num_batches
@@ -258,7 +355,7 @@ class StableDiffusionTrainer:
         avg_recon_loss = total_recon_loss / num_batches
         avg_kl_loss = total_kl_loss / num_batches
         
-        print(f"\n📊 Validation Results:")
+        print(f"\n📊 Validation Results (EMA):")
         print(f"   • Average Total Loss: {avg_loss:.6f}")
         print(f"   • Average Noise Loss: {avg_noise_loss:.6f}")
         print(f"   • Average Recon Loss: {avg_recon_loss:.6f}")
@@ -311,7 +408,7 @@ class StableDiffusionTrainer:
         return True
     
     def save_checkpoint(self, epoch, metrics, filename=None):
-        """Save model checkpoint"""
+        """Save model checkpoint with EMA models"""
         if filename is None:
             filename = f"checkpoint_epoch_{epoch}.pth"
         
@@ -319,6 +416,8 @@ class StableDiffusionTrainer:
             'epoch': epoch,
             'vae_state_dict': self.vae.state_dict(),
             'unet_state_dict': self.unet.state_dict(),
+            'vae_ema_state_dict': self.vae_ema.shadow,
+            'unet_ema_state_dict': self.unet_ema.shadow,
             'vae_optimizer_state_dict': self.vae_optimizer.state_dict(),
             'unet_optimizer_state_dict': self.unet_optimizer.state_dict(),
             'vae_scheduler_state_dict': self.vae_scheduler.state_dict(),
@@ -335,11 +434,13 @@ class StableDiffusionTrainer:
         print(f"💾 Checkpoint saved: {filename}")
     
     def load_checkpoint(self, checkpoint_path):
-        """Load model checkpoint"""
+        """Load model checkpoint with EMA models"""
         checkpoint = torch.load(checkpoint_path, map_location=self.device)
         
         self.vae.load_state_dict(checkpoint['vae_state_dict'])
         self.unet.load_state_dict(checkpoint['unet_state_dict'])
+        self.vae_ema.shadow = checkpoint['vae_ema_state_dict']
+        self.unet_ema.shadow = checkpoint['unet_ema_state_dict']
         self.vae_optimizer.load_state_dict(checkpoint['vae_optimizer_state_dict'])
         self.unet_optimizer.load_state_dict(checkpoint['unet_optimizer_state_dict'])
         self.vae_scheduler.load_state_dict(checkpoint['vae_scheduler_state_dict'])
@@ -349,21 +450,23 @@ class StableDiffusionTrainer:
         return checkpoint['epoch'], checkpoint['metrics']
 
 def main():
-    """Main training function"""
-    print("🎌 Stable Diffusion Kanji Training")
-    print("=" * 50)
+    """Main training function with performance optimizations"""
+    print("🎌 Stable Diffusion Kanji Training - Performance Optimized")
+    print("=" * 60)
     
-    # Configuration
+    # Configuration with performance optimizations
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    batch_size = 16  # Increased from 2
-    num_epochs = 10
+    batch_size = get_optimal_batch_size(device)
+    num_epochs = 25  # Increased from 10 for better quality
     learning_rate = 1e-4
+    validation_frequency = 5  # Reduce validation frequency for speed
     
     print(f"🔧 Configuration:")
     print(f"   • Device: {device}")
-    print(f"   • Batch Size: {batch_size}")
+    print(f"   • Batch Size: {batch_size} (auto-optimized)")
     print(f"   • Epochs: {num_epochs}")
     print(f"   • Learning Rate: {learning_rate}")
+    print(f"   • Validation Frequency: Every {validation_frequency} epochs")
     
     # Data transforms
     transform = transforms.Compose([
@@ -374,16 +477,16 @@ def main():
     
     # Load dataset
     dataset_path = "data/fixed_kanji_dataset"
-    dataset = KanjiDataset(dataset_path, transform=transform, max_samples=1000)  # Limit for testing
+    dataset = KanjiDataset(dataset_path, transform=transform, max_samples=2000)  # Increased for better training
     
     # Split dataset
     train_size = int(0.8 * len(dataset))
     val_size = len(dataset) - train_size
     train_dataset, val_dataset = torch.utils.data.random_split(dataset, [train_size, val_size])
     
-    # Create dataloaders
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
+    # Create dataloaders with optimized settings
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, num_workers=4, pin_memory=True)
     
     print(f"📊 Dataset: {len(dataset)} total, {len(train_dataset)} train, {len(val_dataset)} val")
     
@@ -395,12 +498,12 @@ def main():
         print("❌ Component tests failed. Exiting.")
         return
     
-    # Training loop
+    # Training loop with performance optimizations
     best_val_loss = float('inf')
     train_metrics = []
     val_metrics = []
     
-    print(f"\n🚀 Starting training for {num_epochs} epochs...")
+    print(f"\n🚀 Starting optimized training for {num_epochs} epochs...")
     
     for epoch in range(1, num_epochs + 1):
         print(f"\n{'='*20} Epoch {epoch}/{num_epochs} {'='*20}")
@@ -409,17 +512,18 @@ def main():
         train_results = trainer.train_epoch(train_loader, epoch)
         train_metrics.append(train_results)
         
-        # Validate
-        val_results = trainer.validate(val_loader)
-        val_metrics.append(val_results)
-        
-        # Save best model
-        if val_results['val_loss'] < best_val_loss:
-            best_val_loss = val_results['val_loss']
-            trainer.save_checkpoint(epoch, val_results, "best_model.pth")
+        # Validate less frequently for speed
+        if epoch % validation_frequency == 0 or epoch == num_epochs:
+            val_results = trainer.validate(val_loader)
+            val_metrics.append(val_results)
+            
+            # Save best model
+            if val_results['val_loss'] < best_val_loss:
+                best_val_loss = val_results['val_loss']
+                trainer.save_checkpoint(epoch, val_results, "best_model.pth")
         
         # Save regular checkpoint
-        if epoch % 5 == 0:
+        if epoch % 10 == 0:
             trainer.save_checkpoint(epoch, train_results)
     
     print(f"\n🎉 Training complete!")
@@ -437,7 +541,9 @@ def main():
         # Loss plot
         plt.subplot(1, 3, 1)
         plt.plot(epochs, [m['train_loss'] for m in train_metrics], 'b-', label='Train')
-        plt.plot(epochs, [m['val_loss'] for m in val_metrics], 'r-', label='Validation')
+        if val_metrics:
+            val_epochs = [i for i in epochs if i % validation_frequency == 0 or i == num_epochs]
+            plt.plot(val_epochs, [m['val_loss'] for m in val_metrics], 'r-', label='Validation')
         plt.title('Total Loss')
         plt.xlabel('Epoch')
         plt.ylabel('Loss')
@@ -447,7 +553,8 @@ def main():
         # Noise loss plot
         plt.subplot(1, 3, 2)
         plt.plot(epochs, [m['noise_loss'] for m in train_metrics], 'b-', label='Train')
-        plt.plot(epochs, [m['noise_loss'] for m in val_metrics], 'r-', label='Validation')
+        if val_metrics:
+            plt.plot(val_epochs, [m['noise_loss'] for m in val_metrics], 'r-', label='Validation')
         plt.title('Noise Prediction Loss')
         plt.xlabel('Epoch')
         plt.ylabel('Loss')
@@ -457,7 +564,8 @@ def main():
         # KL loss plot
         plt.subplot(1, 3, 3)
         plt.plot(epochs, [m['kl_loss'] for m in train_metrics], 'b-', label='Train')
-        plt.plot(epochs, [m['kl_loss'] for m in val_metrics], 'r-', label='Validation')
+        if val_metrics:
+            plt.plot(val_epochs, [m['kl_loss'] for m in val_metrics], 'r-', label='Validation')
         plt.title('KL Divergence Loss')
         plt.xlabel('Epoch')
         plt.ylabel('Loss')
@@ -465,10 +573,10 @@ def main():
         plt.grid(True)
         
         plt.tight_layout()
-        plt.savefig('training_curves.png', dpi=300, bbox_inches='tight')
+        plt.savefig('training_curves_optimized.png', dpi=300, bbox_inches='tight')
         plt.show()
         
-        print("📈 Training curves saved as 'training_curves.png'")
+        print("📈 Training curves saved as 'training_curves_optimized.png'")
         
     except Exception as e:
         print(f"⚠️  Could not plot training curves: {e}")

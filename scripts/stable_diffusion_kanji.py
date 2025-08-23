@@ -430,7 +430,7 @@ class StableDiffusionPipeline:
         return base_prompt
     
     def generate(self, prompt, height=128, width=128, num_inference_steps=50, 
-                guidance_scale=7.5, seed=None):
+                guidance_scale=9.0, seed=None):
         # Set seed for reproducibility
         if seed is not None:
             torch.manual_seed(seed)
@@ -448,7 +448,7 @@ class StableDiffusionPipeline:
         self.scheduler.set_timesteps(num_inference_steps)
         timesteps = self.scheduler.timesteps
         
-        # Denoising loop
+        # Enhanced denoising loop with better guidance
         for i, t in enumerate(timesteps):
             # Expand latents for batch processing
             latent_model_input = torch.cat([latents] * 2)
@@ -458,12 +458,22 @@ class StableDiffusionPipeline:
             with torch.no_grad():
                 noise_pred = self.unet(latent_model_input, t_expanded, text_embeddings)
             
-            # Perform guidance
+            # Perform enhanced guidance with optimal scale
             noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
+            
+            # Clamp guidance scale for stability
+            guidance_scale = torch.clamp(torch.tensor(guidance_scale), min=1.0, max=15.0)
+            
+            # Enhanced classifier-free guidance
             noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond)
             
             # Compute previous sample
             latents = self.scheduler.step(noise_pred, t, latents)
+            
+            # Optional: Add noise for better exploration
+            if i < len(timesteps) - 1:
+                next_timestep = timesteps[i + 1]
+                latents = self.scheduler.add_noise(latents, torch.randn_like(latents), next_timestep)
         
         # Decode latents
         with torch.no_grad():
@@ -471,21 +481,23 @@ class StableDiffusionPipeline:
         
         return image
     
-    def generate_concept_kanji(self, concept, style="traditional"):
-        # Generate Kanji for modern concepts
+    def generate_concept_kanji(self, concept, style="traditional", guidance_scale=9.0):
+        # Generate Kanji for modern concepts with optimized guidance
         style_prompts = {
-            "traditional": "traditional calligraphy, brush strokes, ink wash",
-            "modern": "modern typography, clean lines, minimalist",
-            "artistic": "artistic interpretation, creative design, unique style"
+            "traditional": "traditional calligraphy, brush strokes, ink wash, authentic",
+            "modern": "modern typography, clean lines, minimalist, contemporary",
+            "artistic": "artistic interpretation, creative design, unique style, expressive",
+            "professional": "professional design, corporate style, clean and clear",
+            "creative": "creative interpretation, innovative design, artistic flair"
         }
         
         style_desc = style_prompts.get(style, style_prompts["traditional"])
-        prompt = f"kanji character for {concept}, {style_desc}, high quality, detailed"
+        prompt = f"kanji character for {concept}, {style_desc}, high quality, detailed, well-balanced composition"
         
-        return self.generate(prompt)
+        return self.generate(prompt, guidance_scale=guidance_scale)
     
-    def semantic_interpolation(self, prompt1, prompt2, num_steps=5):
-        # Generate images by interpolating between two prompts
+    def semantic_interpolation(self, prompt1, prompt2, num_steps=5, guidance_scale=9.0):
+        # Generate images by interpolating between two prompts with enhanced quality
         embeddings1 = self._encode_prompt(prompt1)
         embeddings2 = self._encode_prompt(prompt2)
         
@@ -494,27 +506,65 @@ class StableDiffusionPipeline:
             alpha = i / (num_steps - 1)
             interpolated_embeddings = (1 - alpha) * embeddings1 + alpha * embeddings2
             
-            # Generate with interpolated embeddings
-            image = self._generate_with_custom_embedding(interpolated_embeddings)
+            # Generate with interpolated embeddings and optimal guidance
+            image = self._generate_with_custom_embedding(interpolated_embeddings, guidance_scale)
             images.append(image)
         
         return images
     
-    def _generate_with_custom_embedding(self, text_embeddings):
-        # Helper method for custom embeddings
+    def _generate_with_custom_embedding(self, text_embeddings, guidance_scale=9.0):
+        # Helper method for custom embeddings with enhanced quality
         latents = torch.randn(1, 4, 16, 16, device=self.device)
         
-        for t in self.scheduler.timesteps:
+        # Set timesteps for generation
+        num_inference_steps = 50
+        self.scheduler.set_timesteps(num_inference_steps)
+        timesteps = self.scheduler.timesteps
+        
+        for i, t in enumerate(timesteps):
             with torch.no_grad():
-                noise_pred = self.unet(latents, t, text_embeddings)
-            latents = self.scheduler.step(noise_pred, t, latents)
+                # Generate with and without conditioning
+                latent_model_input = torch.cat([latents] * 2)
+                t_expanded = t.expand(2)
+                
+                noise_pred = self.unet(latent_model_input, t_expanded, text_embeddings)
+                noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
+                
+                # Apply guidance
+                guidance_scale = torch.clamp(torch.tensor(guidance_scale), min=1.0, max=15.0)
+                noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond)
+                
+                # Denoise step
+                latents = self.scheduler.step(noise_pred, t, latents)
         
         return self.vae.decode(latents)
     
-    def generate_creative_kanji(self, base_concept, modifiers=None):
-        # Generate creative Kanji with concept modifiers
+    def generate_creative_kanji(self, base_concept, modifiers=None, guidance_scale=10.0):
+        # Generate creative Kanji with concept modifiers and enhanced quality
         if modifiers is None:
-            modifiers = ["elegant", "powerful", "mystical"]
+            modifiers = ["elegant", "powerful", "mystical", "balanced", "harmonious"]
         
-        prompt = f"kanji character for {base_concept}, {' '.join(modifiers)}, artistic interpretation"
-        return self.generate(prompt)
+        prompt = f"kanji character for {base_concept}, {' '.join(modifiers)}, artistic interpretation, high quality, detailed strokes"
+        return self.generate(prompt, guidance_scale=guidance_scale)
+    
+    def generate_high_quality_kanji(self, prompt, num_variations=3, guidance_scales=[7.0, 9.0, 12.0]):
+        # Generate multiple high-quality variations with different guidance scales
+        variations = []
+        
+        for i in range(num_variations):
+            seed = torch.randint(0, 1000000, (1,)).item()
+            guidance_scale = guidance_scales[i % len(guidance_scales)]
+            
+            variation = self.generate(
+                prompt, 
+                num_inference_steps=75,  # More steps for higher quality
+                guidance_scale=guidance_scale,
+                seed=seed
+            )
+            variations.append({
+                'image': variation,
+                'seed': seed,
+                'guidance_scale': guidance_scale
+            })
+        
+        return variations
