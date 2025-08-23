@@ -4,12 +4,15 @@ A complete pipeline for training and generating novel Kanji characters using dif
 
 ## 🌟 Features
 
-- **Complete Training Pipeline**: From dataset preparation to model training
-- **Advanced UNet Architecture**: Optimized for Kanji generation
+- **Complete Stable Diffusion Pipeline**: Full implementation with VAE, UNet, and CLIP
+- **Text-to-Kanji Generation**: Generate Kanji from English descriptions
+- **Modern Concept Support**: YouTube, Gundam, AI, Crypto, Internet
+- **Semantic Interpolation**: Blend between different concepts
+- **Advanced Training**: DDPM noise scheduling and cross-attention
 - **Dataset Management**: Automatic processing of KANJIDIC2 and KanjiVG data
 - **Multiple Training Modes**: Quick test, full training, and concept-specific generation
 - **Visualization Tools**: Comprehensive analysis and comparison scripts
-- **CPU Optimized**: Designed for efficient training on CPU resources
+- **GPU/CPU Optimized**: Efficient training on both GPU and CPU resources
 
 ## 📁 Project Structure
 
@@ -33,7 +36,7 @@ git clone https://github.com/CrystalHu940106/Stable_Diffusion_model_new_conji_ge
 cd Stable_Diffusion_model_new_conji_generation
 
 # Install dependencies
-pip install torch torchvision pillow matplotlib numpy
+pip install -r requirements.txt
 ```
 
 ### 2. Prepare Dataset
@@ -43,33 +46,39 @@ pip install torch torchvision pillow matplotlib numpy
 python3 scripts/fix_kanji_dataset.py
 ```
 
-### 3. Quick Training Test
+### 3. Train Stable Diffusion Model
 
 ```bash
-# Run a quick training test
+# Train the complete Stable Diffusion model
+python3 scripts/train_stable_diffusion.py
+```
+
+### 4. Generate Modern Concept Kanji
+
+```bash
+# Generate Kanji for modern concepts (YouTube, Gundam, AI, etc.)
+python3 scripts/advanced_concept_generation.py
+```
+
+### 5. Legacy Training (Optional)
+
+```bash
+# Quick training test (simple UNet)
 python3 scripts/quick_train_test.py
-```
 
-### 4. Full Training
-
-```bash
-# Train the complete model
+# Full training (simple UNet)
 python3 scripts/full_train_kanji.py
-```
-
-### 5. Generate Concept Kanji
-
-```bash
-# Generate Kanji for specific concepts
-python3 scripts/generate_concept_kanji.py
 ```
 
 ## 🔧 Core Scripts
 
 - **`fix_kanji_dataset.py`**: Builds the complete Kanji dataset from KANJIDIC2 and KanjiVG
+- **`stable_diffusion_kanji.py`**: Complete Stable Diffusion implementation
+- **`train_stable_diffusion.py`**: Full Stable Diffusion training pipeline
+- **`advanced_concept_generation.py`**: Generate Kanji for modern concepts (YouTube, Gundam, etc.)
 - **`quick_train_test.py`**: Quick validation of the training pipeline
-- **`full_train_kanji.py`**: Complete training on the full dataset
-- **`generate_concept_kanji.py`**: Generate Kanji for specific concepts
+- **`full_train_kanji.py`**: Legacy training (simple UNet)
+- **`generate_concept_kanji.py`**: Legacy concept generation
 - **`compare_generated_kanji.py`**: Compare generated vs. existing Kanji
 
 ## 📊 Dataset
@@ -81,10 +90,12 @@ python3 scripts/generate_concept_kanji.py
 
 ## 🏗️ Model Architecture
 
-- **Type**: Advanced UNet with BatchNorm
-- **Input/Output**: 3-channel RGB images
-- **Resolution**: 128x128 pixels (configurable)
-- **Optimization**: AdamW optimizer with learning rate scheduling
+- **VAE**: Variational Autoencoder for image compression (4x downsampling)
+- **UNet**: 2D conditional model with cross-attention and time embedding
+- **Text Encoder**: CLIP for semantic text understanding
+- **Scheduler**: DDPM noise scheduling with 1000 timesteps
+- **Input/Output**: 128x128 RGB images with text conditioning
+- **Optimization**: AdamW with cosine annealing and gradient clipping
 
 ## ⚙️ Configuration
 
