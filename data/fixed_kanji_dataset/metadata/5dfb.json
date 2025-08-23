@@ -1,0 +1,17 @@
+{
+  "kanji": "巻",
+  "unicode": "5dfb",
+  "meanings": [
+    "scroll",
+    "volume",
+    "book",
+    "part",
+    "roll up",
+    "wind up",
+    "tie",
+    "coil",
+    "counter for texts (or book scrolls)"
+  ],
+  "image_file": "5dfb.png",
+  "prompt": "kanji character 巻: scroll, volume, book"
+}

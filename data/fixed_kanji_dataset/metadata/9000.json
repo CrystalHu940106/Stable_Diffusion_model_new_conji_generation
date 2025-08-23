@@ -1,0 +1,15 @@
+{
+  "kanji": "退",
+  "unicode": "9000",
+  "meanings": [
+    "retreat",
+    "withdraw",
+    "retire",
+    "resign",
+    "repel",
+    "expel",
+    "reject"
+  ],
+  "image_file": "9000.png",
+  "prompt": "kanji character 退: retreat, withdraw, retire"
+}

@@ -1,0 +1,16 @@
+{
+  "kanji": "積",
+  "unicode": "7a4d",
+  "meanings": [
+    "volume",
+    "product (x*y)",
+    "acreage",
+    "contents",
+    "pile up",
+    "stack",
+    "load",
+    "amass"
+  ],
+  "image_file": "7a4d.png",
+  "prompt": "kanji character 積: volume, product (x*y), acreage"
+}

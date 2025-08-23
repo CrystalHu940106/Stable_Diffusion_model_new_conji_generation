@@ -1,0 +1,5671 @@
+[
+  {
+    "kanji": "亜",
+    "unicode": "4e9c",
+    "meanings": [
+      "Asia",
+      "rank next",
+      "come after",
+      "-ous"
+    ],
+    "image_file": "4e9c.png",
+    "prompt": "kanji character 亜: Asia, rank next, come after"
+  },
+  {
+    "kanji": "唖",
+    "unicode": "5516",
+    "meanings": [
+      "mute",
+      "dumb"
+    ],
+    "image_file": "5516.png",
+    "prompt": "kanji character 唖: mute, dumb"
+  },
+  {
+    "kanji": "娃",
+    "unicode": "5a03",
+    "meanings": [
+      "beautiful"
+    ],
+    "image_file": "5a03.png",
+    "prompt": "kanji character 娃: beautiful"
+  },
+  {
+    "kanji": "阿",
+    "unicode": "963f",
+    "meanings": [
+      "Africa",
+      "flatter",
+      "fawn upon",
+      "corner",
+      "nook",
+      "recess"
+    ],
+    "image_file": "963f.png",
+    "prompt": "kanji character 阿: Africa, flatter, fawn upon"
+  },
+  {
+    "kanji": "哀",
+    "unicode": "54c0",
+    "meanings": [
+      "pathetic",
+      "grief",
+      "sorrow",
+      "pathos",
+      "pity",
+      "sympathize"
+    ],
+    "image_file": "54c0.png",
+    "prompt": "kanji character 哀: pathetic, grief, sorrow"
+  },
+  {
+    "kanji": "愛",
+    "unicode": "611b",
+    "meanings": [
+      "love",
+      "affection",
+      "favourite"
+    ],
+    "image_file": "611b.png",
+    "prompt": "kanji character 愛: love, affection, favourite"
+  },
+  {
+    "kanji": "挨",
+    "unicode": "6328",
+    "meanings": [
+      "approach",
+      "draw near",
+      "push open"
+    ],
+    "image_file": "6328.png",
+    "prompt": "kanji character 挨: approach, draw near, push open"
+  },
+  {
+    "kanji": "姶",
+    "unicode": "59f6",
+    "meanings": [
+      "good-looking",
+      "quiet"
+    ],
+    "image_file": "59f6.png",
+    "prompt": "kanji character 姶: good-looking, quiet"
+  },
+  {
+    "kanji": "逢",
+    "unicode": "9022",
+    "meanings": [
+      "meeting",
+      "tryst",
+      "date",
+      "rendezvous"
+    ],
+    "image_file": "9022.png",
+    "prompt": "kanji character 逢: meeting, tryst, date"
+  },
+  {
+    "kanji": "葵",
+    "unicode": "8475",
+    "meanings": [
+      "hollyhock"
+    ],
+    "image_file": "8475.png",
+    "prompt": "kanji character 葵: hollyhock"
+  },
+  {
+    "kanji": "茜",
+    "unicode": "831c",
+    "meanings": [
+      "madder",
+      "red dye",
+      "Turkey red"
+    ],
+    "image_file": "831c.png",
+    "prompt": "kanji character 茜: madder, red dye, Turkey red"
+  },
+  {
+    "kanji": "穐",
+    "unicode": "7a50",
+    "meanings": [
+      "autumn"
+    ],
+    "image_file": "7a50.png",
+    "prompt": "kanji character 穐: autumn"
+  },
+  {
+    "kanji": "悪",
+    "unicode": "60aa",
+    "meanings": [
+      "bad",
+      "vice",
+      "rascal",
+      "false",
+      "evil",
+      "wrong"
+    ],
+    "image_file": "60aa.png",
+    "prompt": "kanji character 悪: bad, vice, rascal"
+  },
+  {
+    "kanji": "握",
+    "unicode": "63e1",
+    "meanings": [
+      "grip",
+      "hold",
+      "mould sushi",
+      "bribe"
+    ],
+    "image_file": "63e1.png",
+    "prompt": "kanji character 握: grip, hold, mould sushi"
+  },
+  {
+    "kanji": "渥",
+    "unicode": "6e25",
+    "meanings": [
+      "kindness",
+      "moisten"
+    ],
+    "image_file": "6e25.png",
+    "prompt": "kanji character 渥: kindness, moisten"
+  },
+  {
+    "kanji": "旭",
+    "unicode": "65ed",
+    "meanings": [
+      "rising sun",
+      "morning sun"
+    ],
+    "image_file": "65ed.png",
+    "prompt": "kanji character 旭: rising sun, morning sun"
+  },
+  {
+    "kanji": "葦",
+    "unicode": "8466",
+    "meanings": [
+      "reed",
+      "bullrush"
+    ],
+    "image_file": "8466.png",
+    "prompt": "kanji character 葦: reed, bullrush"
+  },
+  {
+    "kanji": "芦",
+    "unicode": "82a6",
+    "meanings": [
+      "reed",
+      "bullrush"
+    ],
+    "image_file": "82a6.png",
+    "prompt": "kanji character 芦: reed, bullrush"
+  },
+  {
+    "kanji": "鯵",
+    "unicode": "9bf5",
+    "meanings": [
+      "horse mackerel"
+    ],
+    "image_file": "9bf5.png",
+    "prompt": "kanji character 鯵: horse mackerel"
+  },
+  {
+    "kanji": "梓",
+    "unicode": "6893",
+    "meanings": [
+      "catalpa tree",
+      "woodblock printing"
+    ],
+    "image_file": "6893.png",
+    "prompt": "kanji character 梓: catalpa tree, woodblock printing"
+  },
+  {
+    "kanji": "圧",
+    "unicode": "5727",
+    "meanings": [
+      "pressure",
+      "push",
+      "overwhelm",
+      "oppress",
+      "dominate"
+    ],
+    "image_file": "5727.png",
+    "prompt": "kanji character 圧: pressure, push, overwhelm"
+  },
+  {
+    "kanji": "斡",
+    "unicode": "65a1",
+    "meanings": [
+      "go around",
+      "rule",
+      "administer"
+    ],
+    "image_file": "65a1.png",
+    "prompt": "kanji character 斡: go around, rule, administer"
+  },
+  {
+    "kanji": "扱",
+    "unicode": "6271",
+    "meanings": [
+      "handle",
+      "entertain",
+      "thresh",
+      "strip"
+    ],
+    "image_file": "6271.png",
+    "prompt": "kanji character 扱: handle, entertain, thresh"
+  },
+  {
+    "kanji": "宛",
+    "unicode": "5b9b",
+    "meanings": [
+      "address",
+      "just like",
+      "fortunately"
+    ],
+    "image_file": "5b9b.png",
+    "prompt": "kanji character 宛: address, just like, fortunately"
+  },
+  {
+    "kanji": "姐",
+    "unicode": "59d0",
+    "meanings": [
+      "elder sister",
+      "maidservant"
+    ],
+    "image_file": "59d0.png",
+    "prompt": "kanji character 姐: elder sister, maidservant"
+  },
+  {
+    "kanji": "虻",
+    "unicode": "867b",
+    "meanings": [
+      "gadfly",
+      "horsefly"
+    ],
+    "image_file": "867b.png",
+    "prompt": "kanji character 虻: gadfly, horsefly"
+  },
+  {
+    "kanji": "飴",
+    "unicode": "98f4",
+    "meanings": [
+      "rice jelly",
+      "candy"
+    ],
+    "image_file": "98f4.png",
+    "prompt": "kanji character 飴: rice jelly, candy"
+  },
+  {
+    "kanji": "絢",
+    "unicode": "7d62",
+    "meanings": [
+      "brilliant fabric design"
+    ],
+    "image_file": "7d62.png",
+    "prompt": "kanji character 絢: brilliant fabric design"
+  },
+  {
+    "kanji": "綾",
+    "unicode": "7dbe",
+    "meanings": [
+      "design",
+      "figured cloth",
+      "twill"
+    ],
+    "image_file": "7dbe.png",
+    "prompt": "kanji character 綾: design, figured cloth, twill"
+  },
+  {
+    "kanji": "鮎",
+    "unicode": "9b8e",
+    "meanings": [
+      "freshwater trout",
+      "smelt"
+    ],
+    "image_file": "9b8e.png",
+    "prompt": "kanji character 鮎: freshwater trout, smelt"
+  },
+  {
+    "kanji": "或",
+    "unicode": "6216",
+    "meanings": [
+      "some",
+      "one",
+      "or",
+      "possibly",
+      "a certain"
+    ],
+    "image_file": "6216.png",
+    "prompt": "kanji character 或: some, one, or"
+  },
+  {
+    "kanji": "粟",
+    "unicode": "7c9f",
+    "meanings": [
+      "millet"
+    ],
+    "image_file": "7c9f.png",
+    "prompt": "kanji character 粟: millet"
+  },
+  {
+    "kanji": "袷",
+    "unicode": "88b7",
+    "meanings": [
+      "lined (kimono)"
+    ],
+    "image_file": "88b7.png",
+    "prompt": "kanji character 袷: lined (kimono)"
+  },
+  {
+    "kanji": "安",
+    "unicode": "5b89",
+    "meanings": [
+      "relax",
+      "cheap",
+      "low",
+      "quiet",
+      "rested",
+      "contented",
+      "peaceful"
+    ],
+    "image_file": "5b89.png",
+    "prompt": "kanji character 安: relax, cheap, low"
+  },
+  {
+    "kanji": "庵",
+    "unicode": "5eb5",
+    "meanings": [
+      "hermitage",
+      "retreat"
+    ],
+    "image_file": "5eb5.png",
+    "prompt": "kanji character 庵: hermitage, retreat"
+  },
+  {
+    "kanji": "按",
+    "unicode": "6309",
+    "meanings": [
+      "hold",
+      "consider",
+      "investigate"
+    ],
+    "image_file": "6309.png",
+    "prompt": "kanji character 按: hold, consider, investigate"
+  },
+  {
+    "kanji": "暗",
+    "unicode": "6697",
+    "meanings": [
+      "darkness",
+      "disappear",
+      "shade",
+      "informal",
+      "grow dark",
+      "be blinded"
+    ],
+    "image_file": "6697.png",
+    "prompt": "kanji character 暗: darkness, disappear, shade"
+  },
+  {
+    "kanji": "案",
+    "unicode": "6848",
+    "meanings": [
+      "plan",
+      "suggestion",
+      "draft",
+      "ponder",
+      "fear",
+      "proposition",
+      "idea",
+      "expectation",
+      "worry",
+      "table",
+      "bench"
+    ],
+    "image_file": "6848.png",
+    "prompt": "kanji character 案: plan, suggestion, draft"
+  },
+  {
+    "kanji": "闇",
+    "unicode": "95c7",
+    "meanings": [
+      "get dark",
+      "gloom",
+      "disorder"
+    ],
+    "image_file": "95c7.png",
+    "prompt": "kanji character 闇: get dark, gloom, disorder"
+  },
+  {
+    "kanji": "鞍",
+    "unicode": "978d",
+    "meanings": [
+      "saddle"
+    ],
+    "image_file": "978d.png",
+    "prompt": "kanji character 鞍: saddle"
+  },
+  {
+    "kanji": "杏",
+    "unicode": "674f",
+    "meanings": [
+      "apricot"
+    ],
+    "image_file": "674f.png",
+    "prompt": "kanji character 杏: apricot"
+  },
+  {
+    "kanji": "以",
+    "unicode": "4ee5",
+    "meanings": [
+      "by means of",
+      "because",
+      "in view of",
+      "compared with"
+    ],
+    "image_file": "4ee5.png",
+    "prompt": "kanji character 以: by means of, because, in view of"
+  },
+  {
+    "kanji": "伊",
+    "unicode": "4f0a",
+    "meanings": [
+      "Italy",
+      "that one"
+    ],
+    "image_file": "4f0a.png",
+    "prompt": "kanji character 伊: Italy, that one"
+  },
+  {
+    "kanji": "位",
+    "unicode": "4f4d",
+    "meanings": [
+      "rank",
+      "grade",
+      "throne",
+      "crown",
+      "about",
+      "some"
+    ],
+    "image_file": "4f4d.png",
+    "prompt": "kanji character 位: rank, grade, throne"
+  },
+  {
+    "kanji": "依",
+    "unicode": "4f9d",
+    "meanings": [
+      "reliant",
+      "depend on",
+      "consequently",
+      "therefore",
+      "due to"
+    ],
+    "image_file": "4f9d.png",
+    "prompt": "kanji character 依: reliant, depend on, consequently"
+  },
+  {
+    "kanji": "偉",
+    "unicode": "5049",
+    "meanings": [
+      "admirable",
+      "greatness",
+      "remarkable",
+      "conceited",
+      "famous",
+      "excellent"
+    ],
+    "image_file": "5049.png",
+    "prompt": "kanji character 偉: admirable, greatness, remarkable"
+  },
+  {
+    "kanji": "囲",
+    "unicode": "56f2",
+    "meanings": [
+      "surround",
+      "besiege",
+      "store",
+      "paling",
+      "enclosure",
+      "encircle",
+      "preserve",
+      "keep"
+    ],
+    "image_file": "56f2.png",
+    "prompt": "kanji character 囲: surround, besiege, store"
+  },
+  {
+    "kanji": "夷",
+    "unicode": "5937",
+    "meanings": [
+      "barbarian",
+      "savage",
+      "Ainu"
+    ],
+    "image_file": "5937.png",
+    "prompt": "kanji character 夷: barbarian, savage, Ainu"
+  },
+  {
+    "kanji": "委",
+    "unicode": "59d4",
+    "meanings": [
+      "committee",
+      "entrust to",
+      "leave to",
+      "devote",
+      "discard"
+    ],
+    "image_file": "59d4.png",
+    "prompt": "kanji character 委: committee, entrust to, leave to"
+  },
+  {
+    "kanji": "威",
+    "unicode": "5a01",
+    "meanings": [
+      "intimidate",
+      "dignity",
+      "majesty",
+      "menace",
+      "threaten"
+    ],
+    "image_file": "5a01.png",
+    "prompt": "kanji character 威: intimidate, dignity, majesty"
+  },
+  {
+    "kanji": "尉",
+    "unicode": "5c09",
+    "meanings": [
+      "military officer",
+      "jailer",
+      "old man",
+      "rank"
+    ],
+    "image_file": "5c09.png",
+    "prompt": "kanji character 尉: military officer, jailer, old man"
+  },
+  {
+    "kanji": "惟",
+    "unicode": "60df",
+    "meanings": [
+      "consider",
+      "reflect",
+      "think"
+    ],
+    "image_file": "60df.png",
+    "prompt": "kanji character 惟: consider, reflect, think"
+  },
+  {
+    "kanji": "意",
+    "unicode": "610f",
+    "meanings": [
+      "idea",
+      "mind",
+      "heart",
+      "taste",
+      "thought",
+      "desire",
+      "care",
+      "liking"
+    ],
+    "image_file": "610f.png",
+    "prompt": "kanji character 意: idea, mind, heart"
+  },
+  {
+    "kanji": "慰",
+    "unicode": "6170",
+    "meanings": [
+      "consolation",
+      "amusement",
+      "seduce",
+      "cheer",
+      "make sport of",
+      "comfort",
+      "console"
+    ],
+    "image_file": "6170.png",
+    "prompt": "kanji character 慰: consolation, amusement, seduce"
+  },
+  {
+    "kanji": "易",
+    "unicode": "6613",
+    "meanings": [
+      "easy",
+      "ready to",
+      "simple",
+      "fortune-telling",
+      "divination"
+    ],
+    "image_file": "6613.png",
+    "prompt": "kanji character 易: easy, ready to, simple"
+  },
+  {
+    "kanji": "椅",
+    "unicode": "6905",
+    "meanings": [
+      "chair"
+    ],
+    "image_file": "6905.png",
+    "prompt": "kanji character 椅: chair"
+  },
+  {
+    "kanji": "為",
+    "unicode": "70ba",
+    "meanings": [
+      "do",
+      "change",
+      "make",
+      "benefit",
+      "welfare",
+      "be of use",
+      "reach to",
+      "try",
+      "practice",
+      "cost",
+      "serve as",
+      "good",
+      "advantage",
+      "as a result of"
+    ],
+    "image_file": "70ba.png",
+    "prompt": "kanji character 為: do, change, make"
+  },
+  {
+    "kanji": "畏",
+    "unicode": "754f",
+    "meanings": [
+      "fear",
+      "majestic",
+      "graciously",
+      "be apprehensive"
+    ],
+    "image_file": "754f.png",
+    "prompt": "kanji character 畏: fear, majestic, graciously"
+  },
+  {
+    "kanji": "異",
+    "unicode": "7570",
+    "meanings": [
+      "uncommon",
+      "different",
+      "queerness",
+      "strangeness",
+      "wonderful",
+      "curious",
+      "unusual"
+    ],
+    "image_file": "7570.png",
+    "prompt": "kanji character 異: uncommon, different, queerness"
+  },
+  {
+    "kanji": "移",
+    "unicode": "79fb",
+    "meanings": [
+      "shift",
+      "move",
+      "change",
+      "drift",
+      "catch (cold, fire)",
+      "pass into"
+    ],
+    "image_file": "79fb.png",
+    "prompt": "kanji character 移: shift, move, change"
+  },
+  {
+    "kanji": "維",
+    "unicode": "7dad",
+    "meanings": [
+      "fiber",
+      "tie",
+      "rope"
+    ],
+    "image_file": "7dad.png",
+    "prompt": "kanji character 維: fiber, tie, rope"
+  },
+  {
+    "kanji": "緯",
+    "unicode": "7def",
+    "meanings": [
+      "horizontal",
+      "woof",
+      "left & right",
+      "(parallels of) latitude",
+      "prediction"
+    ],
+    "image_file": "7def.png",
+    "prompt": "kanji character 緯: horizontal, woof, left & right"
+  },
+  {
+    "kanji": "胃",
+    "unicode": "80c3",
+    "meanings": [
+      "stomach",
+      "paunch",
+      "crop",
+      "craw"
+    ],
+    "image_file": "80c3.png",
+    "prompt": "kanji character 胃: stomach, paunch, crop"
+  },
+  {
+    "kanji": "萎",
+    "unicode": "840e",
+    "meanings": [
+      "wither",
+      "droop",
+      "lame"
+    ],
+    "image_file": "840e.png",
+    "prompt": "kanji character 萎: wither, droop, lame"
+  },
+  {
+    "kanji": "衣",
+    "unicode": "8863",
+    "meanings": [
+      "garment",
+      "clothes",
+      "dressing"
+    ],
+    "image_file": "8863.png",
+    "prompt": "kanji character 衣: garment, clothes, dressing"
+  },
+  {
+    "kanji": "謂",
+    "unicode": "8b02",
+    "meanings": [
+      "reason",
+      "origin",
+      "history",
+      "oral tradition"
+    ],
+    "image_file": "8b02.png",
+    "prompt": "kanji character 謂: reason, origin, history"
+  },
+  {
+    "kanji": "違",
+    "unicode": "9055",
+    "meanings": [
+      "difference",
+      "differ"
+    ],
+    "image_file": "9055.png",
+    "prompt": "kanji character 違: difference, differ"
+  },
+  {
+    "kanji": "遺",
+    "unicode": "907a",
+    "meanings": [
+      "bequeath",
+      "leave behind",
+      "reserve"
+    ],
+    "image_file": "907a.png",
+    "prompt": "kanji character 遺: bequeath, leave behind, reserve"
+  },
+  {
+    "kanji": "医",
+    "unicode": "533b",
+    "meanings": [
+      "doctor",
+      "medicine"
+    ],
+    "image_file": "533b.png",
+    "prompt": "kanji character 医: doctor, medicine"
+  },
+  {
+    "kanji": "井",
+    "unicode": "4e95",
+    "meanings": [
+      "well",
+      "well crib",
+      "town",
+      "community"
+    ],
+    "image_file": "4e95.png",
+    "prompt": "kanji character 井: well, well crib, town"
+  },
+  {
+    "kanji": "亥",
+    "unicode": "4ea5",
+    "meanings": [
+      "sign of the hog",
+      "9-11PM",
+      "twelfth sign of the Chinese zodiac"
+    ],
+    "image_file": "4ea5.png",
+    "prompt": "kanji character 亥: sign of the hog, 9-11PM, twelfth sign of the Chinese zodiac"
+  },
+  {
+    "kanji": "域",
+    "unicode": "57df",
+    "meanings": [
+      "range",
+      "region",
+      "limits",
+      "stage",
+      "level"
+    ],
+    "image_file": "57df.png",
+    "prompt": "kanji character 域: range, region, limits"
+  },
+  {
+    "kanji": "育",
+    "unicode": "80b2",
+    "meanings": [
+      "bring up",
+      "grow up",
+      "raise",
+      "rear"
+    ],
+    "image_file": "80b2.png",
+    "prompt": "kanji character 育: bring up, grow up, raise"
+  },
+  {
+    "kanji": "郁",
+    "unicode": "90c1",
+    "meanings": [
+      "cultural progress",
+      "perfume"
+    ],
+    "image_file": "90c1.png",
+    "prompt": "kanji character 郁: cultural progress, perfume"
+  },
+  {
+    "kanji": "磯",
+    "unicode": "78ef",
+    "meanings": [
+      "seashore",
+      "beach"
+    ],
+    "image_file": "78ef.png",
+    "prompt": "kanji character 磯: seashore, beach"
+  },
+  {
+    "kanji": "一",
+    "unicode": "4e00",
+    "meanings": [
+      "one",
+      "one radical (no.1)"
+    ],
+    "image_file": "4e00.png",
+    "prompt": "kanji character 一: one, one radical (no.1)"
+  },
+  {
+    "kanji": "壱",
+    "unicode": "58f1",
+    "meanings": [
+      "one (in documents)"
+    ],
+    "image_file": "58f1.png",
+    "prompt": "kanji character 壱: one (in documents)"
+  },
+  {
+    "kanji": "溢",
+    "unicode": "6ea2",
+    "meanings": [
+      "overflow",
+      "inundate",
+      "spill"
+    ],
+    "image_file": "6ea2.png",
+    "prompt": "kanji character 溢: overflow, inundate, spill"
+  },
+  {
+    "kanji": "逸",
+    "unicode": "9038",
+    "meanings": [
+      "deviate",
+      "idleness",
+      "leisure",
+      "miss the mark",
+      "evade",
+      "elude",
+      "parry",
+      "diverge"
+    ],
+    "image_file": "9038.png",
+    "prompt": "kanji character 逸: deviate, idleness, leisure"
+  },
+  {
+    "kanji": "稲",
+    "unicode": "7a32",
+    "meanings": [
+      "rice plant"
+    ],
+    "image_file": "7a32.png",
+    "prompt": "kanji character 稲: rice plant"
+  },
+  {
+    "kanji": "茨",
+    "unicode": "8328",
+    "meanings": [
+      "briar",
+      "thorn"
+    ],
+    "image_file": "8328.png",
+    "prompt": "kanji character 茨: briar, thorn"
+  },
+  {
+    "kanji": "芋",
+    "unicode": "828b",
+    "meanings": [
+      "potato"
+    ],
+    "image_file": "828b.png",
+    "prompt": "kanji character 芋: potato"
+  },
+  {
+    "kanji": "鰯",
+    "unicode": "9c2f",
+    "meanings": [
+      "sardine",
+      "(kokuji)"
+    ],
+    "image_file": "9c2f.png",
+    "prompt": "kanji character 鰯: sardine, (kokuji)"
+  },
+  {
+    "kanji": "允",
+    "unicode": "5141",
+    "meanings": [
+      "license",
+      "sincerity",
+      "permit"
+    ],
+    "image_file": "5141.png",
+    "prompt": "kanji character 允: license, sincerity, permit"
+  },
+  {
+    "kanji": "印",
+    "unicode": "5370",
+    "meanings": [
+      "stamp",
+      "seal",
+      "mark",
+      "imprint",
+      "symbol",
+      "emblem",
+      "trademark",
+      "evidence",
+      "souvenir",
+      "India"
+    ],
+    "image_file": "5370.png",
+    "prompt": "kanji character 印: stamp, seal, mark"
+  },
+  {
+    "kanji": "咽",
+    "unicode": "54bd",
+    "meanings": [
+      "throat",
+      "choked",
+      "smothered",
+      "stuffy"
+    ],
+    "image_file": "54bd.png",
+    "prompt": "kanji character 咽: throat, choked, smothered"
+  },
+  {
+    "kanji": "員",
+    "unicode": "54e1",
+    "meanings": [
+      "employee",
+      "member",
+      "number",
+      "the one in charge"
+    ],
+    "image_file": "54e1.png",
+    "prompt": "kanji character 員: employee, member, number"
+  },
+  {
+    "kanji": "因",
+    "unicode": "56e0",
+    "meanings": [
+      "cause",
+      "factor",
+      "be associated with",
+      "depend on",
+      "be limited to"
+    ],
+    "image_file": "56e0.png",
+    "prompt": "kanji character 因: cause, factor, be associated with"
+  },
+  {
+    "kanji": "姻",
+    "unicode": "59fb",
+    "meanings": [
+      "matrimony",
+      "marry"
+    ],
+    "image_file": "59fb.png",
+    "prompt": "kanji character 姻: matrimony, marry"
+  },
+  {
+    "kanji": "引",
+    "unicode": "5f15",
+    "meanings": [
+      "pull",
+      "tug",
+      "jerk",
+      "admit",
+      "install",
+      "quote",
+      "refer to"
+    ],
+    "image_file": "5f15.png",
+    "prompt": "kanji character 引: pull, tug, jerk"
+  },
+  {
+    "kanji": "飲",
+    "unicode": "98f2",
+    "meanings": [
+      "drink",
+      "smoke",
+      "take"
+    ],
+    "image_file": "98f2.png",
+    "prompt": "kanji character 飲: drink, smoke, take"
+  },
+  {
+    "kanji": "淫",
+    "unicode": "6deb",
+    "meanings": [
+      "lewdness",
+      "licentiousness"
+    ],
+    "image_file": "6deb.png",
+    "prompt": "kanji character 淫: lewdness, licentiousness"
+  },
+  {
+    "kanji": "胤",
+    "unicode": "80e4",
+    "meanings": [
+      "descendent",
+      "issue",
+      "offspring"
+    ],
+    "image_file": "80e4.png",
+    "prompt": "kanji character 胤: descendent, issue, offspring"
+  },
+  {
+    "kanji": "蔭",
+    "unicode": "852d",
+    "meanings": [
+      "shade",
+      "shadow",
+      "backing assistance"
+    ],
+    "image_file": "852d.png",
+    "prompt": "kanji character 蔭: shade, shadow, backing assistance"
+  },
+  {
+    "kanji": "院",
+    "unicode": "9662",
+    "meanings": [
+      "Inst.",
+      "institution",
+      "temple",
+      "mansion",
+      "school"
+    ],
+    "image_file": "9662.png",
+    "prompt": "kanji character 院: Inst., institution, temple"
+  },
+  {
+    "kanji": "陰",
+    "unicode": "9670",
+    "meanings": [
+      "shade",
+      "yin",
+      "negative",
+      "sex organs",
+      "secret",
+      "shadow"
+    ],
+    "image_file": "9670.png",
+    "prompt": "kanji character 陰: shade, yin, negative"
+  },
+  {
+    "kanji": "隠",
+    "unicode": "96a0",
+    "meanings": [
+      "conceal",
+      "hide",
+      "cover"
+    ],
+    "image_file": "96a0.png",
+    "prompt": "kanji character 隠: conceal, hide, cover"
+  },
+  {
+    "kanji": "韻",
+    "unicode": "97fb",
+    "meanings": [
+      "rhyme",
+      "elegance",
+      "tone"
+    ],
+    "image_file": "97fb.png",
+    "prompt": "kanji character 韻: rhyme, elegance, tone"
+  },
+  {
+    "kanji": "吋",
+    "unicode": "540b",
+    "meanings": [
+      "inch"
+    ],
+    "image_file": "540b.png",
+    "prompt": "kanji character 吋: inch"
+  },
+  {
+    "kanji": "右",
+    "unicode": "53f3",
+    "meanings": [
+      "right"
+    ],
+    "image_file": "53f3.png",
+    "prompt": "kanji character 右: right"
+  },
+  {
+    "kanji": "宇",
+    "unicode": "5b87",
+    "meanings": [
+      "eaves",
+      "roof",
+      "house",
+      "heaven"
+    ],
+    "image_file": "5b87.png",
+    "prompt": "kanji character 宇: eaves, roof, house"
+  },
+  {
+    "kanji": "烏",
+    "unicode": "70cf",
+    "meanings": [
+      "crow",
+      "raven"
+    ],
+    "image_file": "70cf.png",
+    "prompt": "kanji character 烏: crow, raven"
+  },
+  {
+    "kanji": "羽",
+    "unicode": "7fbd",
+    "meanings": [
+      "feathers",
+      "counter for birds, rabbits"
+    ],
+    "image_file": "7fbd.png",
+    "prompt": "kanji character 羽: feathers, counter for birds, rabbits"
+  },
+  {
+    "kanji": "迂",
+    "unicode": "8fc2",
+    "meanings": [
+      "roundabout way"
+    ],
+    "image_file": "8fc2.png",
+    "prompt": "kanji character 迂: roundabout way"
+  },
+  {
+    "kanji": "雨",
+    "unicode": "96e8",
+    "meanings": [
+      "rain"
+    ],
+    "image_file": "96e8.png",
+    "prompt": "kanji character 雨: rain"
+  },
+  {
+    "kanji": "卯",
+    "unicode": "536f",
+    "meanings": [
+      "sign of the hare or rabbit",
+      "fourth sign of Chinese zodiac",
+      "5-7AM",
+      "east"
+    ],
+    "image_file": "536f.png",
+    "prompt": "kanji character 卯: sign of the hare or rabbit, fourth sign of Chinese zodiac, 5-7AM"
+  },
+  {
+    "kanji": "鵜",
+    "unicode": "9d5c",
+    "meanings": [
+      "cormorant"
+    ],
+    "image_file": "9d5c.png",
+    "prompt": "kanji character 鵜: cormorant"
+  },
+  {
+    "kanji": "窺",
+    "unicode": "7aba",
+    "meanings": [
+      "lie in wait",
+      "spy on",
+      "reconnoiter"
+    ],
+    "image_file": "7aba.png",
+    "prompt": "kanji character 窺: lie in wait, spy on, reconnoiter"
+  },
+  {
+    "kanji": "丑",
+    "unicode": "4e11",
+    "meanings": [
+      "sign of the ox or cow",
+      "1-3AM",
+      "second sign of Chinese zodiac"
+    ],
+    "image_file": "4e11.png",
+    "prompt": "kanji character 丑: sign of the ox or cow, 1-3AM, second sign of Chinese zodiac"
+  },
+  {
+    "kanji": "碓",
+    "unicode": "7893",
+    "meanings": [
+      "pestle"
+    ],
+    "image_file": "7893.png",
+    "prompt": "kanji character 碓: pestle"
+  },
+  {
+    "kanji": "臼",
+    "unicode": "81fc",
+    "meanings": [
+      "mortar"
+    ],
+    "image_file": "81fc.png",
+    "prompt": "kanji character 臼: mortar"
+  },
+  {
+    "kanji": "渦",
+    "unicode": "6e26",
+    "meanings": [
+      "whirlpool",
+      "eddy",
+      "vortex"
+    ],
+    "image_file": "6e26.png",
+    "prompt": "kanji character 渦: whirlpool, eddy, vortex"
+  },
+  {
+    "kanji": "嘘",
+    "unicode": "5618",
+    "meanings": [
+      "lie",
+      "falsehood"
+    ],
+    "image_file": "5618.png",
+    "prompt": "kanji character 嘘: lie, falsehood"
+  },
+  {
+    "kanji": "唄",
+    "unicode": "5504",
+    "meanings": [
+      "song",
+      "ballad"
+    ],
+    "image_file": "5504.png",
+    "prompt": "kanji character 唄: song, ballad"
+  },
+  {
+    "kanji": "欝",
+    "unicode": "6b1d",
+    "meanings": [
+      "gloom",
+      "depression",
+      "melancholy"
+    ],
+    "image_file": "6b1d.png",
+    "prompt": "kanji character 欝: gloom, depression, melancholy"
+  },
+  {
+    "kanji": "蔚",
+    "unicode": "851a",
+    "meanings": [
+      "dense growth"
+    ],
+    "image_file": "851a.png",
+    "prompt": "kanji character 蔚: dense growth"
+  },
+  {
+    "kanji": "鰻",
+    "unicode": "9c3b",
+    "meanings": [
+      "eel"
+    ],
+    "image_file": "9c3b.png",
+    "prompt": "kanji character 鰻: eel"
+  },
+  {
+    "kanji": "姥",
+    "unicode": "59e5",
+    "meanings": [
+      "old woman"
+    ],
+    "image_file": "59e5.png",
+    "prompt": "kanji character 姥: old woman"
+  },
+  {
+    "kanji": "厩",
+    "unicode": "53a9",
+    "meanings": [
+      "barn",
+      "stable"
+    ],
+    "image_file": "53a9.png",
+    "prompt": "kanji character 厩: barn, stable"
+  },
+  {
+    "kanji": "浦",
+    "unicode": "6d66",
+    "meanings": [
+      "bay",
+      "creek",
+      "inlet",
+      "gulf",
+      "beach",
+      "seacoast"
+    ],
+    "image_file": "6d66.png",
+    "prompt": "kanji character 浦: bay, creek, inlet"
+  },
+  {
+    "kanji": "瓜",
+    "unicode": "74dc",
+    "meanings": [
+      "melon"
+    ],
+    "image_file": "74dc.png",
+    "prompt": "kanji character 瓜: melon"
+  },
+  {
+    "kanji": "閏",
+    "unicode": "958f",
+    "meanings": [
+      "intercalation",
+      "illegitimate throne"
+    ],
+    "image_file": "958f.png",
+    "prompt": "kanji character 閏: intercalation, illegitimate throne"
+  },
+  {
+    "kanji": "噂",
+    "unicode": "5642",
+    "meanings": [
+      "rumor",
+      "gossip",
+      "hearsay"
+    ],
+    "image_file": "5642.png",
+    "prompt": "kanji character 噂: rumor, gossip, hearsay"
+  },
+  {
+    "kanji": "云",
+    "unicode": "4e91",
+    "meanings": [
+      "say"
+    ],
+    "image_file": "4e91.png",
+    "prompt": "kanji character 云: say"
+  },
+  {
+    "kanji": "運",
+    "unicode": "904b",
+    "meanings": [
+      "carry",
+      "luck",
+      "destiny",
+      "fate",
+      "lot",
+      "transport",
+      "progress",
+      "advance"
+    ],
+    "image_file": "904b.png",
+    "prompt": "kanji character 運: carry, luck, destiny"
+  },
+  {
+    "kanji": "雲",
+    "unicode": "96f2",
+    "meanings": [
+      "cloud"
+    ],
+    "image_file": "96f2.png",
+    "prompt": "kanji character 雲: cloud"
+  },
+  {
+    "kanji": "荏",
+    "unicode": "834f",
+    "meanings": [
+      "bean",
+      "perilla",
+      "herb",
+      "soft",
+      "pliable"
+    ],
+    "image_file": "834f.png",
+    "prompt": "kanji character 荏: bean, perilla, herb"
+  },
+  {
+    "kanji": "餌",
+    "unicode": "990c",
+    "meanings": [
+      "food",
+      "bait",
+      "prey",
+      "tempting profit"
+    ],
+    "image_file": "990c.png",
+    "prompt": "kanji character 餌: food, bait, prey"
+  },
+  {
+    "kanji": "叡",
+    "unicode": "53e1",
+    "meanings": [
+      "intelligence",
+      "imperial"
+    ],
+    "image_file": "53e1.png",
+    "prompt": "kanji character 叡: intelligence, imperial"
+  },
+  {
+    "kanji": "営",
+    "unicode": "55b6",
+    "meanings": [
+      "camp",
+      "perform",
+      "build",
+      "conduct (business)"
+    ],
+    "image_file": "55b6.png",
+    "prompt": "kanji character 営: camp, perform, build"
+  },
+  {
+    "kanji": "嬰",
+    "unicode": "5b30",
+    "meanings": [
+      "sharp (music)",
+      "baby"
+    ],
+    "image_file": "5b30.png",
+    "prompt": "kanji character 嬰: sharp (music), baby"
+  },
+  {
+    "kanji": "影",
+    "unicode": "5f71",
+    "meanings": [
+      "shadow",
+      "silhouette",
+      "phantom"
+    ],
+    "image_file": "5f71.png",
+    "prompt": "kanji character 影: shadow, silhouette, phantom"
+  },
+  {
+    "kanji": "映",
+    "unicode": "6620",
+    "meanings": [
+      "reflect",
+      "reflection",
+      "projection"
+    ],
+    "image_file": "6620.png",
+    "prompt": "kanji character 映: reflect, reflection, projection"
+  },
+  {
+    "kanji": "曳",
+    "unicode": "66f3",
+    "meanings": [
+      "pull",
+      "tug",
+      "jerk",
+      "admit",
+      "install",
+      "quote",
+      "refer to"
+    ],
+    "image_file": "66f3.png",
+    "prompt": "kanji character 曳: pull, tug, jerk"
+  },
+  {
+    "kanji": "栄",
+    "unicode": "6804",
+    "meanings": [
+      "flourish",
+      "prosperity",
+      "honor",
+      "glory",
+      "splendor"
+    ],
+    "image_file": "6804.png",
+    "prompt": "kanji character 栄: flourish, prosperity, honor"
+  },
+  {
+    "kanji": "永",
+    "unicode": "6c38",
+    "meanings": [
+      "eternity",
+      "long",
+      "lengthy"
+    ],
+    "image_file": "6c38.png",
+    "prompt": "kanji character 永: eternity, long, lengthy"
+  },
+  {
+    "kanji": "泳",
+    "unicode": "6cf3",
+    "meanings": [
+      "swim"
+    ],
+    "image_file": "6cf3.png",
+    "prompt": "kanji character 泳: swim"
+  },
+  {
+    "kanji": "洩",
+    "unicode": "6d29",
+    "meanings": [
+      "leak",
+      "escape"
+    ],
+    "image_file": "6d29.png",
+    "prompt": "kanji character 洩: leak, escape"
+  },
+  {
+    "kanji": "瑛",
+    "unicode": "745b",
+    "meanings": [
+      "sparkle of jewelry",
+      "crystal"
+    ],
+    "image_file": "745b.png",
+    "prompt": "kanji character 瑛: sparkle of jewelry, crystal"
+  },
+  {
+    "kanji": "盈",
+    "unicode": "76c8",
+    "meanings": [
+      "fullness",
+      "enough",
+      "pride",
+      "satisfy"
+    ],
+    "image_file": "76c8.png",
+    "prompt": "kanji character 盈: fullness, enough, pride"
+  },
+  {
+    "kanji": "穎",
+    "unicode": "7a4e",
+    "meanings": [
+      "heads of grain",
+      "cleverness"
+    ],
+    "image_file": "7a4e.png",
+    "prompt": "kanji character 穎: heads of grain, cleverness"
+  },
+  {
+    "kanji": "頴",
+    "unicode": "9834",
+    "meanings": [
+      "heads of grain",
+      "cleverness"
+    ],
+    "image_file": "9834.png",
+    "prompt": "kanji character 頴: heads of grain, cleverness"
+  },
+  {
+    "kanji": "英",
+    "unicode": "82f1",
+    "meanings": [
+      "England",
+      "English",
+      "hero",
+      "outstanding",
+      "calyx"
+    ],
+    "image_file": "82f1.png",
+    "prompt": "kanji character 英: England, English, hero"
+  },
+  {
+    "kanji": "衛",
+    "unicode": "885b",
+    "meanings": [
+      "defense",
+      "protection"
+    ],
+    "image_file": "885b.png",
+    "prompt": "kanji character 衛: defense, protection"
+  },
+  {
+    "kanji": "詠",
+    "unicode": "8a60",
+    "meanings": [
+      "recitation",
+      "poem",
+      "song",
+      "composing"
+    ],
+    "image_file": "8a60.png",
+    "prompt": "kanji character 詠: recitation, poem, song"
+  },
+  {
+    "kanji": "鋭",
+    "unicode": "92ed",
+    "meanings": [
+      "pointed",
+      "sharpness",
+      "edge",
+      "weapon",
+      "sharp",
+      "violent"
+    ],
+    "image_file": "92ed.png",
+    "prompt": "kanji character 鋭: pointed, sharpness, edge"
+  },
+  {
+    "kanji": "液",
+    "unicode": "6db2",
+    "meanings": [
+      "fluid",
+      "liquid",
+      "juice",
+      "sap",
+      "secretion"
+    ],
+    "image_file": "6db2.png",
+    "prompt": "kanji character 液: fluid, liquid, juice"
+  },
+  {
+    "kanji": "疫",
+    "unicode": "75ab",
+    "meanings": [
+      "epidemic"
+    ],
+    "image_file": "75ab.png",
+    "prompt": "kanji character 疫: epidemic"
+  },
+  {
+    "kanji": "益",
+    "unicode": "76ca",
+    "meanings": [
+      "benefit",
+      "gain",
+      "profit",
+      "advantage"
+    ],
+    "image_file": "76ca.png",
+    "prompt": "kanji character 益: benefit, gain, profit"
+  },
+  {
+    "kanji": "駅",
+    "unicode": "99c5",
+    "meanings": [
+      "station"
+    ],
+    "image_file": "99c5.png",
+    "prompt": "kanji character 駅: station"
+  },
+  {
+    "kanji": "悦",
+    "unicode": "60a6",
+    "meanings": [
+      "ecstasy",
+      "joy",
+      "rapture"
+    ],
+    "image_file": "60a6.png",
+    "prompt": "kanji character 悦: ecstasy, joy, rapture"
+  },
+  {
+    "kanji": "謁",
+    "unicode": "8b01",
+    "meanings": [
+      "audience",
+      "audience (with king)"
+    ],
+    "image_file": "8b01.png",
+    "prompt": "kanji character 謁: audience, audience (with king)"
+  },
+  {
+    "kanji": "越",
+    "unicode": "8d8a",
+    "meanings": [
+      "surpass",
+      "cross over",
+      "move to",
+      "exceed",
+      "Vietnam"
+    ],
+    "image_file": "8d8a.png",
+    "prompt": "kanji character 越: surpass, cross over, move to"
+  },
+  {
+    "kanji": "閲",
+    "unicode": "95b2",
+    "meanings": [
+      "review",
+      "inspection",
+      "revision"
+    ],
+    "image_file": "95b2.png",
+    "prompt": "kanji character 閲: review, inspection, revision"
+  },
+  {
+    "kanji": "榎",
+    "unicode": "698e",
+    "meanings": [
+      "lotus tree",
+      "nettle tree",
+      "hackberry"
+    ],
+    "image_file": "698e.png",
+    "prompt": "kanji character 榎: lotus tree, nettle tree, hackberry"
+  },
+  {
+    "kanji": "厭",
+    "unicode": "53ad",
+    "meanings": [
+      "get tired of",
+      "satiate",
+      "bore",
+      "dislike",
+      "disagreeable",
+      "unwelcome"
+    ],
+    "image_file": "53ad.png",
+    "prompt": "kanji character 厭: get tired of, satiate, bore"
+  },
+  {
+    "kanji": "円",
+    "unicode": "5186",
+    "meanings": [
+      "circle",
+      "yen",
+      "round"
+    ],
+    "image_file": "5186.png",
+    "prompt": "kanji character 円: circle, yen, round"
+  },
+  {
+    "kanji": "園",
+    "unicode": "5712",
+    "meanings": [
+      "park",
+      "garden",
+      "yard",
+      "farm"
+    ],
+    "image_file": "5712.png",
+    "prompt": "kanji character 園: park, garden, yard"
+  },
+  {
+    "kanji": "堰",
+    "unicode": "5830",
+    "meanings": [
+      "dam",
+      "prevent",
+      "stop up"
+    ],
+    "image_file": "5830.png",
+    "prompt": "kanji character 堰: dam, prevent, stop up"
+  },
+  {
+    "kanji": "奄",
+    "unicode": "5944",
+    "meanings": [
+      "cover",
+      "suffocate",
+      "obstruct"
+    ],
+    "image_file": "5944.png",
+    "prompt": "kanji character 奄: cover, suffocate, obstruct"
+  },
+  {
+    "kanji": "宴",
+    "unicode": "5bb4",
+    "meanings": [
+      "banquet",
+      "feast",
+      "party"
+    ],
+    "image_file": "5bb4.png",
+    "prompt": "kanji character 宴: banquet, feast, party"
+  },
+  {
+    "kanji": "延",
+    "unicode": "5ef6",
+    "meanings": [
+      "prolong",
+      "stretching"
+    ],
+    "image_file": "5ef6.png",
+    "prompt": "kanji character 延: prolong, stretching"
+  },
+  {
+    "kanji": "怨",
+    "unicode": "6028",
+    "meanings": [
+      "grudge",
+      "show resentment",
+      "be jealous"
+    ],
+    "image_file": "6028.png",
+    "prompt": "kanji character 怨: grudge, show resentment, be jealous"
+  },
+  {
+    "kanji": "掩",
+    "unicode": "63a9",
+    "meanings": [
+      "cover",
+      "conceal"
+    ],
+    "image_file": "63a9.png",
+    "prompt": "kanji character 掩: cover, conceal"
+  },
+  {
+    "kanji": "援",
+    "unicode": "63f4",
+    "meanings": [
+      "abet",
+      "help",
+      "save"
+    ],
+    "image_file": "63f4.png",
+    "prompt": "kanji character 援: abet, help, save"
+  },
+  {
+    "kanji": "沿",
+    "unicode": "6cbf",
+    "meanings": [
+      "run alongside",
+      "follow along",
+      "run along",
+      "lie along"
+    ],
+    "image_file": "6cbf.png",
+    "prompt": "kanji character 沿: run alongside, follow along, run along"
+  },
+  {
+    "kanji": "演",
+    "unicode": "6f14",
+    "meanings": [
+      "performance",
+      "act",
+      "play",
+      "render",
+      "stage"
+    ],
+    "image_file": "6f14.png",
+    "prompt": "kanji character 演: performance, act, play"
+  },
+  {
+    "kanji": "炎",
+    "unicode": "708e",
+    "meanings": [
+      "inflammation",
+      "flame",
+      "blaze"
+    ],
+    "image_file": "708e.png",
+    "prompt": "kanji character 炎: inflammation, flame, blaze"
+  },
+  {
+    "kanji": "焔",
+    "unicode": "7114",
+    "meanings": [
+      "flame",
+      "blaze"
+    ],
+    "image_file": "7114.png",
+    "prompt": "kanji character 焔: flame, blaze"
+  },
+  {
+    "kanji": "煙",
+    "unicode": "7159",
+    "meanings": [
+      "smoke"
+    ],
+    "image_file": "7159.png",
+    "prompt": "kanji character 煙: smoke"
+  },
+  {
+    "kanji": "燕",
+    "unicode": "71d5",
+    "meanings": [
+      "swallow (bird)"
+    ],
+    "image_file": "71d5.png",
+    "prompt": "kanji character 燕: swallow (bird)"
+  },
+  {
+    "kanji": "猿",
+    "unicode": "733f",
+    "meanings": [
+      "monkey"
+    ],
+    "image_file": "733f.png",
+    "prompt": "kanji character 猿: monkey"
+  },
+  {
+    "kanji": "縁",
+    "unicode": "7e01",
+    "meanings": [
+      "affinity",
+      "relation",
+      "connection",
+      "edge",
+      "border",
+      "verge",
+      "brink"
+    ],
+    "image_file": "7e01.png",
+    "prompt": "kanji character 縁: affinity, relation, connection"
+  },
+  {
+    "kanji": "艶",
+    "unicode": "8276",
+    "meanings": [
+      "glossy",
+      "luster",
+      "glaze",
+      "polish",
+      "charm",
+      "colorful",
+      "captivating"
+    ],
+    "image_file": "8276.png",
+    "prompt": "kanji character 艶: glossy, luster, glaze"
+  },
+  {
+    "kanji": "苑",
+    "unicode": "82d1",
+    "meanings": [
+      "garden",
+      "farm",
+      "park"
+    ],
+    "image_file": "82d1.png",
+    "prompt": "kanji character 苑: garden, farm, park"
+  },
+  {
+    "kanji": "薗",
+    "unicode": "8597",
+    "meanings": [
+      "garden",
+      "yard",
+      "farm"
+    ],
+    "image_file": "8597.png",
+    "prompt": "kanji character 薗: garden, yard, farm"
+  },
+  {
+    "kanji": "遠",
+    "unicode": "9060",
+    "meanings": [
+      "distant",
+      "far"
+    ],
+    "image_file": "9060.png",
+    "prompt": "kanji character 遠: distant, far"
+  },
+  {
+    "kanji": "鉛",
+    "unicode": "925b",
+    "meanings": [
+      "lead"
+    ],
+    "image_file": "925b.png",
+    "prompt": "kanji character 鉛: lead"
+  },
+  {
+    "kanji": "鴛",
+    "unicode": "9d1b",
+    "meanings": [
+      "male mandarin duck"
+    ],
+    "image_file": "9d1b.png",
+    "prompt": "kanji character 鴛: male mandarin duck"
+  },
+  {
+    "kanji": "塩",
+    "unicode": "5869",
+    "meanings": [
+      "salt"
+    ],
+    "image_file": "5869.png",
+    "prompt": "kanji character 塩: salt"
+  },
+  {
+    "kanji": "於",
+    "unicode": "65bc",
+    "meanings": [
+      "at",
+      "in",
+      "on",
+      "as for"
+    ],
+    "image_file": "65bc.png",
+    "prompt": "kanji character 於: at, in, on"
+  },
+  {
+    "kanji": "汚",
+    "unicode": "6c5a",
+    "meanings": [
+      "dirty",
+      "pollute",
+      "disgrace",
+      "rape",
+      "defile"
+    ],
+    "image_file": "6c5a.png",
+    "prompt": "kanji character 汚: dirty, pollute, disgrace"
+  },
+  {
+    "kanji": "甥",
+    "unicode": "7525",
+    "meanings": [
+      "nephew"
+    ],
+    "image_file": "7525.png",
+    "prompt": "kanji character 甥: nephew"
+  },
+  {
+    "kanji": "凹",
+    "unicode": "51f9",
+    "meanings": [
+      "concave",
+      "hollow",
+      "sunken"
+    ],
+    "image_file": "51f9.png",
+    "prompt": "kanji character 凹: concave, hollow, sunken"
+  },
+  {
+    "kanji": "央",
+    "unicode": "592e",
+    "meanings": [
+      "center",
+      "middle"
+    ],
+    "image_file": "592e.png",
+    "prompt": "kanji character 央: center, middle"
+  },
+  {
+    "kanji": "奥",
+    "unicode": "5965",
+    "meanings": [
+      "heart",
+      "interior"
+    ],
+    "image_file": "5965.png",
+    "prompt": "kanji character 奥: heart, interior"
+  },
+  {
+    "kanji": "往",
+    "unicode": "5f80",
+    "meanings": [
+      "journey",
+      "travel",
+      "chase away",
+      "let go",
+      "going",
+      "before",
+      "formerly"
+    ],
+    "image_file": "5f80.png",
+    "prompt": "kanji character 往: journey, travel, chase away"
+  },
+  {
+    "kanji": "応",
+    "unicode": "5fdc",
+    "meanings": [
+      "apply",
+      "answer",
+      "yes",
+      "OK",
+      "reply",
+      "accept"
+    ],
+    "image_file": "5fdc.png",
+    "prompt": "kanji character 応: apply, answer, yes"
+  },
+  {
+    "kanji": "押",
+    "unicode": "62bc",
+    "meanings": [
+      "push",
+      "stop",
+      "check",
+      "subdue",
+      "attach",
+      "seize",
+      "weight",
+      "shove",
+      "press",
+      "seal",
+      "do in spite of"
+    ],
+    "image_file": "62bc.png",
+    "prompt": "kanji character 押: push, stop, check"
+  },
+  {
+    "kanji": "旺",
+    "unicode": "65fa",
+    "meanings": [
+      "flourishing",
+      "successful",
+      "beautiful",
+      "vigorous"
+    ],
+    "image_file": "65fa.png",
+    "prompt": "kanji character 旺: flourishing, successful, beautiful"
+  },
+  {
+    "kanji": "横",
+    "unicode": "6a2a",
+    "meanings": [
+      "sideways",
+      "side",
+      "horizontal",
+      "width",
+      "woof",
+      "unreasonable",
+      "perverse"
+    ],
+    "image_file": "6a2a.png",
+    "prompt": "kanji character 横: sideways, side, horizontal"
+  },
+  {
+    "kanji": "欧",
+    "unicode": "6b27",
+    "meanings": [
+      "Europe"
+    ],
+    "image_file": "6b27.png",
+    "prompt": "kanji character 欧: Europe"
+  },
+  {
+    "kanji": "殴",
+    "unicode": "6bb4",
+    "meanings": [
+      "assault",
+      "hit",
+      "beat",
+      "thrash"
+    ],
+    "image_file": "6bb4.png",
+    "prompt": "kanji character 殴: assault, hit, beat"
+  },
+  {
+    "kanji": "王",
+    "unicode": "738b",
+    "meanings": [
+      "king",
+      "rule",
+      "magnate"
+    ],
+    "image_file": "738b.png",
+    "prompt": "kanji character 王: king, rule, magnate"
+  },
+  {
+    "kanji": "翁",
+    "unicode": "7fc1",
+    "meanings": [
+      "venerable old man"
+    ],
+    "image_file": "7fc1.png",
+    "prompt": "kanji character 翁: venerable old man"
+  },
+  {
+    "kanji": "襖",
+    "unicode": "8956",
+    "meanings": [
+      "opaque sliding door"
+    ],
+    "image_file": "8956.png",
+    "prompt": "kanji character 襖: opaque sliding door"
+  },
+  {
+    "kanji": "鴬",
+    "unicode": "9d2c",
+    "meanings": [
+      "nightingale",
+      "bush warbler"
+    ],
+    "image_file": "9d2c.png",
+    "prompt": "kanji character 鴬: nightingale, bush warbler"
+  },
+  {
+    "kanji": "鴎",
+    "unicode": "9d0e",
+    "meanings": [
+      "seagull"
+    ],
+    "image_file": "9d0e.png",
+    "prompt": "kanji character 鴎: seagull"
+  },
+  {
+    "kanji": "黄",
+    "unicode": "9ec4",
+    "meanings": [
+      "yellow"
+    ],
+    "image_file": "9ec4.png",
+    "prompt": "kanji character 黄: yellow"
+  },
+  {
+    "kanji": "岡",
+    "unicode": "5ca1",
+    "meanings": [
+      "mount",
+      "hill",
+      "knoll"
+    ],
+    "image_file": "5ca1.png",
+    "prompt": "kanji character 岡: mount, hill, knoll"
+  },
+  {
+    "kanji": "沖",
+    "unicode": "6c96",
+    "meanings": [
+      "open sea",
+      "offing",
+      "rise high into sky"
+    ],
+    "image_file": "6c96.png",
+    "prompt": "kanji character 沖: open sea, offing, rise high into sky"
+  },
+  {
+    "kanji": "荻",
+    "unicode": "837b",
+    "meanings": [
+      "reed",
+      "rush"
+    ],
+    "image_file": "837b.png",
+    "prompt": "kanji character 荻: reed, rush"
+  },
+  {
+    "kanji": "億",
+    "unicode": "5104",
+    "meanings": [
+      "hundred million",
+      "10**8"
+    ],
+    "image_file": "5104.png",
+    "prompt": "kanji character 億: hundred million, 10**8"
+  },
+  {
+    "kanji": "屋",
+    "unicode": "5c4b",
+    "meanings": [
+      "roof",
+      "house",
+      "shop",
+      "dealer",
+      "seller"
+    ],
+    "image_file": "5c4b.png",
+    "prompt": "kanji character 屋: roof, house, shop"
+  },
+  {
+    "kanji": "憶",
+    "unicode": "61b6",
+    "meanings": [
+      "recollection",
+      "think",
+      "remember"
+    ],
+    "image_file": "61b6.png",
+    "prompt": "kanji character 憶: recollection, think, remember"
+  },
+  {
+    "kanji": "臆",
+    "unicode": "81c6",
+    "meanings": [
+      "timidity",
+      "heart",
+      "mind",
+      "fear",
+      "cowardly"
+    ],
+    "image_file": "81c6.png",
+    "prompt": "kanji character 臆: timidity, heart, mind"
+  },
+  {
+    "kanji": "桶",
+    "unicode": "6876",
+    "meanings": [
+      "tub",
+      "bucket"
+    ],
+    "image_file": "6876.png",
+    "prompt": "kanji character 桶: tub, bucket"
+  },
+  {
+    "kanji": "牡",
+    "unicode": "7261",
+    "meanings": [
+      "male"
+    ],
+    "image_file": "7261.png",
+    "prompt": "kanji character 牡: male"
+  },
+  {
+    "kanji": "乙",
+    "unicode": "4e59",
+    "meanings": [
+      "the latter",
+      "duplicate",
+      "strange",
+      "witty",
+      "fishhook radical (no. 5)"
+    ],
+    "image_file": "4e59.png",
+    "prompt": "kanji character 乙: the latter, duplicate, strange"
+  },
+  {
+    "kanji": "俺",
+    "unicode": "4ffa",
+    "meanings": [
+      "I",
+      "myself"
+    ],
+    "image_file": "4ffa.png",
+    "prompt": "kanji character 俺: I, myself"
+  },
+  {
+    "kanji": "卸",
+    "unicode": "5378",
+    "meanings": [
+      "wholesale"
+    ],
+    "image_file": "5378.png",
+    "prompt": "kanji character 卸: wholesale"
+  },
+  {
+    "kanji": "恩",
+    "unicode": "6069",
+    "meanings": [
+      "grace",
+      "kindness",
+      "goodness",
+      "favor",
+      "mercy",
+      "blessing",
+      "benefit"
+    ],
+    "image_file": "6069.png",
+    "prompt": "kanji character 恩: grace, kindness, goodness"
+  },
+  {
+    "kanji": "温",
+    "unicode": "6e29",
+    "meanings": [
+      "warm"
+    ],
+    "image_file": "6e29.png",
+    "prompt": "kanji character 温: warm"
+  },
+  {
+    "kanji": "穏",
+    "unicode": "7a4f",
+    "meanings": [
+      "calm",
+      "quiet",
+      "moderation"
+    ],
+    "image_file": "7a4f.png",
+    "prompt": "kanji character 穏: calm, quiet, moderation"
+  },
+  {
+    "kanji": "音",
+    "unicode": "97f3",
+    "meanings": [
+      "sound",
+      "noise"
+    ],
+    "image_file": "97f3.png",
+    "prompt": "kanji character 音: sound, noise"
+  },
+  {
+    "kanji": "下",
+    "unicode": "4e0b",
+    "meanings": [
+      "below",
+      "down",
+      "descend",
+      "give",
+      "low",
+      "inferior"
+    ],
+    "image_file": "4e0b.png",
+    "prompt": "kanji character 下: below, down, descend"
+  },
+  {
+    "kanji": "化",
+    "unicode": "5316",
+    "meanings": [
+      "change",
+      "take the form of",
+      "influence",
+      "enchant",
+      "delude",
+      "-ization"
+    ],
+    "image_file": "5316.png",
+    "prompt": "kanji character 化: change, take the form of, influence"
+  },
+  {
+    "kanji": "仮",
+    "unicode": "4eee",
+    "meanings": [
+      "sham",
+      "temporary",
+      "interim",
+      "assumed (name)",
+      "informal"
+    ],
+    "image_file": "4eee.png",
+    "prompt": "kanji character 仮: sham, temporary, interim"
+  },
+  {
+    "kanji": "何",
+    "unicode": "4f55",
+    "meanings": [
+      "what"
+    ],
+    "image_file": "4f55.png",
+    "prompt": "kanji character 何: what"
+  },
+  {
+    "kanji": "伽",
+    "unicode": "4f3d",
+    "meanings": [
+      "nursing",
+      "attending",
+      "entertainer"
+    ],
+    "image_file": "4f3d.png",
+    "prompt": "kanji character 伽: nursing, attending, entertainer"
+  },
+  {
+    "kanji": "価",
+    "unicode": "4fa1",
+    "meanings": [
+      "value",
+      "price"
+    ],
+    "image_file": "4fa1.png",
+    "prompt": "kanji character 価: value, price"
+  },
+  {
+    "kanji": "佳",
+    "unicode": "4f73",
+    "meanings": [
+      "excellent",
+      "beautiful",
+      "good",
+      "pleasing",
+      "skilled"
+    ],
+    "image_file": "4f73.png",
+    "prompt": "kanji character 佳: excellent, beautiful, good"
+  },
+  {
+    "kanji": "加",
+    "unicode": "52a0",
+    "meanings": [
+      "add",
+      "addition",
+      "increase",
+      "join",
+      "include",
+      "Canada"
+    ],
+    "image_file": "52a0.png",
+    "prompt": "kanji character 加: add, addition, increase"
+  },
+  {
+    "kanji": "可",
+    "unicode": "53ef",
+    "meanings": [
+      "can",
+      "passable",
+      "approval"
+    ],
+    "image_file": "53ef.png",
+    "prompt": "kanji character 可: can, passable, approval"
+  },
+  {
+    "kanji": "嘉",
+    "unicode": "5609",
+    "meanings": [
+      "applaud",
+      "praise",
+      "esteem",
+      "happy",
+      "auspicious"
+    ],
+    "image_file": "5609.png",
+    "prompt": "kanji character 嘉: applaud, praise, esteem"
+  },
+  {
+    "kanji": "夏",
+    "unicode": "590f",
+    "meanings": [
+      "summer"
+    ],
+    "image_file": "590f.png",
+    "prompt": "kanji character 夏: summer"
+  },
+  {
+    "kanji": "嫁",
+    "unicode": "5ac1",
+    "meanings": [
+      "marry into",
+      "bride"
+    ],
+    "image_file": "5ac1.png",
+    "prompt": "kanji character 嫁: marry into, bride"
+  },
+  {
+    "kanji": "家",
+    "unicode": "5bb6",
+    "meanings": [
+      "house",
+      "home",
+      "family",
+      "professional",
+      "expert",
+      "performer"
+    ],
+    "image_file": "5bb6.png",
+    "prompt": "kanji character 家: house, home, family"
+  },
+  {
+    "kanji": "寡",
+    "unicode": "5be1",
+    "meanings": [
+      "widow",
+      "minority",
+      "few"
+    ],
+    "image_file": "5be1.png",
+    "prompt": "kanji character 寡: widow, minority, few"
+  },
+  {
+    "kanji": "科",
+    "unicode": "79d1",
+    "meanings": [
+      "department",
+      "course",
+      "section"
+    ],
+    "image_file": "79d1.png",
+    "prompt": "kanji character 科: department, course, section"
+  },
+  {
+    "kanji": "暇",
+    "unicode": "6687",
+    "meanings": [
+      "spare time",
+      "rest",
+      "leisure",
+      "time",
+      "leave of absence"
+    ],
+    "image_file": "6687.png",
+    "prompt": "kanji character 暇: spare time, rest, leisure"
+  },
+  {
+    "kanji": "果",
+    "unicode": "679c",
+    "meanings": [
+      "fruit",
+      "reward",
+      "carry out",
+      "achieve",
+      "complete",
+      "end",
+      "finish",
+      "succeed"
+    ],
+    "image_file": "679c.png",
+    "prompt": "kanji character 果: fruit, reward, carry out"
+  },
+  {
+    "kanji": "架",
+    "unicode": "67b6",
+    "meanings": [
+      "erect",
+      "frame",
+      "mount",
+      "support",
+      "shelf",
+      "construct"
+    ],
+    "image_file": "67b6.png",
+    "prompt": "kanji character 架: erect, frame, mount"
+  },
+  {
+    "kanji": "歌",
+    "unicode": "6b4c",
+    "meanings": [
+      "song",
+      "sing"
+    ],
+    "image_file": "6b4c.png",
+    "prompt": "kanji character 歌: song, sing"
+  },
+  {
+    "kanji": "河",
+    "unicode": "6cb3",
+    "meanings": [
+      "river"
+    ],
+    "image_file": "6cb3.png",
+    "prompt": "kanji character 河: river"
+  },
+  {
+    "kanji": "火",
+    "unicode": "706b",
+    "meanings": [
+      "fire"
+    ],
+    "image_file": "706b.png",
+    "prompt": "kanji character 火: fire"
+  },
+  {
+    "kanji": "珂",
+    "unicode": "73c2",
+    "meanings": [
+      "jewel"
+    ],
+    "image_file": "73c2.png",
+    "prompt": "kanji character 珂: jewel"
+  },
+  {
+    "kanji": "禍",
+    "unicode": "798d",
+    "meanings": [
+      "calamity",
+      "misfortune",
+      "evil",
+      "curse"
+    ],
+    "image_file": "798d.png",
+    "prompt": "kanji character 禍: calamity, misfortune, evil"
+  },
+  {
+    "kanji": "禾",
+    "unicode": "79be",
+    "meanings": [
+      "two-branch tree radical (no. 115)"
+    ],
+    "image_file": "79be.png",
+    "prompt": "kanji character 禾: two-branch tree radical (no. 115)"
+  },
+  {
+    "kanji": "稼",
+    "unicode": "7a3c",
+    "meanings": [
+      "earnings",
+      "work",
+      "earn money"
+    ],
+    "image_file": "7a3c.png",
+    "prompt": "kanji character 稼: earnings, work, earn money"
+  },
+  {
+    "kanji": "箇",
+    "unicode": "7b87",
+    "meanings": [
+      "counter for articles"
+    ],
+    "image_file": "7b87.png",
+    "prompt": "kanji character 箇: counter for articles"
+  },
+  {
+    "kanji": "花",
+    "unicode": "82b1",
+    "meanings": [
+      "flower"
+    ],
+    "image_file": "82b1.png",
+    "prompt": "kanji character 花: flower"
+  },
+  {
+    "kanji": "苛",
+    "unicode": "82db",
+    "meanings": [
+      "torment",
+      "scold",
+      "chastise"
+    ],
+    "image_file": "82db.png",
+    "prompt": "kanji character 苛: torment, scold, chastise"
+  },
+  {
+    "kanji": "茄",
+    "unicode": "8304",
+    "meanings": [
+      "eggplant"
+    ],
+    "image_file": "8304.png",
+    "prompt": "kanji character 茄: eggplant"
+  },
+  {
+    "kanji": "荷",
+    "unicode": "8377",
+    "meanings": [
+      "baggage",
+      "shoulder-pole load",
+      "bear (a burden)",
+      "shoulder (a gun)",
+      "load",
+      "cargo",
+      "freight"
+    ],
+    "image_file": "8377.png",
+    "prompt": "kanji character 荷: baggage, shoulder-pole load, bear (a burden)"
+  },
+  {
+    "kanji": "華",
+    "unicode": "83ef",
+    "meanings": [
+      "splendor",
+      "flower",
+      "petal",
+      "shine",
+      "luster",
+      "ostentatious",
+      "showy",
+      "gay",
+      "gorgeous"
+    ],
+    "image_file": "83ef.png",
+    "prompt": "kanji character 華: splendor, flower, petal"
+  },
+  {
+    "kanji": "菓",
+    "unicode": "83d3",
+    "meanings": [
+      "candy",
+      "cakes",
+      "fruit"
+    ],
+    "image_file": "83d3.png",
+    "prompt": "kanji character 菓: candy, cakes, fruit"
+  },
+  {
+    "kanji": "蝦",
+    "unicode": "8766",
+    "meanings": [
+      "shrimp",
+      "prawn",
+      "lobster"
+    ],
+    "image_file": "8766.png",
+    "prompt": "kanji character 蝦: shrimp, prawn, lobster"
+  },
+  {
+    "kanji": "課",
+    "unicode": "8ab2",
+    "meanings": [
+      "chapter",
+      "lesson",
+      "section",
+      "department",
+      "division",
+      "counter for chapters (of a book)"
+    ],
+    "image_file": "8ab2.png",
+    "prompt": "kanji character 課: chapter, lesson, section"
+  },
+  {
+    "kanji": "嘩",
+    "unicode": "5629",
+    "meanings": [
+      "noisy"
+    ],
+    "image_file": "5629.png",
+    "prompt": "kanji character 嘩: noisy"
+  },
+  {
+    "kanji": "貨",
+    "unicode": "8ca8",
+    "meanings": [
+      "freight",
+      "goods",
+      "property"
+    ],
+    "image_file": "8ca8.png",
+    "prompt": "kanji character 貨: freight, goods, property"
+  },
+  {
+    "kanji": "迦",
+    "unicode": "8fe6",
+    "meanings": [
+      "(used phonetically)"
+    ],
+    "image_file": "8fe6.png",
+    "prompt": "kanji character 迦: (used phonetically)"
+  },
+  {
+    "kanji": "過",
+    "unicode": "904e",
+    "meanings": [
+      "overdo",
+      "exceed",
+      "go beyond",
+      "error"
+    ],
+    "image_file": "904e.png",
+    "prompt": "kanji character 過: overdo, exceed, go beyond"
+  },
+  {
+    "kanji": "霞",
+    "unicode": "971e",
+    "meanings": [
+      "be hazy",
+      "grow dim",
+      "blurred"
+    ],
+    "image_file": "971e.png",
+    "prompt": "kanji character 霞: be hazy, grow dim, blurred"
+  },
+  {
+    "kanji": "蚊",
+    "unicode": "868a",
+    "meanings": [
+      "mosquito"
+    ],
+    "image_file": "868a.png",
+    "prompt": "kanji character 蚊: mosquito"
+  },
+  {
+    "kanji": "俄",
+    "unicode": "4fc4",
+    "meanings": [
+      "sudden",
+      "abrupt",
+      "improvised"
+    ],
+    "image_file": "4fc4.png",
+    "prompt": "kanji character 俄: sudden, abrupt, improvised"
+  },
+  {
+    "kanji": "峨",
+    "unicode": "5ce8",
+    "meanings": [
+      "high mountain"
+    ],
+    "image_file": "5ce8.png",
+    "prompt": "kanji character 峨: high mountain"
+  },
+  {
+    "kanji": "我",
+    "unicode": "6211",
+    "meanings": [
+      "ego",
+      "I",
+      "selfish",
+      "our",
+      "oneself"
+    ],
+    "image_file": "6211.png",
+    "prompt": "kanji character 我: ego, I, selfish"
+  },
+  {
+    "kanji": "牙",
+    "unicode": "7259",
+    "meanings": [
+      "tusk",
+      "fang",
+      "tusk radical (no. 92)"
+    ],
+    "image_file": "7259.png",
+    "prompt": "kanji character 牙: tusk, fang, tusk radical (no. 92)"
+  },
+  {
+    "kanji": "画",
+    "unicode": "753b",
+    "meanings": [
+      "brush-stroke",
+      "picture"
+    ],
+    "image_file": "753b.png",
+    "prompt": "kanji character 画: brush-stroke, picture"
+  },
+  {
+    "kanji": "臥",
+    "unicode": "81e5",
+    "meanings": [
+      "bend down",
+      "bow",
+      "lie prostrate"
+    ],
+    "image_file": "81e5.png",
+    "prompt": "kanji character 臥: bend down, bow, lie prostrate"
+  },
+  {
+    "kanji": "芽",
+    "unicode": "82bd",
+    "meanings": [
+      "bud",
+      "sprout",
+      "spear",
+      "germ"
+    ],
+    "image_file": "82bd.png",
+    "prompt": "kanji character 芽: bud, sprout, spear"
+  },
+  {
+    "kanji": "蛾",
+    "unicode": "86fe",
+    "meanings": [
+      "moth"
+    ],
+    "image_file": "86fe.png",
+    "prompt": "kanji character 蛾: moth"
+  },
+  {
+    "kanji": "賀",
+    "unicode": "8cc0",
+    "meanings": [
+      "congratulations",
+      "joy"
+    ],
+    "image_file": "8cc0.png",
+    "prompt": "kanji character 賀: congratulations, joy"
+  },
+  {
+    "kanji": "雅",
+    "unicode": "96c5",
+    "meanings": [
+      "gracious",
+      "elegant",
+      "graceful",
+      "refined"
+    ],
+    "image_file": "96c5.png",
+    "prompt": "kanji character 雅: gracious, elegant, graceful"
+  },
+  {
+    "kanji": "餓",
+    "unicode": "9913",
+    "meanings": [
+      "starve",
+      "hungry",
+      "thirst"
+    ],
+    "image_file": "9913.png",
+    "prompt": "kanji character 餓: starve, hungry, thirst"
+  },
+  {
+    "kanji": "駕",
+    "unicode": "99d5",
+    "meanings": [
+      "vehicle",
+      "palanquin",
+      "litter",
+      "hitch up an animal"
+    ],
+    "image_file": "99d5.png",
+    "prompt": "kanji character 駕: vehicle, palanquin, litter"
+  },
+  {
+    "kanji": "介",
+    "unicode": "4ecb",
+    "meanings": [
+      "jammed in",
+      "shellfish",
+      "mediate",
+      "concern oneself with"
+    ],
+    "image_file": "4ecb.png",
+    "prompt": "kanji character 介: jammed in, shellfish, mediate"
+  },
+  {
+    "kanji": "会",
+    "unicode": "4f1a",
+    "meanings": [
+      "meeting",
+      "meet",
+      "party",
+      "association",
+      "interview",
+      "join"
+    ],
+    "image_file": "4f1a.png",
+    "prompt": "kanji character 会: meeting, meet, party"
+  },
+  {
+    "kanji": "解",
+    "unicode": "89e3",
+    "meanings": [
+      "unravel",
+      "notes",
+      "key",
+      "explanation",
+      "understanding",
+      "untie",
+      "undo",
+      "solve",
+      "answer",
+      "cancel",
+      "absolve",
+      "explain",
+      "minute"
+    ],
+    "image_file": "89e3.png",
+    "prompt": "kanji character 解: unravel, notes, key"
+  },
+  {
+    "kanji": "回",
+    "unicode": "56de",
+    "meanings": [
+      "-times",
+      "round",
+      "game",
+      "revolve",
+      "counter for occurrences"
+    ],
+    "image_file": "56de.png",
+    "prompt": "kanji character 回: -times, round, game"
+  },
+  {
+    "kanji": "塊",
+    "unicode": "584a",
+    "meanings": [
+      "clod",
+      "lump",
+      "chunk",
+      "clot",
+      "mass"
+    ],
+    "image_file": "584a.png",
+    "prompt": "kanji character 塊: clod, lump, chunk"
+  },
+  {
+    "kanji": "壊",
+    "unicode": "58ca",
+    "meanings": [
+      "demolition",
+      "break",
+      "destroy"
+    ],
+    "image_file": "58ca.png",
+    "prompt": "kanji character 壊: demolition, break, destroy"
+  },
+  {
+    "kanji": "廻",
+    "unicode": "5efb",
+    "meanings": [
+      "round",
+      "game",
+      "revolve",
+      "go around",
+      "circumference"
+    ],
+    "image_file": "5efb.png",
+    "prompt": "kanji character 廻: round, game, revolve"
+  },
+  {
+    "kanji": "快",
+    "unicode": "5feb",
+    "meanings": [
+      "cheerful",
+      "pleasant",
+      "agreeable",
+      "comfortable"
+    ],
+    "image_file": "5feb.png",
+    "prompt": "kanji character 快: cheerful, pleasant, agreeable"
+  },
+  {
+    "kanji": "怪",
+    "unicode": "602a",
+    "meanings": [
+      "suspicious",
+      "mystery",
+      "apparition"
+    ],
+    "image_file": "602a.png",
+    "prompt": "kanji character 怪: suspicious, mystery, apparition"
+  },
+  {
+    "kanji": "悔",
+    "unicode": "6094",
+    "meanings": [
+      "repent",
+      "regret"
+    ],
+    "image_file": "6094.png",
+    "prompt": "kanji character 悔: repent, regret"
+  },
+  {
+    "kanji": "恢",
+    "unicode": "6062",
+    "meanings": [
+      "wide",
+      "large",
+      "enlarge"
+    ],
+    "image_file": "6062.png",
+    "prompt": "kanji character 恢: wide, large, enlarge"
+  },
+  {
+    "kanji": "懐",
+    "unicode": "61d0",
+    "meanings": [
+      "feelings",
+      "heart",
+      "yearn",
+      "miss someone",
+      "become attached to",
+      "bosom",
+      "breast",
+      "pocket"
+    ],
+    "image_file": "61d0.png",
+    "prompt": "kanji character 懐: feelings, heart, yearn"
+  },
+  {
+    "kanji": "戒",
+    "unicode": "6212",
+    "meanings": [
+      "commandment"
+    ],
+    "image_file": "6212.png",
+    "prompt": "kanji character 戒: commandment"
+  },
+  {
+    "kanji": "拐",
+    "unicode": "62d0",
+    "meanings": [
+      "kidnap",
+      "falsify"
+    ],
+    "image_file": "62d0.png",
+    "prompt": "kanji character 拐: kidnap, falsify"
+  },
+  {
+    "kanji": "改",
+    "unicode": "6539",
+    "meanings": [
+      "reformation",
+      "change",
+      "modify",
+      "mend",
+      "renew",
+      "examine",
+      "inspect",
+      "search"
+    ],
+    "image_file": "6539.png",
+    "prompt": "kanji character 改: reformation, change, modify"
+  },
+  {
+    "kanji": "魁",
+    "unicode": "9b41",
+    "meanings": [
+      "charging ahead of others"
+    ],
+    "image_file": "9b41.png",
+    "prompt": "kanji character 魁: charging ahead of others"
+  },
+  {
+    "kanji": "晦",
+    "unicode": "6666",
+    "meanings": [
+      "dark",
+      "disappear"
+    ],
+    "image_file": "6666.png",
+    "prompt": "kanji character 晦: dark, disappear"
+  },
+  {
+    "kanji": "械",
+    "unicode": "68b0",
+    "meanings": [
+      "contraption",
+      "fetter",
+      "machine",
+      "instrument"
+    ],
+    "image_file": "68b0.png",
+    "prompt": "kanji character 械: contraption, fetter, machine"
+  },
+  {
+    "kanji": "海",
+    "unicode": "6d77",
+    "meanings": [
+      "sea",
+      "ocean"
+    ],
+    "image_file": "6d77.png",
+    "prompt": "kanji character 海: sea, ocean"
+  },
+  {
+    "kanji": "灰",
+    "unicode": "7070",
+    "meanings": [
+      "ashes",
+      "puckery juice",
+      "cremate"
+    ],
+    "image_file": "7070.png",
+    "prompt": "kanji character 灰: ashes, puckery juice, cremate"
+  },
+  {
+    "kanji": "界",
+    "unicode": "754c",
+    "meanings": [
+      "world",
+      "boundary"
+    ],
+    "image_file": "754c.png",
+    "prompt": "kanji character 界: world, boundary"
+  },
+  {
+    "kanji": "皆",
+    "unicode": "7686",
+    "meanings": [
+      "all",
+      "everything"
+    ],
+    "image_file": "7686.png",
+    "prompt": "kanji character 皆: all, everything"
+  },
+  {
+    "kanji": "絵",
+    "unicode": "7d75",
+    "meanings": [
+      "picture",
+      "drawing",
+      "painting",
+      "sketch"
+    ],
+    "image_file": "7d75.png",
+    "prompt": "kanji character 絵: picture, drawing, painting"
+  },
+  {
+    "kanji": "芥",
+    "unicode": "82a5",
+    "meanings": [
+      "mustard",
+      "rape",
+      "dust",
+      "trash",
+      "rubbish"
+    ],
+    "image_file": "82a5.png",
+    "prompt": "kanji character 芥: mustard, rape, dust"
+  },
+  {
+    "kanji": "蟹",
+    "unicode": "87f9",
+    "meanings": [
+      "crab"
+    ],
+    "image_file": "87f9.png",
+    "prompt": "kanji character 蟹: crab"
+  },
+  {
+    "kanji": "開",
+    "unicode": "958b",
+    "meanings": [
+      "open",
+      "unfold",
+      "unseal"
+    ],
+    "image_file": "958b.png",
+    "prompt": "kanji character 開: open, unfold, unseal"
+  },
+  {
+    "kanji": "階",
+    "unicode": "968e",
+    "meanings": [
+      "storey",
+      "stair",
+      "counter for storeys of a building"
+    ],
+    "image_file": "968e.png",
+    "prompt": "kanji character 階: storey, stair, counter for storeys of a building"
+  },
+  {
+    "kanji": "貝",
+    "unicode": "8c9d",
+    "meanings": [
+      "shellfish"
+    ],
+    "image_file": "8c9d.png",
+    "prompt": "kanji character 貝: shellfish"
+  },
+  {
+    "kanji": "凱",
+    "unicode": "51f1",
+    "meanings": [
+      "victory song"
+    ],
+    "image_file": "51f1.png",
+    "prompt": "kanji character 凱: victory song"
+  },
+  {
+    "kanji": "劾",
+    "unicode": "52be",
+    "meanings": [
+      "censure",
+      "criminal investigation"
+    ],
+    "image_file": "52be.png",
+    "prompt": "kanji character 劾: censure, criminal investigation"
+  },
+  {
+    "kanji": "外",
+    "unicode": "5916",
+    "meanings": [
+      "outside"
+    ],
+    "image_file": "5916.png",
+    "prompt": "kanji character 外: outside"
+  },
+  {
+    "kanji": "咳",
+    "unicode": "54b3",
+    "meanings": [
+      "cough",
+      "clear throat"
+    ],
+    "image_file": "54b3.png",
+    "prompt": "kanji character 咳: cough, clear throat"
+  },
+  {
+    "kanji": "害",
+    "unicode": "5bb3",
+    "meanings": [
+      "harm",
+      "injury"
+    ],
+    "image_file": "5bb3.png",
+    "prompt": "kanji character 害: harm, injury"
+  },
+  {
+    "kanji": "崖",
+    "unicode": "5d16",
+    "meanings": [
+      "cliff",
+      "bluff",
+      "precipice"
+    ],
+    "image_file": "5d16.png",
+    "prompt": "kanji character 崖: cliff, bluff, precipice"
+  },
+  {
+    "kanji": "慨",
+    "unicode": "6168",
+    "meanings": [
+      "rue",
+      "be sad",
+      "sigh",
+      "lament"
+    ],
+    "image_file": "6168.png",
+    "prompt": "kanji character 慨: rue, be sad, sigh"
+  },
+  {
+    "kanji": "概",
+    "unicode": "6982",
+    "meanings": [
+      "outline",
+      "condition",
+      "approximation",
+      "generally"
+    ],
+    "image_file": "6982.png",
+    "prompt": "kanji character 概: outline, condition, approximation"
+  },
+  {
+    "kanji": "涯",
+    "unicode": "6daf",
+    "meanings": [
+      "horizon",
+      "shore",
+      "limit",
+      "bound"
+    ],
+    "image_file": "6daf.png",
+    "prompt": "kanji character 涯: horizon, shore, limit"
+  },
+  {
+    "kanji": "碍",
+    "unicode": "788d",
+    "meanings": [
+      "obstacle"
+    ],
+    "image_file": "788d.png",
+    "prompt": "kanji character 碍: obstacle"
+  },
+  {
+    "kanji": "蓋",
+    "unicode": "84cb",
+    "meanings": [
+      "cover",
+      "lid",
+      "flap"
+    ],
+    "image_file": "84cb.png",
+    "prompt": "kanji character 蓋: cover, lid, flap"
+  },
+  {
+    "kanji": "街",
+    "unicode": "8857",
+    "meanings": [
+      "boulevard",
+      "street",
+      "town"
+    ],
+    "image_file": "8857.png",
+    "prompt": "kanji character 街: boulevard, street, town"
+  },
+  {
+    "kanji": "該",
+    "unicode": "8a72",
+    "meanings": [
+      "above-stated",
+      "the said",
+      "that specific"
+    ],
+    "image_file": "8a72.png",
+    "prompt": "kanji character 該: above-stated, the said, that specific"
+  },
+  {
+    "kanji": "鎧",
+    "unicode": "93a7",
+    "meanings": [
+      "put on armor",
+      "arm oneself"
+    ],
+    "image_file": "93a7.png",
+    "prompt": "kanji character 鎧: put on armor, arm oneself"
+  },
+  {
+    "kanji": "骸",
+    "unicode": "9ab8",
+    "meanings": [
+      "bone",
+      "body",
+      "corpse"
+    ],
+    "image_file": "9ab8.png",
+    "prompt": "kanji character 骸: bone, body, corpse"
+  },
+  {
+    "kanji": "浬",
+    "unicode": "6d6c",
+    "meanings": [
+      "knot",
+      "nautical mile"
+    ],
+    "image_file": "6d6c.png",
+    "prompt": "kanji character 浬: knot, nautical mile"
+  },
+  {
+    "kanji": "馨",
+    "unicode": "99a8",
+    "meanings": [
+      "fragrant",
+      "balmy",
+      "favourable"
+    ],
+    "image_file": "99a8.png",
+    "prompt": "kanji character 馨: fragrant, balmy, favourable"
+  },
+  {
+    "kanji": "蛙",
+    "unicode": "86d9",
+    "meanings": [
+      "frog"
+    ],
+    "image_file": "86d9.png",
+    "prompt": "kanji character 蛙: frog"
+  },
+  {
+    "kanji": "垣",
+    "unicode": "57a3",
+    "meanings": [
+      "hedge",
+      "fence",
+      "wall"
+    ],
+    "image_file": "57a3.png",
+    "prompt": "kanji character 垣: hedge, fence, wall"
+  },
+  {
+    "kanji": "柿",
+    "unicode": "67ff",
+    "meanings": [
+      "persimmon"
+    ],
+    "image_file": "67ff.png",
+    "prompt": "kanji character 柿: persimmon"
+  },
+  {
+    "kanji": "蛎",
+    "unicode": "86ce",
+    "meanings": [
+      "oyster"
+    ],
+    "image_file": "86ce.png",
+    "prompt": "kanji character 蛎: oyster"
+  },
+  {
+    "kanji": "鈎",
+    "unicode": "920e",
+    "meanings": [
+      "hook",
+      "barb",
+      "gaff",
+      "brackets"
+    ],
+    "image_file": "920e.png",
+    "prompt": "kanji character 鈎: hook, barb, gaff"
+  },
+  {
+    "kanji": "劃",
+    "unicode": "5283",
+    "meanings": [
+      "divide"
+    ],
+    "image_file": "5283.png",
+    "prompt": "kanji character 劃: divide"
+  },
+  {
+    "kanji": "嚇",
+    "unicode": "5687",
+    "meanings": [
+      "menacing",
+      "dignity",
+      "majesty",
+      "threaten"
+    ],
+    "image_file": "5687.png",
+    "prompt": "kanji character 嚇: menacing, dignity, majesty"
+  },
+  {
+    "kanji": "各",
+    "unicode": "5404",
+    "meanings": [
+      "each",
+      "every",
+      "either"
+    ],
+    "image_file": "5404.png",
+    "prompt": "kanji character 各: each, every, either"
+  },
+  {
+    "kanji": "廓",
+    "unicode": "5ed3",
+    "meanings": [
+      "enclosure",
+      "quarter",
+      "red-light district"
+    ],
+    "image_file": "5ed3.png",
+    "prompt": "kanji character 廓: enclosure, quarter, red-light district"
+  },
+  {
+    "kanji": "拡",
+    "unicode": "62e1",
+    "meanings": [
+      "broaden",
+      "extend",
+      "expand",
+      "enlarge"
+    ],
+    "image_file": "62e1.png",
+    "prompt": "kanji character 拡: broaden, extend, expand"
+  },
+  {
+    "kanji": "撹",
+    "unicode": "64b9",
+    "meanings": [
+      "disturb",
+      "throw into confusion"
+    ],
+    "image_file": "64b9.png",
+    "prompt": "kanji character 撹: disturb, throw into confusion"
+  },
+  {
+    "kanji": "格",
+    "unicode": "683c",
+    "meanings": [
+      "status",
+      "rank",
+      "capacity",
+      "character",
+      "case (law, grammar)"
+    ],
+    "image_file": "683c.png",
+    "prompt": "kanji character 格: status, rank, capacity"
+  },
+  {
+    "kanji": "核",
+    "unicode": "6838",
+    "meanings": [
+      "nucleus",
+      "core",
+      "kernel"
+    ],
+    "image_file": "6838.png",
+    "prompt": "kanji character 核: nucleus, core, kernel"
+  },
+  {
+    "kanji": "殻",
+    "unicode": "6bbb",
+    "meanings": [
+      "husk",
+      "nut shell"
+    ],
+    "image_file": "6bbb.png",
+    "prompt": "kanji character 殻: husk, nut shell"
+  },
+  {
+    "kanji": "獲",
+    "unicode": "7372",
+    "meanings": [
+      "seize",
+      "get",
+      "find",
+      "earn",
+      "acquire",
+      "can",
+      "may",
+      "able to"
+    ],
+    "image_file": "7372.png",
+    "prompt": "kanji character 獲: seize, get, find"
+  },
+  {
+    "kanji": "確",
+    "unicode": "78ba",
+    "meanings": [
+      "assurance",
+      "firm",
+      "tight",
+      "hard",
+      "solid",
+      "confirm",
+      "clear",
+      "evident"
+    ],
+    "image_file": "78ba.png",
+    "prompt": "kanji character 確: assurance, firm, tight"
+  },
+  {
+    "kanji": "穫",
+    "unicode": "7a6b",
+    "meanings": [
+      "harvest",
+      "reap"
+    ],
+    "image_file": "7a6b.png",
+    "prompt": "kanji character 穫: harvest, reap"
+  },
+  {
+    "kanji": "覚",
+    "unicode": "899a",
+    "meanings": [
+      "memorize",
+      "learn",
+      "remember",
+      "awake",
+      "sober up"
+    ],
+    "image_file": "899a.png",
+    "prompt": "kanji character 覚: memorize, learn, remember"
+  },
+  {
+    "kanji": "角",
+    "unicode": "89d2",
+    "meanings": [
+      "angle",
+      "corner",
+      "square",
+      "horn",
+      "antlers"
+    ],
+    "image_file": "89d2.png",
+    "prompt": "kanji character 角: angle, corner, square"
+  },
+  {
+    "kanji": "赫",
+    "unicode": "8d6b",
+    "meanings": [
+      "suddenly",
+      "brighten",
+      "illuminate",
+      "light up"
+    ],
+    "image_file": "8d6b.png",
+    "prompt": "kanji character 赫: suddenly, brighten, illuminate"
+  },
+  {
+    "kanji": "較",
+    "unicode": "8f03",
+    "meanings": [
+      "contrast",
+      "compare"
+    ],
+    "image_file": "8f03.png",
+    "prompt": "kanji character 較: contrast, compare"
+  },
+  {
+    "kanji": "郭",
+    "unicode": "90ed",
+    "meanings": [
+      "enclosure",
+      "quarters",
+      "fortification",
+      "red-light district"
+    ],
+    "image_file": "90ed.png",
+    "prompt": "kanji character 郭: enclosure, quarters, fortification"
+  },
+  {
+    "kanji": "閣",
+    "unicode": "95a3",
+    "meanings": [
+      "tower",
+      "tall building",
+      "palace"
+    ],
+    "image_file": "95a3.png",
+    "prompt": "kanji character 閣: tower, tall building, palace"
+  },
+  {
+    "kanji": "隔",
+    "unicode": "9694",
+    "meanings": [
+      "isolate",
+      "alternate",
+      "distance",
+      "separate",
+      "gulf"
+    ],
+    "image_file": "9694.png",
+    "prompt": "kanji character 隔: isolate, alternate, distance"
+  },
+  {
+    "kanji": "革",
+    "unicode": "9769",
+    "meanings": [
+      "leather",
+      "skin",
+      "reform",
+      "become serious"
+    ],
+    "image_file": "9769.png",
+    "prompt": "kanji character 革: leather, skin, reform"
+  },
+  {
+    "kanji": "学",
+    "unicode": "5b66",
+    "meanings": [
+      "study",
+      "learning",
+      "science"
+    ],
+    "image_file": "5b66.png",
+    "prompt": "kanji character 学: study, learning, science"
+  },
+  {
+    "kanji": "岳",
+    "unicode": "5cb3",
+    "meanings": [
+      "point",
+      "peak",
+      "mountain"
+    ],
+    "image_file": "5cb3.png",
+    "prompt": "kanji character 岳: point, peak, mountain"
+  },
+  {
+    "kanji": "楽",
+    "unicode": "697d",
+    "meanings": [
+      "music",
+      "comfort",
+      "ease"
+    ],
+    "image_file": "697d.png",
+    "prompt": "kanji character 楽: music, comfort, ease"
+  },
+  {
+    "kanji": "額",
+    "unicode": "984d",
+    "meanings": [
+      "forehead",
+      "tablet",
+      "plaque",
+      "framed picture",
+      "sum",
+      "amount",
+      "volume"
+    ],
+    "image_file": "984d.png",
+    "prompt": "kanji character 額: forehead, tablet, plaque"
+  },
+  {
+    "kanji": "顎",
+    "unicode": "984e",
+    "meanings": [
+      "jaw",
+      "chin",
+      "gill"
+    ],
+    "image_file": "984e.png",
+    "prompt": "kanji character 顎: jaw, chin, gill"
+  },
+  {
+    "kanji": "掛",
+    "unicode": "639b",
+    "meanings": [
+      "hang",
+      "suspend",
+      "depend",
+      "arrive at",
+      "tax",
+      "pour"
+    ],
+    "image_file": "639b.png",
+    "prompt": "kanji character 掛: hang, suspend, depend"
+  },
+  {
+    "kanji": "笠",
+    "unicode": "7b20",
+    "meanings": [
+      "bamboo hat",
+      "one's influence"
+    ],
+    "image_file": "7b20.png",
+    "prompt": "kanji character 笠: bamboo hat, one's influence"
+  },
+  {
+    "kanji": "樫",
+    "unicode": "6a2b",
+    "meanings": [
+      "evergreen oak",
+      "(kokuji)"
+    ],
+    "image_file": "6a2b.png",
+    "prompt": "kanji character 樫: evergreen oak, (kokuji)"
+  },
+  {
+    "kanji": "橿",
+    "unicode": "6a7f",
+    "meanings": [
+      "oak"
+    ],
+    "image_file": "6a7f.png",
+    "prompt": "kanji character 橿: oak"
+  },
+  {
+    "kanji": "梶",
+    "unicode": "68b6",
+    "meanings": [
+      "sculling oar"
+    ],
+    "image_file": "68b6.png",
+    "prompt": "kanji character 梶: sculling oar"
+  },
+  {
+    "kanji": "鰍",
+    "unicode": "9c0d",
+    "meanings": [
+      "bullhead"
+    ],
+    "image_file": "9c0d.png",
+    "prompt": "kanji character 鰍: bullhead"
+  },
+  {
+    "kanji": "潟",
+    "unicode": "6f5f",
+    "meanings": [
+      "lagoon"
+    ],
+    "image_file": "6f5f.png",
+    "prompt": "kanji character 潟: lagoon"
+  },
+  {
+    "kanji": "割",
+    "unicode": "5272",
+    "meanings": [
+      "proportion",
+      "comparatively",
+      "divide",
+      "cut",
+      "separate",
+      "split"
+    ],
+    "image_file": "5272.png",
+    "prompt": "kanji character 割: proportion, comparatively, divide"
+  },
+  {
+    "kanji": "喝",
+    "unicode": "559d",
+    "meanings": [
+      "hoarse",
+      "scold"
+    ],
+    "image_file": "559d.png",
+    "prompt": "kanji character 喝: hoarse, scold"
+  },
+  {
+    "kanji": "恰",
+    "unicode": "6070",
+    "meanings": [
+      "just as",
+      "as though",
+      "fortunately"
+    ],
+    "image_file": "6070.png",
+    "prompt": "kanji character 恰: just as, as though, fortunately"
+  },
+  {
+    "kanji": "括",
+    "unicode": "62ec",
+    "meanings": [
+      "fasten",
+      "tie up",
+      "arrest",
+      "constrict"
+    ],
+    "image_file": "62ec.png",
+    "prompt": "kanji character 括: fasten, tie up, arrest"
+  },
+  {
+    "kanji": "活",
+    "unicode": "6d3b",
+    "meanings": [
+      "lively",
+      "resuscitation",
+      "being helped",
+      "living"
+    ],
+    "image_file": "6d3b.png",
+    "prompt": "kanji character 活: lively, resuscitation, being helped"
+  },
+  {
+    "kanji": "渇",
+    "unicode": "6e07",
+    "meanings": [
+      "thirst",
+      "dry up",
+      "parch"
+    ],
+    "image_file": "6e07.png",
+    "prompt": "kanji character 渇: thirst, dry up, parch"
+  },
+  {
+    "kanji": "滑",
+    "unicode": "6ed1",
+    "meanings": [
+      "slippery",
+      "slide",
+      "slip",
+      "fail exam"
+    ],
+    "image_file": "6ed1.png",
+    "prompt": "kanji character 滑: slippery, slide, slip"
+  },
+  {
+    "kanji": "葛",
+    "unicode": "845b",
+    "meanings": [
+      "arrowroot",
+      "kudzu"
+    ],
+    "image_file": "845b.png",
+    "prompt": "kanji character 葛: arrowroot, kudzu"
+  },
+  {
+    "kanji": "褐",
+    "unicode": "8910",
+    "meanings": [
+      "brown",
+      "woollen kimono"
+    ],
+    "image_file": "8910.png",
+    "prompt": "kanji character 褐: brown, woollen kimono"
+  },
+  {
+    "kanji": "轄",
+    "unicode": "8f44",
+    "meanings": [
+      "control",
+      "wedge"
+    ],
+    "image_file": "8f44.png",
+    "prompt": "kanji character 轄: control, wedge"
+  },
+  {
+    "kanji": "且",
+    "unicode": "4e14",
+    "meanings": [
+      "moreover",
+      "also",
+      "furthermore"
+    ],
+    "image_file": "4e14.png",
+    "prompt": "kanji character 且: moreover, also, furthermore"
+  },
+  {
+    "kanji": "鰹",
+    "unicode": "9c39",
+    "meanings": [
+      "bonito"
+    ],
+    "image_file": "9c39.png",
+    "prompt": "kanji character 鰹: bonito"
+  },
+  {
+    "kanji": "叶",
+    "unicode": "53f6",
+    "meanings": [
+      "grant",
+      "answer"
+    ],
+    "image_file": "53f6.png",
+    "prompt": "kanji character 叶: grant, answer"
+  },
+  {
+    "kanji": "椛",
+    "unicode": "691b",
+    "meanings": [
+      "autumn foliage",
+      "birch",
+      "maple",
+      "(kokuji)"
+    ],
+    "image_file": "691b.png",
+    "prompt": "kanji character 椛: autumn foliage, birch, maple"
+  },
+  {
+    "kanji": "樺",
+    "unicode": "6a3a",
+    "meanings": [
+      "birch",
+      "dark red"
+    ],
+    "image_file": "6a3a.png",
+    "prompt": "kanji character 樺: birch, dark red"
+  },
+  {
+    "kanji": "鞄",
+    "unicode": "9784",
+    "meanings": [
+      "suitcase",
+      "bag",
+      "briefcase"
+    ],
+    "image_file": "9784.png",
+    "prompt": "kanji character 鞄: suitcase, bag, briefcase"
+  },
+  {
+    "kanji": "株",
+    "unicode": "682a",
+    "meanings": [
+      "stocks",
+      "stump",
+      "shares",
+      "stock",
+      "counter for small plants"
+    ],
+    "image_file": "682a.png",
+    "prompt": "kanji character 株: stocks, stump, shares"
+  },
+  {
+    "kanji": "兜",
+    "unicode": "515c",
+    "meanings": [
+      "helmet",
+      "head piece"
+    ],
+    "image_file": "515c.png",
+    "prompt": "kanji character 兜: helmet, head piece"
+  },
+  {
+    "kanji": "竃",
+    "unicode": "7ac3",
+    "meanings": [
+      "kitchen stove",
+      "furnace",
+      "oven",
+      "hearth"
+    ],
+    "image_file": "7ac3.png",
+    "prompt": "kanji character 竃: kitchen stove, furnace, oven"
+  },
+  {
+    "kanji": "蒲",
+    "unicode": "84b2",
+    "meanings": [
+      "bullrush",
+      "flag",
+      "cattail"
+    ],
+    "image_file": "84b2.png",
+    "prompt": "kanji character 蒲: bullrush, flag, cattail"
+  },
+  {
+    "kanji": "釜",
+    "unicode": "91dc",
+    "meanings": [
+      "kettle",
+      "cauldron",
+      "iron pot"
+    ],
+    "image_file": "91dc.png",
+    "prompt": "kanji character 釜: kettle, cauldron, iron pot"
+  },
+  {
+    "kanji": "鎌",
+    "unicode": "938c",
+    "meanings": [
+      "sickle",
+      "scythe",
+      "trick"
+    ],
+    "image_file": "938c.png",
+    "prompt": "kanji character 鎌: sickle, scythe, trick"
+  },
+  {
+    "kanji": "噛",
+    "unicode": "565b",
+    "meanings": [
+      "chew",
+      "bite",
+      "gnaw"
+    ],
+    "image_file": "565b.png",
+    "prompt": "kanji character 噛: chew, bite, gnaw"
+  },
+  {
+    "kanji": "鴨",
+    "unicode": "9d28",
+    "meanings": [
+      "wild duck",
+      "easy mark"
+    ],
+    "image_file": "9d28.png",
+    "prompt": "kanji character 鴨: wild duck, easy mark"
+  },
+  {
+    "kanji": "栢",
+    "unicode": "6822",
+    "meanings": [
+      "oak"
+    ],
+    "image_file": "6822.png",
+    "prompt": "kanji character 栢: oak"
+  },
+  {
+    "kanji": "茅",
+    "unicode": "8305",
+    "meanings": [
+      "miscanthus reed"
+    ],
+    "image_file": "8305.png",
+    "prompt": "kanji character 茅: miscanthus reed"
+  },
+  {
+    "kanji": "萱",
+    "unicode": "8431",
+    "meanings": [
+      "miscanthus reed"
+    ],
+    "image_file": "8431.png",
+    "prompt": "kanji character 萱: miscanthus reed"
+  },
+  {
+    "kanji": "粥",
+    "unicode": "7ca5",
+    "meanings": [
+      "rice gruel"
+    ],
+    "image_file": "7ca5.png",
+    "prompt": "kanji character 粥: rice gruel"
+  },
+  {
+    "kanji": "刈",
+    "unicode": "5208",
+    "meanings": [
+      "reap",
+      "cut",
+      "clip",
+      "trim",
+      "prune"
+    ],
+    "image_file": "5208.png",
+    "prompt": "kanji character 刈: reap, cut, clip"
+  },
+  {
+    "kanji": "苅",
+    "unicode": "82c5",
+    "meanings": [
+      "cutting (grass)"
+    ],
+    "image_file": "82c5.png",
+    "prompt": "kanji character 苅: cutting (grass)"
+  },
+  {
+    "kanji": "瓦",
+    "unicode": "74e6",
+    "meanings": [
+      "tile",
+      "gram"
+    ],
+    "image_file": "74e6.png",
+    "prompt": "kanji character 瓦: tile, gram"
+  },
+  {
+    "kanji": "乾",
+    "unicode": "4e7e",
+    "meanings": [
+      "drought",
+      "dry",
+      "dessicate",
+      "drink up",
+      "heaven",
+      "emperor"
+    ],
+    "image_file": "4e7e.png",
+    "prompt": "kanji character 乾: drought, dry, dessicate"
+  },
+  {
+    "kanji": "侃",
+    "unicode": "4f83",
+    "meanings": [
+      "strong",
+      "just",
+      "righteous",
+      "peace-loving"
+    ],
+    "image_file": "4f83.png",
+    "prompt": "kanji character 侃: strong, just, righteous"
+  },
+  {
+    "kanji": "冠",
+    "unicode": "51a0",
+    "meanings": [
+      "crown",
+      "best",
+      "peerless"
+    ],
+    "image_file": "51a0.png",
+    "prompt": "kanji character 冠: crown, best, peerless"
+  },
+  {
+    "kanji": "寒",
+    "unicode": "5bd2",
+    "meanings": [
+      "cold"
+    ],
+    "image_file": "5bd2.png",
+    "prompt": "kanji character 寒: cold"
+  },
+  {
+    "kanji": "刊",
+    "unicode": "520a",
+    "meanings": [
+      "publish",
+      "carve",
+      "engrave"
+    ],
+    "image_file": "520a.png",
+    "prompt": "kanji character 刊: publish, carve, engrave"
+  },
+  {
+    "kanji": "勘",
+    "unicode": "52d8",
+    "meanings": [
+      "intuition",
+      "perception",
+      "check",
+      "compare",
+      "sixth sense"
+    ],
+    "image_file": "52d8.png",
+    "prompt": "kanji character 勘: intuition, perception, check"
+  },
+  {
+    "kanji": "勧",
+    "unicode": "52e7",
+    "meanings": [
+      "persuade",
+      "recommend",
+      "advise",
+      "encourage",
+      "offer"
+    ],
+    "image_file": "52e7.png",
+    "prompt": "kanji character 勧: persuade, recommend, advise"
+  },
+  {
+    "kanji": "巻",
+    "unicode": "5dfb",
+    "meanings": [
+      "scroll",
+      "volume",
+      "book",
+      "part",
+      "roll up",
+      "wind up",
+      "tie",
+      "coil",
+      "counter for texts (or book scrolls)"
+    ],
+    "image_file": "5dfb.png",
+    "prompt": "kanji character 巻: scroll, volume, book"
+  },
+  {
+    "kanji": "喚",
+    "unicode": "559a",
+    "meanings": [
+      "yell",
+      "cry",
+      "call",
+      "scream",
+      "summon"
+    ],
+    "image_file": "559a.png",
+    "prompt": "kanji character 喚: yell, cry, call"
+  },
+  {
+    "kanji": "堪",
+    "unicode": "582a",
+    "meanings": [
+      "withstand",
+      "endure",
+      "support",
+      "resist"
+    ],
+    "image_file": "582a.png",
+    "prompt": "kanji character 堪: withstand, endure, support"
+  },
+  {
+    "kanji": "姦",
+    "unicode": "59e6",
+    "meanings": [
+      "wicked",
+      "mischief",
+      "seduce",
+      "rape",
+      "noisy"
+    ],
+    "image_file": "59e6.png",
+    "prompt": "kanji character 姦: wicked, mischief, seduce"
+  },
+  {
+    "kanji": "完",
+    "unicode": "5b8c",
+    "meanings": [
+      "perfect",
+      "completion",
+      "end"
+    ],
+    "image_file": "5b8c.png",
+    "prompt": "kanji character 完: perfect, completion, end"
+  },
+  {
+    "kanji": "官",
+    "unicode": "5b98",
+    "meanings": [
+      "bureaucrat",
+      "the government",
+      "organ"
+    ],
+    "image_file": "5b98.png",
+    "prompt": "kanji character 官: bureaucrat, the government, organ"
+  },
+  {
+    "kanji": "寛",
+    "unicode": "5bdb",
+    "meanings": [
+      "tolerant",
+      "leniency",
+      "generosity",
+      "relax",
+      "feel at home",
+      "be at ease",
+      "broadminded"
+    ],
+    "image_file": "5bdb.png",
+    "prompt": "kanji character 寛: tolerant, leniency, generosity"
+  },
+  {
+    "kanji": "干",
+    "unicode": "5e72",
+    "meanings": [
+      "dry",
+      "parch",
+      "ebb",
+      "recede",
+      "interfere",
+      "intercede"
+    ],
+    "image_file": "5e72.png",
+    "prompt": "kanji character 干: dry, parch, ebb"
+  },
+  {
+    "kanji": "幹",
+    "unicode": "5e79",
+    "meanings": [
+      "tree trunk",
+      "main part",
+      "talent",
+      "capability"
+    ],
+    "image_file": "5e79.png",
+    "prompt": "kanji character 幹: tree trunk, main part, talent"
+  },
+  {
+    "kanji": "患",
+    "unicode": "60a3",
+    "meanings": [
+      "afflicted",
+      "disease",
+      "suffer from",
+      "be ill"
+    ],
+    "image_file": "60a3.png",
+    "prompt": "kanji character 患: afflicted, disease, suffer from"
+  },
+  {
+    "kanji": "感",
+    "unicode": "611f",
+    "meanings": [
+      "emotion",
+      "feeling",
+      "sensation"
+    ],
+    "image_file": "611f.png",
+    "prompt": "kanji character 感: emotion, feeling, sensation"
+  },
+  {
+    "kanji": "慣",
+    "unicode": "6163",
+    "meanings": [
+      "accustomed",
+      "get used to",
+      "become experienced"
+    ],
+    "image_file": "6163.png",
+    "prompt": "kanji character 慣: accustomed, get used to, become experienced"
+  },
+  {
+    "kanji": "憾",
+    "unicode": "61be",
+    "meanings": [
+      "remorse",
+      "regret",
+      "be sorry"
+    ],
+    "image_file": "61be.png",
+    "prompt": "kanji character 憾: remorse, regret, be sorry"
+  },
+  {
+    "kanji": "換",
+    "unicode": "63db",
+    "meanings": [
+      "interchange",
+      "period",
+      "change",
+      "convert",
+      "replace",
+      "renew"
+    ],
+    "image_file": "63db.png",
+    "prompt": "kanji character 換: interchange, period, change"
+  },
+  {
+    "kanji": "敢",
+    "unicode": "6562",
+    "meanings": [
+      "daring",
+      "brave",
+      "bold",
+      "sad",
+      "tragic",
+      "pitiful"
+    ],
+    "image_file": "6562.png",
+    "prompt": "kanji character 敢: daring, brave, bold"
+  },
+  {
+    "kanji": "柑",
+    "unicode": "67d1",
+    "meanings": [
+      "citrus",
+      "orange"
+    ],
+    "image_file": "67d1.png",
+    "prompt": "kanji character 柑: citrus, orange"
+  },
+  {
+    "kanji": "桓",
+    "unicode": "6853",
+    "meanings": [
+      "marking post"
+    ],
+    "image_file": "6853.png",
+    "prompt": "kanji character 桓: marking post"
+  },
+  {
+    "kanji": "棺",
+    "unicode": "68fa",
+    "meanings": [
+      "coffin",
+      "casket"
+    ],
+    "image_file": "68fa.png",
+    "prompt": "kanji character 棺: coffin, casket"
+  },
+  {
+    "kanji": "款",
+    "unicode": "6b3e",
+    "meanings": [
+      "goodwill",
+      "article",
+      "section",
+      "friendship",
+      "collusion"
+    ],
+    "image_file": "6b3e.png",
+    "prompt": "kanji character 款: goodwill, article, section"
+  },
+  {
+    "kanji": "歓",
+    "unicode": "6b53",
+    "meanings": [
+      "delight",
+      "joy"
+    ],
+    "image_file": "6b53.png",
+    "prompt": "kanji character 歓: delight, joy"
+  },
+  {
+    "kanji": "汗",
+    "unicode": "6c57",
+    "meanings": [
+      "sweat",
+      "perspire"
+    ],
+    "image_file": "6c57.png",
+    "prompt": "kanji character 汗: sweat, perspire"
+  },
+  {
+    "kanji": "漢",
+    "unicode": "6f22",
+    "meanings": [
+      "Sino-",
+      "China"
+    ],
+    "image_file": "6f22.png",
+    "prompt": "kanji character 漢: Sino-, China"
+  },
+  {
+    "kanji": "澗",
+    "unicode": "6f97",
+    "meanings": [
+      "valley river",
+      "10**36"
+    ],
+    "image_file": "6f97.png",
+    "prompt": "kanji character 澗: valley river, 10**36"
+  },
+  {
+    "kanji": "潅",
+    "unicode": "6f45",
+    "meanings": [
+      "pour into",
+      "irrigate",
+      "shed (tears)",
+      "flow into",
+      "concentrate on"
+    ],
+    "image_file": "6f45.png",
+    "prompt": "kanji character 潅: pour into, irrigate, shed (tears)"
+  },
+  {
+    "kanji": "環",
+    "unicode": "74b0",
+    "meanings": [
+      "ring",
+      "circle",
+      "loop"
+    ],
+    "image_file": "74b0.png",
+    "prompt": "kanji character 環: ring, circle, loop"
+  },
+  {
+    "kanji": "甘",
+    "unicode": "7518",
+    "meanings": [
+      "sweet",
+      "coax",
+      "pamper",
+      "be content",
+      "sugary"
+    ],
+    "image_file": "7518.png",
+    "prompt": "kanji character 甘: sweet, coax, pamper"
+  },
+  {
+    "kanji": "監",
+    "unicode": "76e3",
+    "meanings": [
+      "oversee",
+      "official",
+      "govt office",
+      "rule",
+      "administer"
+    ],
+    "image_file": "76e3.png",
+    "prompt": "kanji character 監: oversee, official, govt office"
+  },
+  {
+    "kanji": "看",
+    "unicode": "770b",
+    "meanings": [
+      "watch over",
+      "see"
+    ],
+    "image_file": "770b.png",
+    "prompt": "kanji character 看: watch over, see"
+  },
+  {
+    "kanji": "竿",
+    "unicode": "7aff",
+    "meanings": [
+      "pole",
+      "rod",
+      "scale beam",
+      "violin neck"
+    ],
+    "image_file": "7aff.png",
+    "prompt": "kanji character 竿: pole, rod, scale beam"
+  },
+  {
+    "kanji": "管",
+    "unicode": "7ba1",
+    "meanings": [
+      "pipe",
+      "tube",
+      "wind instrument",
+      "drunken talk",
+      "control",
+      "jurisdiction"
+    ],
+    "image_file": "7ba1.png",
+    "prompt": "kanji character 管: pipe, tube, wind instrument"
+  },
+  {
+    "kanji": "簡",
+    "unicode": "7c21",
+    "meanings": [
+      "simplicity",
+      "brevity"
+    ],
+    "image_file": "7c21.png",
+    "prompt": "kanji character 簡: simplicity, brevity"
+  },
+  {
+    "kanji": "緩",
+    "unicode": "7de9",
+    "meanings": [
+      "slacken",
+      "loosen",
+      "relax",
+      "lessen",
+      "be moderate",
+      "ease"
+    ],
+    "image_file": "7de9.png",
+    "prompt": "kanji character 緩: slacken, loosen, relax"
+  },
+  {
+    "kanji": "缶",
+    "unicode": "7f36",
+    "meanings": [
+      "tin can",
+      "container",
+      "jar radical (no. 121)"
+    ],
+    "image_file": "7f36.png",
+    "prompt": "kanji character 缶: tin can, container, jar radical (no. 121)"
+  },
+  {
+    "kanji": "翰",
+    "unicode": "7ff0",
+    "meanings": [
+      "letter",
+      "writing brush"
+    ],
+    "image_file": "7ff0.png",
+    "prompt": "kanji character 翰: letter, writing brush"
+  },
+  {
+    "kanji": "肝",
+    "unicode": "809d",
+    "meanings": [
+      "liver",
+      "pluck",
+      "nerve",
+      "chutzpah"
+    ],
+    "image_file": "809d.png",
+    "prompt": "kanji character 肝: liver, pluck, nerve"
+  },
+  {
+    "kanji": "艦",
+    "unicode": "8266",
+    "meanings": [
+      "warship"
+    ],
+    "image_file": "8266.png",
+    "prompt": "kanji character 艦: warship"
+  },
+  {
+    "kanji": "莞",
+    "unicode": "839e",
+    "meanings": [
+      "smiling",
+      "reed used to cover tatami"
+    ],
+    "image_file": "839e.png",
+    "prompt": "kanji character 莞: smiling, reed used to cover tatami"
+  },
+  {
+    "kanji": "観",
+    "unicode": "89b3",
+    "meanings": [
+      "outlook",
+      "look",
+      "appearance",
+      "condition",
+      "view"
+    ],
+    "image_file": "89b3.png",
+    "prompt": "kanji character 観: outlook, look, appearance"
+  },
+  {
+    "kanji": "諌",
+    "unicode": "8acc",
+    "meanings": [
+      "admonish",
+      "dissuade"
+    ],
+    "image_file": "8acc.png",
+    "prompt": "kanji character 諌: admonish, dissuade"
+  },
+  {
+    "kanji": "貫",
+    "unicode": "8cab",
+    "meanings": [
+      "pierce",
+      "8 1/3lbs",
+      "penetrate",
+      "brace"
+    ],
+    "image_file": "8cab.png",
+    "prompt": "kanji character 貫: pierce, 8 1/3lbs, penetrate"
+  },
+  {
+    "kanji": "還",
+    "unicode": "9084",
+    "meanings": [
+      "send back",
+      "return"
+    ],
+    "image_file": "9084.png",
+    "prompt": "kanji character 還: send back, return"
+  },
+  {
+    "kanji": "鑑",
+    "unicode": "9451",
+    "meanings": [
+      "specimen",
+      "take warning from",
+      "learn from"
+    ],
+    "image_file": "9451.png",
+    "prompt": "kanji character 鑑: specimen, take warning from, learn from"
+  },
+  {
+    "kanji": "間",
+    "unicode": "9593",
+    "meanings": [
+      "interval",
+      "space"
+    ],
+    "image_file": "9593.png",
+    "prompt": "kanji character 間: interval, space"
+  },
+  {
+    "kanji": "閑",
+    "unicode": "9591",
+    "meanings": [
+      "leisure"
+    ],
+    "image_file": "9591.png",
+    "prompt": "kanji character 閑: leisure"
+  },
+  {
+    "kanji": "関",
+    "unicode": "95a2",
+    "meanings": [
+      "connection",
+      "barrier",
+      "gateway",
+      "involve",
+      "concerning"
+    ],
+    "image_file": "95a2.png",
+    "prompt": "kanji character 関: connection, barrier, gateway"
+  },
+  {
+    "kanji": "陥",
+    "unicode": "9665",
+    "meanings": [
+      "collapse",
+      "fall into",
+      "cave in",
+      "fall (castle)",
+      "slide into"
+    ],
+    "image_file": "9665.png",
+    "prompt": "kanji character 陥: collapse, fall into, cave in"
+  },
+  {
+    "kanji": "韓",
+    "unicode": "97d3",
+    "meanings": [
+      "Korea"
+    ],
+    "image_file": "97d3.png",
+    "prompt": "kanji character 韓: Korea"
+  },
+  {
+    "kanji": "館",
+    "unicode": "9928",
+    "meanings": [
+      "building",
+      "mansion",
+      "large building",
+      "palace"
+    ],
+    "image_file": "9928.png",
+    "prompt": "kanji character 館: building, mansion, large building"
+  },
+  {
+    "kanji": "舘",
+    "unicode": "8218",
+    "meanings": [
+      "mansion",
+      "large building",
+      "palace"
+    ],
+    "image_file": "8218.png",
+    "prompt": "kanji character 舘: mansion, large building, palace"
+  },
+  {
+    "kanji": "丸",
+    "unicode": "4e38",
+    "meanings": [
+      "round",
+      "full (month)",
+      "perfection",
+      "-ship",
+      "pills",
+      "make round",
+      "roll up",
+      "curl up",
+      "seduce",
+      "explain away"
+    ],
+    "image_file": "4e38.png",
+    "prompt": "kanji character 丸: round, full (month), perfection"
+  },
+  {
+    "kanji": "含",
+    "unicode": "542b",
+    "meanings": [
+      "contain",
+      "include",
+      "hold in the mouth",
+      "bear in mind",
+      "understand",
+      "cherish"
+    ],
+    "image_file": "542b.png",
+    "prompt": "kanji character 含: contain, include, hold in the mouth"
+  },
+  {
+    "kanji": "岸",
+    "unicode": "5cb8",
+    "meanings": [
+      "beach"
+    ],
+    "image_file": "5cb8.png",
+    "prompt": "kanji character 岸: beach"
+  },
+  {
+    "kanji": "巌",
+    "unicode": "5dcc",
+    "meanings": [
+      "rock",
+      "crag",
+      "boulder"
+    ],
+    "image_file": "5dcc.png",
+    "prompt": "kanji character 巌: rock, crag, boulder"
+  },
+  {
+    "kanji": "玩",
+    "unicode": "73a9",
+    "meanings": [
+      "play",
+      "take pleasure in",
+      "trifle with",
+      "make sport of"
+    ],
+    "image_file": "73a9.png",
+    "prompt": "kanji character 玩: play, take pleasure in, trifle with"
+  },
+  {
+    "kanji": "癌",
+    "unicode": "764c",
+    "meanings": [
+      "cancer",
+      "cancerous evil"
+    ],
+    "image_file": "764c.png",
+    "prompt": "kanji character 癌: cancer, cancerous evil"
+  },
+  {
+    "kanji": "眼",
+    "unicode": "773c",
+    "meanings": [
+      "eyeball"
+    ],
+    "image_file": "773c.png",
+    "prompt": "kanji character 眼: eyeball"
+  },
+  {
+    "kanji": "岩",
+    "unicode": "5ca9",
+    "meanings": [
+      "boulder",
+      "rock",
+      "cliff"
+    ],
+    "image_file": "5ca9.png",
+    "prompt": "kanji character 岩: boulder, rock, cliff"
+  },
+  {
+    "kanji": "翫",
+    "unicode": "7feb",
+    "meanings": [
+      "take pleasure in",
+      "play instrument"
+    ],
+    "image_file": "7feb.png",
+    "prompt": "kanji character 翫: take pleasure in, play instrument"
+  },
+  {
+    "kanji": "贋",
+    "unicode": "8d0b",
+    "meanings": [
+      "counterfeit",
+      "forgery"
+    ],
+    "image_file": "8d0b.png",
+    "prompt": "kanji character 贋: counterfeit, forgery"
+  },
+  {
+    "kanji": "雁",
+    "unicode": "96c1",
+    "meanings": [
+      "wild goose"
+    ],
+    "image_file": "96c1.png",
+    "prompt": "kanji character 雁: wild goose"
+  },
+  {
+    "kanji": "頑",
+    "unicode": "9811",
+    "meanings": [
+      "stubborn",
+      "foolish",
+      "firmly"
+    ],
+    "image_file": "9811.png",
+    "prompt": "kanji character 頑: stubborn, foolish, firmly"
+  },
+  {
+    "kanji": "顔",
+    "unicode": "9854",
+    "meanings": [
+      "face",
+      "expression"
+    ],
+    "image_file": "9854.png",
+    "prompt": "kanji character 顔: face, expression"
+  },
+  {
+    "kanji": "願",
+    "unicode": "9858",
+    "meanings": [
+      "petition",
+      "request",
+      "vow",
+      "wish",
+      "hope"
+    ],
+    "image_file": "9858.png",
+    "prompt": "kanji character 願: petition, request, vow"
+  },
+  {
+    "kanji": "企",
+    "unicode": "4f01",
+    "meanings": [
+      "undertake",
+      "scheme",
+      "design",
+      "attempt",
+      "plan"
+    ],
+    "image_file": "4f01.png",
+    "prompt": "kanji character 企: undertake, scheme, design"
+  },
+  {
+    "kanji": "伎",
+    "unicode": "4f0e",
+    "meanings": [
+      "deed",
+      "skill"
+    ],
+    "image_file": "4f0e.png",
+    "prompt": "kanji character 伎: deed, skill"
+  },
+  {
+    "kanji": "危",
+    "unicode": "5371",
+    "meanings": [
+      "dangerous",
+      "fear",
+      "uneasy"
+    ],
+    "image_file": "5371.png",
+    "prompt": "kanji character 危: dangerous, fear, uneasy"
+  },
+  {
+    "kanji": "喜",
+    "unicode": "559c",
+    "meanings": [
+      "rejoice",
+      "take pleasure in"
+    ],
+    "image_file": "559c.png",
+    "prompt": "kanji character 喜: rejoice, take pleasure in"
+  },
+  {
+    "kanji": "器",
+    "unicode": "5668",
+    "meanings": [
+      "utensil",
+      "vessel",
+      "receptacle",
+      "implement",
+      "instrument",
+      "ability",
+      "container",
+      "tool",
+      "set"
+    ],
+    "image_file": "5668.png",
+    "prompt": "kanji character 器: utensil, vessel, receptacle"
+  },
+  {
+    "kanji": "基",
+    "unicode": "57fa",
+    "meanings": [
+      "fundamentals",
+      "radical (chem)",
+      "counter for machines",
+      "foundation"
+    ],
+    "image_file": "57fa.png",
+    "prompt": "kanji character 基: fundamentals, radical (chem), counter for machines"
+  },
+  {
+    "kanji": "奇",
+    "unicode": "5947",
+    "meanings": [
+      "strange",
+      "strangeness",
+      "curiosity"
+    ],
+    "image_file": "5947.png",
+    "prompt": "kanji character 奇: strange, strangeness, curiosity"
+  },
+  {
+    "kanji": "嬉",
+    "unicode": "5b09",
+    "meanings": [
+      "glad",
+      "pleased",
+      "rejoice"
+    ],
+    "image_file": "5b09.png",
+    "prompt": "kanji character 嬉: glad, pleased, rejoice"
+  },
+  {
+    "kanji": "寄",
+    "unicode": "5bc4",
+    "meanings": [
+      "draw near",
+      "stop in",
+      "bring near",
+      "gather",
+      "collect",
+      "send",
+      "forward"
+    ],
+    "image_file": "5bc4.png",
+    "prompt": "kanji character 寄: draw near, stop in, bring near"
+  },
+  {
+    "kanji": "岐",
+    "unicode": "5c90",
+    "meanings": [
+      "branch off",
+      "fork in road",
+      "scene",
+      "arena",
+      "theater"
+    ],
+    "image_file": "5c90.png",
+    "prompt": "kanji character 岐: branch off, fork in road, scene"
+  },
+  {
+    "kanji": "希",
+    "unicode": "5e0c",
+    "meanings": [
+      "hope",
+      "beg",
+      "request",
+      "pray",
+      "beseech",
+      "Greece",
+      "dilute (acid)",
+      "rare",
+      "few",
+      "phenomenal"
+    ],
+    "image_file": "5e0c.png",
+    "prompt": "kanji character 希: hope, beg, request"
+  },
+  {
+    "kanji": "幾",
+    "unicode": "5e7e",
+    "meanings": [
+      "how many",
+      "how much",
+      "how far",
+      "how long",
+      "some",
+      "several"
+    ],
+    "image_file": "5e7e.png",
+    "prompt": "kanji character 幾: how many, how much, how far"
+  },
+  {
+    "kanji": "忌",
+    "unicode": "5fcc",
+    "meanings": [
+      "mourning",
+      "abhor",
+      "detestable",
+      "death anniversary"
+    ],
+    "image_file": "5fcc.png",
+    "prompt": "kanji character 忌: mourning, abhor, detestable"
+  },
+  {
+    "kanji": "揮",
+    "unicode": "63ee",
+    "meanings": [
+      "brandish",
+      "wave",
+      "wag",
+      "swing",
+      "shake"
+    ],
+    "image_file": "63ee.png",
+    "prompt": "kanji character 揮: brandish, wave, wag"
+  },
+  {
+    "kanji": "机",
+    "unicode": "673a",
+    "meanings": [
+      "desk",
+      "table"
+    ],
+    "image_file": "673a.png",
+    "prompt": "kanji character 机: desk, table"
+  },
+  {
+    "kanji": "旗",
+    "unicode": "65d7",
+    "meanings": [
+      "national flag",
+      "banner",
+      "standard"
+    ],
+    "image_file": "65d7.png",
+    "prompt": "kanji character 旗: national flag, banner, standard"
+  },
+  {
+    "kanji": "既",
+    "unicode": "65e2",
+    "meanings": [
+      "previously",
+      "already",
+      "long ago"
+    ],
+    "image_file": "65e2.png",
+    "prompt": "kanji character 既: previously, already, long ago"
+  },
+  {
+    "kanji": "期",
+    "unicode": "671f",
+    "meanings": [
+      "period",
+      "time",
+      "date",
+      "term"
+    ],
+    "image_file": "671f.png",
+    "prompt": "kanji character 期: period, time, date"
+  },
+  {
+    "kanji": "棋",
+    "unicode": "68cb",
+    "meanings": [
+      "chess piece",
+      "Japanese chess",
+      "shogi"
+    ],
+    "image_file": "68cb.png",
+    "prompt": "kanji character 棋: chess piece, Japanese chess, shogi"
+  },
+  {
+    "kanji": "棄",
+    "unicode": "68c4",
+    "meanings": [
+      "abandon",
+      "throw away",
+      "discard",
+      "resign",
+      "reject",
+      "sacrifice"
+    ],
+    "image_file": "68c4.png",
+    "prompt": "kanji character 棄: abandon, throw away, discard"
+  },
+  {
+    "kanji": "機",
+    "unicode": "6a5f",
+    "meanings": [
+      "loom",
+      "mechanism",
+      "machine",
+      "airplane",
+      "opportunity",
+      "potency",
+      "efficacy",
+      "occasion"
+    ],
+    "image_file": "6a5f.png",
+    "prompt": "kanji character 機: loom, mechanism, machine"
+  },
+  {
+    "kanji": "帰",
+    "unicode": "5e30",
+    "meanings": [
+      "homecoming",
+      "arrive at",
+      "lead to",
+      "result in"
+    ],
+    "image_file": "5e30.png",
+    "prompt": "kanji character 帰: homecoming, arrive at, lead to"
+  },
+  {
+    "kanji": "毅",
+    "unicode": "6bc5",
+    "meanings": [
+      "strong"
+    ],
+    "image_file": "6bc5.png",
+    "prompt": "kanji character 毅: strong"
+  },
+  {
+    "kanji": "気",
+    "unicode": "6c17",
+    "meanings": [
+      "spirit",
+      "mind",
+      "air",
+      "atmosphere",
+      "mood"
+    ],
+    "image_file": "6c17.png",
+    "prompt": "kanji character 気: spirit, mind, air"
+  },
+  {
+    "kanji": "汽",
+    "unicode": "6c7d",
+    "meanings": [
+      "vapor",
+      "steam"
+    ],
+    "image_file": "6c7d.png",
+    "prompt": "kanji character 汽: vapor, steam"
+  },
+  {
+    "kanji": "畿",
+    "unicode": "757f",
+    "meanings": [
+      "capital",
+      "suburbs of capital"
+    ],
+    "image_file": "757f.png",
+    "prompt": "kanji character 畿: capital, suburbs of capital"
+  },
+  {
+    "kanji": "祈",
+    "unicode": "7948",
+    "meanings": [
+      "pray",
+      "wish"
+    ],
+    "image_file": "7948.png",
+    "prompt": "kanji character 祈: pray, wish"
+  },
+  {
+    "kanji": "季",
+    "unicode": "5b63",
+    "meanings": [
+      "seasons"
+    ],
+    "image_file": "5b63.png",
+    "prompt": "kanji character 季: seasons"
+  },
+  {
+    "kanji": "稀",
+    "unicode": "7a00",
+    "meanings": [
+      "rare",
+      "phenomenal",
+      "dilute (acid)"
+    ],
+    "image_file": "7a00.png",
+    "prompt": "kanji character 稀: rare, phenomenal, dilute (acid)"
+  },
+  {
+    "kanji": "紀",
+    "unicode": "7d00",
+    "meanings": [
+      "chronicle",
+      "account",
+      "narrative",
+      "history",
+      "annals",
+      "geologic period"
+    ],
+    "image_file": "7d00.png",
+    "prompt": "kanji character 紀: chronicle, account, narrative"
+  },
+  {
+    "kanji": "徽",
+    "unicode": "5fbd",
+    "meanings": [
+      "good",
+      "beautiful",
+      "badge"
+    ],
+    "image_file": "5fbd.png",
+    "prompt": "kanji character 徽: good, beautiful, badge"
+  },
+  {
+    "kanji": "規",
+    "unicode": "898f",
+    "meanings": [
+      "standard",
+      "measure"
+    ],
+    "image_file": "898f.png",
+    "prompt": "kanji character 規: standard, measure"
+  },
+  {
+    "kanji": "記",
+    "unicode": "8a18",
+    "meanings": [
+      "scribe",
+      "account",
+      "narrative"
+    ],
+    "image_file": "8a18.png",
+    "prompt": "kanji character 記: scribe, account, narrative"
+  },
+  {
+    "kanji": "貴",
+    "unicode": "8cb4",
+    "meanings": [
+      "precious",
+      "value",
+      "prize",
+      "esteem",
+      "honor"
+    ],
+    "image_file": "8cb4.png",
+    "prompt": "kanji character 貴: precious, value, prize"
+  },
+  {
+    "kanji": "起",
+    "unicode": "8d77",
+    "meanings": [
+      "rouse",
+      "wake up",
+      "get up"
+    ],
+    "image_file": "8d77.png",
+    "prompt": "kanji character 起: rouse, wake up, get up"
+  },
+  {
+    "kanji": "軌",
+    "unicode": "8ecc",
+    "meanings": [
+      "rut",
+      "wheel",
+      "track",
+      "model",
+      "way of doing"
+    ],
+    "image_file": "8ecc.png",
+    "prompt": "kanji character 軌: rut, wheel, track"
+  },
+  {
+    "kanji": "輝",
+    "unicode": "8f1d",
+    "meanings": [
+      "radiance",
+      "shine",
+      "sparkle",
+      "gleam",
+      "twinkle"
+    ],
+    "image_file": "8f1d.png",
+    "prompt": "kanji character 輝: radiance, shine, sparkle"
+  },
+  {
+    "kanji": "飢",
+    "unicode": "98e2",
+    "meanings": [
+      "hungry",
+      "starve"
+    ],
+    "image_file": "98e2.png",
+    "prompt": "kanji character 飢: hungry, starve"
+  },
+  {
+    "kanji": "騎",
+    "unicode": "9a0e",
+    "meanings": [
+      "equestrian",
+      "riding on horses",
+      "counter for equestrians"
+    ],
+    "image_file": "9a0e.png",
+    "prompt": "kanji character 騎: equestrian, riding on horses, counter for equestrians"
+  },
+  {
+    "kanji": "鬼",
+    "unicode": "9b3c",
+    "meanings": [
+      "ghost",
+      "devil"
+    ],
+    "image_file": "9b3c.png",
+    "prompt": "kanji character 鬼: ghost, devil"
+  },
+  {
+    "kanji": "亀",
+    "unicode": "4e80",
+    "meanings": [
+      "tortoise",
+      "turtle"
+    ],
+    "image_file": "4e80.png",
+    "prompt": "kanji character 亀: tortoise, turtle"
+  },
+  {
+    "kanji": "偽",
+    "unicode": "507d",
+    "meanings": [
+      "falsehood",
+      "lie",
+      "deceive",
+      "pretend",
+      "counterfeit",
+      "forgery"
+    ],
+    "image_file": "507d.png",
+    "prompt": "kanji character 偽: falsehood, lie, deceive"
+  },
+  {
+    "kanji": "儀",
+    "unicode": "5100",
+    "meanings": [
+      "ceremony",
+      "rule",
+      "affair",
+      "case",
+      "a matter"
+    ],
+    "image_file": "5100.png",
+    "prompt": "kanji character 儀: ceremony, rule, affair"
+  },
+  {
+    "kanji": "妓",
+    "unicode": "5993",
+    "meanings": [
+      "stretch",
+      "singing girl",
+      "geisha",
+      "prostitute"
+    ],
+    "image_file": "5993.png",
+    "prompt": "kanji character 妓: stretch, singing girl, geisha"
+  },
+  {
+    "kanji": "宜",
+    "unicode": "5b9c",
+    "meanings": [
+      "best regards",
+      "good"
+    ],
+    "image_file": "5b9c.png",
+    "prompt": "kanji character 宜: best regards, good"
+  },
+  {
+    "kanji": "戯",
+    "unicode": "622f",
+    "meanings": [
+      "frolic",
+      "play",
+      "sport"
+    ],
+    "image_file": "622f.png",
+    "prompt": "kanji character 戯: frolic, play, sport"
+  },
+  {
+    "kanji": "技",
+    "unicode": "6280",
+    "meanings": [
+      "skill",
+      "art",
+      "craft",
+      "ability",
+      "feat",
+      "performance",
+      "vocation",
+      "arts"
+    ],
+    "image_file": "6280.png",
+    "prompt": "kanji character 技: skill, art, craft"
+  },
+  {
+    "kanji": "擬",
+    "unicode": "64ec",
+    "meanings": [
+      "mimic",
+      "aim (a gun) at",
+      "nominate",
+      "imitate"
+    ],
+    "image_file": "64ec.png",
+    "prompt": "kanji character 擬: mimic, aim (a gun) at, nominate"
+  },
+  {
+    "kanji": "欺",
+    "unicode": "6b3a",
+    "meanings": [
+      "deceit",
+      "cheat",
+      "delude"
+    ],
+    "image_file": "6b3a.png",
+    "prompt": "kanji character 欺: deceit, cheat, delude"
+  },
+  {
+    "kanji": "犠",
+    "unicode": "72a0",
+    "meanings": [
+      "sacrifice"
+    ],
+    "image_file": "72a0.png",
+    "prompt": "kanji character 犠: sacrifice"
+  }
+]

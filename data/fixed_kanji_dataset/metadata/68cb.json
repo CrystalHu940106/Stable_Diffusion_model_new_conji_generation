@@ -1,0 +1,11 @@
+{
+  "kanji": "棋",
+  "unicode": "68cb",
+  "meanings": [
+    "chess piece",
+    "Japanese chess",
+    "shogi"
+  ],
+  "image_file": "68cb.png",
+  "prompt": "kanji character 棋: chess piece, Japanese chess, shogi"
+}

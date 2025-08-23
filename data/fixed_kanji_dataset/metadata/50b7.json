@@ -1,0 +1,18 @@
+{
+  "kanji": "傷",
+  "unicode": "50b7",
+  "meanings": [
+    "wound",
+    "hurt",
+    "injure",
+    "impair",
+    "pain",
+    "injury",
+    "cut",
+    "gash",
+    "scar",
+    "weak point"
+  ],
+  "image_file": "50b7.png",
+  "prompt": "kanji character 傷: wound, hurt, injure"
+}

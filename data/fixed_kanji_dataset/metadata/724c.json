@@ -1,0 +1,12 @@
+{
+  "kanji": "牌",
+  "unicode": "724c",
+  "meanings": [
+    "label",
+    "signboard",
+    "medal",
+    "mahjong tiles"
+  ],
+  "image_file": "724c.png",
+  "prompt": "kanji character 牌: label, signboard, medal"
+}
