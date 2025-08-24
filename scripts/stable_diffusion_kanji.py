@@ -35,12 +35,15 @@ class VAE(nn.Module):
         
         self.encoder = nn.Sequential(*encoder_layers)
         
-        # Decoder
+        # Decoder - ensure exact 128x128 output
         decoder_layers = []
-        hidden_dims_rev = hidden_dims[::-1]
         in_ch = latent_channels
         
-        for h_dim in hidden_dims_rev:
+        # We need exactly 4 upsampling layers: 8->16->32->64->128
+        # Use the hidden_dims in reverse order for channels
+        hidden_dims_rev = hidden_dims[::-1]
+        
+        for i, h_dim in enumerate(hidden_dims_rev):
             decoder_layers.extend([
                 nn.ConvTranspose2d(in_ch, h_dim, kernel_size=4, stride=2, padding=1),
                 nn.BatchNorm2d(h_dim),
@@ -48,9 +51,9 @@ class VAE(nn.Module):
             ])
             in_ch = h_dim
         
-        # Final decoding layer
+        # Final layer to get to 3 channels
         decoder_layers.extend([
-            nn.ConvTranspose2d(hidden_dims[0], in_channels, kernel_size=4, stride=2, padding=1),
+            nn.Conv2d(in_ch, in_channels, kernel_size=3, stride=1, padding=1),
             nn.Tanh()
         ])
         
@@ -364,8 +367,12 @@ class DDPMScheduler:
         # Ensure timesteps are within bounds
         timesteps = torch.clamp(timesteps, 0, self.num_train_timesteps - 1)
         
-        sqrt_alpha = self.sqrt_alphas_cumprod[timesteps].view(-1, 1, 1, 1)
-        sqrt_one_minus_alpha = self.sqrt_one_minus_alphas_cumprod[timesteps].view(-1, 1, 1, 1)
+        # Move timesteps to CPU for indexing, then back to device
+        device = timesteps.device
+        timesteps_cpu = timesteps.cpu()
+        
+        sqrt_alpha = self.sqrt_alphas_cumprod[timesteps_cpu].view(-1, 1, 1, 1).to(device)
+        sqrt_one_minus_alpha = self.sqrt_one_minus_alphas_cumprod[timesteps_cpu].view(-1, 1, 1, 1).to(device)
         
         return sqrt_alpha * original_samples + sqrt_one_minus_alpha * noise
     
@@ -373,9 +380,13 @@ class DDPMScheduler:
         # Ensure timestep is within bounds
         timestep = torch.clamp(timestep, 0, self.num_train_timesteps - 1)
         
+        # Move timestep to CPU for indexing, then back to device
+        device = timestep.device
+        timestep_cpu = timestep.cpu()
+        
         # Simple DDPM step
-        alpha = self.alphas_cumprod[timestep]
-        alpha_prev = self.alphas_cumprod_prev[timestep]
+        alpha = self.alphas_cumprod[timestep_cpu].to(device)
+        alpha_prev = self.alphas_cumprod_prev[timestep_cpu].to(device)
         
         # Ensure alpha tensors have correct shape
         if alpha.dim() == 0:
@@ -399,6 +410,12 @@ class DDPMScheduler:
     @property
     def timesteps(self):
         return torch.arange(self.num_train_timesteps)
+    
+    def set_timesteps(self, num_inference_steps):
+        self.num_inference_steps = num_inference_steps
+        step_ratio = self.num_train_timesteps // num_inference_steps
+        timesteps = (torch.arange(0, num_inference_steps) * step_ratio).flip(0)
+        return timesteps
 
 class StableDiffusionPipeline:
     def __init__(self, device='cuda' if torch.cuda.is_available() else 'cpu'):
@@ -445,8 +462,8 @@ class StableDiffusionPipeline:
         latents = torch.randn(1, 4, latent_height, latent_width, device=self.device)
         
         # Set timesteps
-        self.scheduler.set_timesteps(num_inference_steps)
-        timesteps = self.scheduler.timesteps
+        timesteps = self.scheduler.set_timesteps(num_inference_steps)
+        timesteps = timesteps.to(self.device)
         
         # Enhanced denoising loop with better guidance
         for i, t in enumerate(timesteps):

@@ -15,7 +15,7 @@ from pathlib import Path
 import os
 from tqdm import tqdm
 import matplotlib.pyplot as plt
-from scripts.stable_diffusion_kanji import VAE, UNet2DConditionModel, DDPMScheduler, StableDiffusionPipeline
+from stable_diffusion_kanji import VAE, UNet2DConditionModel, DDPMScheduler, StableDiffusionPipeline
 
 def get_optimal_batch_size(device):
     """智能选择最优批处理大小"""
@@ -114,7 +114,8 @@ class StableDiffusionTrainer:
         self.unet = UNet2DConditionModel(
             model_channels=256,  # Increased from 128
             num_res_blocks=3,    # Increased from 2
-            channel_mult=(1, 2, 4, 8, 16),  # More levels
+            channel_mult=(1, 2, 4, 8),  # Reduced to match VAE latent space
+            attention_resolutions=(8,),  # Only at 8x8 resolution
             num_heads=16         # Increased from 8
         ).to(device)
         
@@ -455,7 +456,12 @@ def main():
     print("=" * 60)
     
     # Configuration with performance optimizations
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    if torch.cuda.is_available():
+        device = 'cuda'
+    elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+        device = 'mps'
+    else:
+        device = 'cpu'
     batch_size = get_optimal_batch_size(device)
     num_epochs = 25  # Increased from 10 for better quality
     learning_rate = 1e-4
