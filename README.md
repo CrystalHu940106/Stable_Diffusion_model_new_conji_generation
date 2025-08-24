@@ -60,21 +60,43 @@ python3 scripts/train_stable_diffusion.py
 python3 scripts/advanced_concept_generation.py
 ```
 
-### 5. Legacy Training (Optional)
+### 5. Google Colab Training (Recommended)
+
+🚀 **Get 5-10x faster training with free GPU!**
 
 ```bash
-# Quick training test (simple UNet)
-python3 scripts/quick_train_test.py
+# Option 1: Upload files to Colab and run directly
+# 1. Upload improved_stable_diffusion.py to Colab
+# 2. Upload colab_training.py to Colab
+# 3. Run: !python colab_training.py
 
-# Full training (simple UNet)
-python3 scripts/full_train_kanji.py
+# Option 2: Use the provided notebook
+# 1. Open colab_training_notebook.ipynb in Colab
+# 2. Follow the step-by-step instructions
+# 3. Start training with optimized parameters
 ```
+
+**Colab Benefits:**
+- 🆓 **Free T4 GPU** (3-5x faster than local)
+- 💎 **Pro V100/P100 GPU** (8-10x faster than local)
+- ☁️ **Cloud-based** - no local setup required
+- 💾 **Auto-save** checkpoints every 5 epochs
+- 🔄 **Resume training** from any checkpoint
+- 📊 **Real-time monitoring** of GPU usage
+
+**Expected Training Time:**
+- **Colab Free (T4)**: 50 epochs in 2-3 hours
+- **Colab Pro (V100/P100)**: 50 epochs in 1-1.5 hours
+
+### 6. Legacy Training (Optional)
 
 ## 🔧 Core Scripts
 
 - **`fix_kanji_dataset.py`**: Builds the complete Kanji dataset from KANJIDIC2 and KanjiVG
 - **`stable_diffusion_kanji.py`**: Complete Stable Diffusion implementation
+- **`improved_stable_diffusion.py`**: Enhanced model based on official Stable Diffusion best practices
 - **`train_stable_diffusion.py`**: Full Stable Diffusion training pipeline
+- **`colab_training.py`**: Google Colab optimized training script with GPU acceleration
 - **`advanced_concept_generation.py`**: Generate Kanji for modern concepts (YouTube, Gundam, etc.)
 - **`quick_train_test.py`**: Quick validation of the training pipeline
 - **`full_train_kanji.py`**: Legacy training (simple UNet)
@@ -161,9 +183,13 @@ This project is open source and available under the MIT License.
 - KanjiVG project for stroke data
 - PyTorch community for the deep learning framework
 
-## 📞 Contact
+## 📚 Additional Documentation
 
-For questions or contributions, please open an issue on GitHub.
+- **`IMPROVEMENTS_ANALYSIS.md`**: Detailed analysis of model improvements based on official Stable Diffusion
+- **`COLAB_USAGE_GUIDE.md`**: Complete guide for Google Colab training with step-by-step instructions
+- **`colab_training_notebook.ipynb`**: Jupyter notebook ready for Colab with all cells pre-configured
+
+## 📞 Contact
 
 ---
 
