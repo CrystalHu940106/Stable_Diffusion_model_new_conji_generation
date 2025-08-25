@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 from stable_diffusion_kanji import VAE, UNet2DConditionModel, DDPMScheduler, StableDiffusionPipeline
 
 def get_optimal_batch_size(device):
-    """智能选择最优批处理大小"""
+    """智can选择最优批处理大小"""
     if torch.cuda.is_available():
         gpu_memory = torch.cuda.get_device_properties(0).total_memory / (1024**3)  # GB
         if gpu_memory > 8:
@@ -33,7 +33,7 @@ def get_optimal_batch_size(device):
         return 2
 
 class EMAModel:
-    """指数移动平均模型"""
+    """指数移动平均model"""
     def __init__(self, model, decay=0.9999):
         self.model = model
         self.decay = decay

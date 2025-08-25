@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-测试改进后的Stable Diffusion模型
-比较改进前后的性能差异
+test改进后ofStable Diffusionmodel
+比较改进前后of性can差异
 """
 
 import torch
@@ -17,7 +17,7 @@ import numpy as np
 import time
 
 def test_model_comparison():
-    """比较原始模型和改进模型的性能"""
+    """比较原始model和改进modelof性can"""
     
     print("🎌 模型性能对比测试")
     print("=" * 50)
@@ -25,10 +25,10 @@ def test_model_comparison():
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f"🔧 使用设备: {device}")
     
-    # 测试概念
+    # test概念
     concepts = ["water", "future"]
     
-    # 测试原始模型
+    # test原始model
     print(f"\n🔍 测试原始模型...")
     try:
         original_pipeline = OriginalPipeline(device=device)
@@ -51,7 +51,7 @@ def test_model_comparison():
                 generation_time = time.time() - start_time
                 print(f"   ⏱️  生成时间: {generation_time:.2f}秒")
                 
-                # 转换为PIL图像
+                # convert为PILimage
                 if isinstance(result, torch.Tensor):
                     result = (result + 1) / 2
                     result = torch.clamp(result, 0, 1)
@@ -65,7 +65,7 @@ def test_model_comparison():
                 pil_image.save(output_path)
                 print(f"   💾 已保存: {output_path}")
                 
-                # 分析图像质量
+                # 分析imagequality
                 img_array = np.array(pil_image.convert('L'))
                 print(f"   📊 图像统计:")
                 print(f"      • 尺寸: {img_array.shape}")
@@ -80,7 +80,7 @@ def test_model_comparison():
     except Exception as e:
         print(f"❌ 原始模型初始化失败: {e}")
     
-    # 测试改进模型
+    # test改进model
     print(f"\n🔍 测试改进模型...")
     try:
         improved_pipeline = ImprovedPipeline(device=device)
@@ -96,14 +96,14 @@ def test_model_comparison():
                     height=128,
                     width=128,
                     num_inference_steps=50,
-                    guidance_scale=7.5,  # 使用官方推荐的guidance scale
+                    guidance_scale=7.5,  # using官方推荐ofguidance scale
                     seed=42
                 )
                 
                 generation_time = time.time() - start_time
                 print(f"   ⏱️  生成时间: {generation_time:.2f}秒")
                 
-                # 转换为PIL图像
+                # convert为PILimage
                 if isinstance(result, torch.Tensor):
                     result = (result + 1) / 2
                     result = torch.clamp(result, 0, 1)
@@ -117,7 +117,7 @@ def test_model_comparison():
                 pil_image.save(output_path)
                 print(f"   💾 已保存: {output_path}")
                 
-                # 分析图像质量
+                # 分析imagequality
                 img_array = np.array(pil_image.convert('L'))
                 print(f"   📊 图像统计:")
                 print(f"      • 尺寸: {img_array.shape}")
@@ -132,14 +132,14 @@ def test_model_comparison():
     except Exception as e:
         print(f"❌ 改进模型初始化失败: {e}")
     
-    # 生成对比图
+    # generation对比图
     print(f"\n🎨 生成对比图...")
     try:
         concepts = ["water", "future"]
         fig, axes = plt.subplots(len(concepts), 2, figsize=(12, 10))
         
         for i, concept in enumerate(concepts):
-            # 原始模型结果
+            # 原始model结果
             original_file = f"original_{concept}.png"
             if os.path.exists(original_file):
                 original_img = Image.open(original_file)
@@ -152,7 +152,7 @@ def test_model_comparison():
                 axes[i, 0].set_title(f'{concept} - 原始模型')
                 axes[i, 0].axis('off')
             
-            # 改进模型结果
+            # 改进model结果
             improved_file = f"improved_{concept}.png"
             if os.path.exists(improved_file):
                 improved_img = Image.open(improved_file)

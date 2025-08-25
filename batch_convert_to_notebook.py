@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-批量转换Python脚本为Jupyter notebook
-扫描整个项目包，生成能在Colab和Kaggle上运行的notebook
+批量convertPythonscript为Jupyter notebook
+scanentireprojectpackage，generationcaninColab和Kaggleonrunofnotebook
 """
 
 import os
@@ -10,9 +10,9 @@ import sys
 from pathlib import Path
 
 def batch_convert_to_notebooks():
-    """批量转换Python文件为Jupyter notebook"""
+    """批量convertPython文件为Jupyter notebook"""
     
-    # 扫描scripts目录
+    # scanscripts目录
     scripts_dir = './scripts'
     
     if not os.path.exists(scripts_dir):
@@ -21,7 +21,7 @@ def batch_convert_to_notebooks():
     
     print(f"🔍 扫描目录: {scripts_dir}")
     
-    # 重点转换的训练相关脚本
+    # keyconvertoftrainingrelatedscript
     priority_files = [
         'colab_training.py',
         'train_stable_diffusion.py', 
@@ -31,7 +31,7 @@ def batch_convert_to_notebooks():
     
     converted_files = []
     
-    # 首先转换优先级文件
+    # 首先convert优先级文件
     for filename in priority_files:
         py_path = os.path.join(scripts_dir, filename)
         if os.path.exists(py_path):
@@ -39,7 +39,7 @@ def batch_convert_to_notebooks():
             
             print(f"🔄 转换: {filename}")
             try:
-                # 使用ipynb-py-convert转换
+                # usingipynb-py-convertconvert
                 result = subprocess.run([
                     '/Users/hu.crystal/Library/Python/3.9/bin/ipynb-py-convert', 
                     py_path, ipynb_path
@@ -55,7 +55,7 @@ def batch_convert_to_notebooks():
             except Exception as e:
                 print(f"❌ 转换错误 {filename}: {e}")
     
-    # 然后转换其他Python文件
+    # 然后convert其他Python文件
     for filename in os.listdir(scripts_dir):
         if filename.endswith('.py') and filename not in priority_files:
             py_path = os.path.join(scripts_dir, filename)
@@ -84,11 +84,11 @@ def batch_convert_to_notebooks():
     return converted_files
 
 def create_complete_colab_notebook():
-    """创建一个完整的Colab训练notebook"""
+    """createacompleteofColabtrainingnotebook"""
     
     print("\n🚀 创建完整的Colab/Kaggle训练notebook...")
     
-    # 读取核心脚本内容
+    # read核心script内容
     scripts_to_include = [
         'scripts/improved_stable_diffusion.py',
         'scripts/colab_training.py'
@@ -96,7 +96,7 @@ def create_complete_colab_notebook():
     
     notebook_cells = []
     
-    # 添加标题和说明
+    # add标题和说明
     notebook_cells.append({
         "cell_type": "markdown",
         "metadata": {},
@@ -126,7 +126,7 @@ def create_complete_colab_notebook():
         ]
     })
     
-    # 添加依赖安装
+    # add依赖安装
     notebook_cells.append({
         "cell_type": "markdown",
         "metadata": {},
@@ -147,7 +147,7 @@ def create_complete_colab_notebook():
         ]
     })
     
-    # 添加GPU检查
+    # addGPUcheck
     notebook_cells.append({
         "cell_type": "markdown",
         "metadata": {},
@@ -181,13 +181,13 @@ def create_complete_colab_notebook():
         ]
     })
     
-    # 读取并添加模型实现代码
+    # readandaddmodelimplementationcode
     for script_path in scripts_to_include:
         if os.path.exists(script_path):
             with open(script_path, 'r', encoding='utf-8') as f:
                 content = f.read()
                 
-            # 提取主要代码部分（去掉import和main部分）
+            # 提取主要code部分（去掉import和main部分）
             lines = content.split('\n')
             code_lines = []
             skip_main = False
@@ -214,7 +214,7 @@ def create_complete_colab_notebook():
                 "source": [clean_code]
             })
     
-    # 添加训练启动代码
+    # addtrainingstartupcode
     notebook_cells.append({
         "cell_type": "markdown",
         "metadata": {},
@@ -236,7 +236,7 @@ def create_complete_colab_notebook():
         ]
     })
     
-    # 添加结果下载
+    # add结果下载
     notebook_cells.append({
         "cell_type": "markdown",
         "metadata": {},
@@ -291,7 +291,7 @@ def create_complete_colab_notebook():
         ]
     })
     
-    # 创建完整的notebook
+    # createcompleteofnotebook
     complete_notebook = {
         "cells": notebook_cells,
         "metadata": {
@@ -326,10 +326,10 @@ def create_complete_colab_notebook():
 if __name__ == "__main__":
     print("🚀 开始批量转换Python脚本为Jupyter notebook...")
     
-    # 批量转换现有脚本
+    # 批量convert现有script
     converted_files = batch_convert_to_notebooks()
     
-    # 创建完整的Colab训练notebook
+    # createcompleteofColabtrainingnotebook
     complete_notebook = create_complete_colab_notebook()
     
     print(f"\n🎉 所有转换完成！")

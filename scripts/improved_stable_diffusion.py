@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-改进的Stable Diffusion实现
-借鉴官方CompVis/stable-diffusion的最佳实践
+改进ofStable Diffusionimplementation
+借鉴官方CompVis/stable-diffusionof最佳实践
 """
 
 import torch
@@ -14,25 +14,25 @@ import numpy as np
 
 class ImprovedVAE(nn.Module):
     """
-    改进的VAE实现，借鉴官方架构
+    改进ofVAEimplementation，借鉴官方架构
     """
     def __init__(self, in_channels=3, latent_channels=4, hidden_dims=[128, 256, 512, 1024]):
         super().__init__()
         self.latent_channels = latent_channels
         
-        # Encoder - 使用更深的网络
+        # Encoder - usingmore深of网络
         encoder_layers = []
         in_ch = in_channels
         for h_dim in hidden_dims:
-            # 计算合适的GroupNorm组数
+            # 计算合适ofGroupNorm组数
             num_groups = min(32, h_dim)
             while h_dim % num_groups != 0 and num_groups > 1:
                 num_groups -= 1
             
             encoder_layers.extend([
                 nn.Conv2d(in_ch, h_dim, kernel_size=3, stride=2, padding=1),
-                nn.GroupNorm(num_groups, h_dim),  # 使用GroupNorm替代BatchNorm
-                nn.SiLU()  # 使用SiLU替代LeakyReLU
+                nn.GroupNorm(num_groups, h_dim),  # usingGroupNormreplaceBatchNorm
+                nn.SiLU()  # usingSiLUreplaceLeakyReLU
             ])
             in_ch = h_dim
         
@@ -49,15 +49,15 @@ class ImprovedVAE(nn.Module):
         
         self.encoder = nn.Sequential(*encoder_layers)
         
-        # Decoder - 确保精确的128x128输出
+        # Decoder - ensure精确of128x128output
         decoder_layers = []
         in_ch = latent_channels
         
-        # 使用hidden_dims的反序进行上采样
+        # usinghidden_dimsof反序进行on采样
         hidden_dims_rev = hidden_dims[::-1]
         
         for i, h_dim in enumerate(hidden_dims_rev):
-            # 计算合适的GroupNorm组数
+            # 计算合适ofGroupNorm组数
             num_groups = min(32, h_dim)
             while h_dim % num_groups != 0 and num_groups > 1:
                 num_groups -= 1
@@ -69,7 +69,7 @@ class ImprovedVAE(nn.Module):
             ])
             in_ch = h_dim
         
-        # 最终输出层
+        # 最终output层
         decoder_layers.extend([
             nn.Conv2d(in_ch, in_channels, kernel_size=3, stride=1, padding=1),
             nn.Tanh()
@@ -78,11 +78,11 @@ class ImprovedVAE(nn.Module):
         self.decoder = nn.Sequential(*decoder_layers)
         
     def encode(self, x):
-        # 确保输入是128x128
+        # ensure输入是128x128
         if x.shape[-1] != 128:
             x = F.interpolate(x, size=(128, 128), mode='bilinear', align_corners=False)
         
-        # 编码到潜在空间
+        # 编码to潜in空间
         encoded = self.encoder(x)
         mu, logvar = torch.chunk(encoded, 2, dim=1)
         
@@ -101,7 +101,7 @@ class ImprovedVAE(nn.Module):
 
 class ImprovedCrossAttention(nn.Module):
     """
-    改进的交叉注意力实现，借鉴官方版本
+    改进of交叉注意力implementation，借鉴官方version
     """
     def __init__(self, query_dim, context_dim=None, heads=8, dim_head=64, dropout=0.0):
         super().__init__()
@@ -131,7 +131,7 @@ class ImprovedCrossAttention(nn.Module):
             B, C, H, W = x.shape
             x = x.view(B, C, H * W).transpose(1, 2)  # (B, H*W, C)
         
-        # 处理上下文
+        # 处理on下文
         if context.dim() == 4:
             B, C, H, W = context.shape
             context = context.view(B, C, H * W).transpose(1, 2)  # (B, H*W, C)
@@ -153,10 +153,10 @@ class ImprovedCrossAttention(nn.Module):
         out = torch.matmul(attn, v)
         out = out.transpose(1, 2).contiguous().view(out.shape[0], -1, out.shape[-1] * self.heads)
         
-        # 应用输出投影
+        # 应用output投影
         out = self.to_out(out)
         
-        # 转换回4D格式 (B, H*W, C) -> (B, C, H, W)
+        # convert回4D格式 (B, H*W, C) -> (B, C, H, W)
         if len(original_shape) == 4:
             B, C, H, W = original_shape
             out = out.transpose(1, 2).view(B, C, H, W)
@@ -165,12 +165,12 @@ class ImprovedCrossAttention(nn.Module):
 
 class ImprovedResBlock(nn.Module):
     """
-    改进的残差块，借鉴官方实现
+    改进of残差块，借鉴官方implementation
     """
     def __init__(self, channels, time_dim, dropout=0.0):
         super().__init__()
         
-        # 动态计算GroupNorm的组数，确保channels能被num_groups整除
+        # 动态计算GroupNormof组数，ensurechannelscan被num_groups整除
         if channels >= 32:
             num_groups = min(32, channels // (channels // 32))
         elif channels >= 16:
@@ -182,7 +182,7 @@ class ImprovedResBlock(nn.Module):
         else:
             num_groups = 1
         
-        # 确保num_groups能整除channels
+        # ensurenum_groupscan整除channels
         while channels % num_groups != 0 and num_groups > 1:
             num_groups -= 1
         
@@ -220,7 +220,7 @@ class ImprovedResBlock(nn.Module):
 
 class ImprovedUNet2DConditionModel(nn.Module):
     """
-    简化的UNet实现，避免复杂的跳跃连接
+    简化ofUNetimplementation，avoid复杂of跳跃连接
     """
     def __init__(self, in_channels=4, out_channels=4, model_channels=128, num_res_blocks=2, 
                  attention_resolutions=(8, 16), dropout=0.1, channel_mult=(1, 2, 4, 8), 
@@ -275,11 +275,11 @@ class ImprovedUNet2DConditionModel(nn.Module):
             ImprovedResBlock(ch, time_embed_dim, dropout)
         ])
         
-        # 解码器块
+        # decode器块
         self.decoder_blocks = nn.ModuleList()
         
         for level, mult in list(enumerate(channel_mult))[::-1]:
-            # 上采样
+            # on采样
             if level < len(channel_mult) - 1:
                 ch = ch // 2
                 self.decoder_blocks.append(nn.ConvTranspose2d(ch * 2, ch, 4, stride=2, padding=1))
@@ -292,7 +292,7 @@ class ImprovedUNet2DConditionModel(nn.Module):
             if level in attention_resolutions:
                 self.decoder_blocks.append(ImprovedCrossAttention(ch, context_dim, num_heads, dropout=dropout))
         
-        # 输出投影
+        # output投影
         self.out = nn.Sequential(
             nn.GroupNorm(min(32, ch), ch),
             nn.SiLU(),
@@ -324,10 +324,10 @@ class ImprovedUNet2DConditionModel(nn.Module):
             else:
                 h = module(h, t)
         
-        # 输出块
+        # output块
         for module in self.output_blocks:
             if isinstance(module, nn.ModuleList):
-                # 处理ModuleList中的模块
+                # 处理ModuleList中of模块
                 for submodule in module:
                     if isinstance(submodule, ImprovedCrossAttention):
                         h = submodule(h, context)
@@ -347,30 +347,30 @@ class ImprovedUNet2DConditionModel(nn.Module):
             # 跳跃连接
             if hs:
                 skip_h = hs.pop()
-                # 简单的跳跃连接，不进行通道调整
+                # 简单of跳跃连接，不进行通道调整
                 h = torch.cat([h, skip_h], dim=1)
         
         return self.out(h)
 
 class ImprovedDDPMScheduler:
     """
-    改进的DDPM调度器，借鉴官方实现
+    改进ofDDPMscheduling器，借鉴官方implementation
     """
     def __init__(self, num_train_timesteps=1000, beta_start=0.0001, beta_end=0.02):
         self.num_train_timesteps = num_train_timesteps
         
-        # 线性噪声调度
+        # 线性noisescheduling
         self.betas = torch.linspace(beta_start, beta_end, num_train_timesteps)
         self.alphas = 1.0 - self.betas
         self.alphas_cumprod = torch.cumprod(self.alphas, dim=0)
         self.alphas_cumprod_prev = torch.cat([torch.tensor([1.0]), self.alphas_cumprod[:-1]])
         
-        # 计算噪声预测的系数
+        # 计算noisepredictionofcoefficient
         self.sqrt_alphas_cumprod = torch.sqrt(self.alphas_cumprod)
         self.sqrt_one_minus_alphas_cumprod = torch.sqrt(1.0 - self.alphas_cumprod)
         
     def add_noise(self, original_samples, noise, timesteps):
-        """添加噪声到原始样本"""
+        """addnoiseto原始样本"""
         sqrt_alpha = self.sqrt_alphas_cumprod[timesteps].view(-1, 1, 1, 1)
         sqrt_one_minus_alpha = self.sqrt_one_minus_alphas_cumprod[timesteps].view(-1, 1, 1, 1)
         
@@ -381,17 +381,17 @@ class ImprovedDDPMScheduler:
         alpha = self.alphas_cumprod[timestep].view(-1, 1, 1, 1)
         alpha_prev = self.alphas_cumprod_prev[timestep].view(-1, 1, 1, 1)
         
-        # 预测x0
+        # predictionx0
         pred_original_sample = (sample - torch.sqrt(1 - alpha) * model_output) / torch.sqrt(alpha)
         
-        # 预测前一个样本
+        # prediction前a样本
         pred_sample_direction = torch.sqrt(1 - alpha_prev) * model_output
         pred_prev_sample = torch.sqrt(alpha_prev) * pred_original_sample + pred_sample_direction
         
         return pred_prev_sample
     
     def set_timesteps(self, num_inference_steps):
-        """设置推理时间步"""
+        """set推理时间步"""
         self.num_inference_steps = num_inference_steps
         step_ratio = self.num_train_timesteps // num_inference_steps
         timesteps = (torch.arange(0, num_inference_steps) * step_ratio).flip(0)
@@ -399,12 +399,12 @@ class ImprovedDDPMScheduler:
 
 class ImprovedStableDiffusionPipeline:
     """
-    改进的Stable Diffusion Pipeline，借鉴官方最佳实践
+    改进ofStable Diffusion Pipeline，借鉴官方最佳实践
     """
     def __init__(self, device='cuda' if torch.cuda.is_available() else 'cpu'):
         self.device = device
         
-        # 初始化组件
+        # initialization组件
         self.vae = ImprovedVAE().to(device)
         self.unet = ImprovedUNet2DConditionModel(
             in_channels=4,
@@ -420,7 +420,7 @@ class ImprovedStableDiffusionPipeline:
         self.tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-base-patch32")
         self.text_encoder = CLIPTextModel.from_pretrained("openai/clip-vit-base-patch32").to(device)
         
-        # 设置为评估模式
+        # set为评估模式
         self.text_encoder.eval()
         self.vae.eval()
         
@@ -432,15 +432,15 @@ class ImprovedStableDiffusionPipeline:
         return text_embeddings
     
     def _parse_kanji_prompt(self, prompt):
-        """解析汉字提示，使用更详细的描述"""
+        """解析汉字提示，usingmore详细of描述"""
         base_prompt = f"kanji character representing {prompt}, traditional calligraphy style, black ink on white paper, high contrast, detailed strokes, clear lines, professional quality, artistic interpretation"
         return base_prompt
     
     def generate(self, prompt, height=128, width=128, num_inference_steps=50, 
                 guidance_scale=7.5, seed=None):
-        """生成图像，使用官方推荐的参数"""
+        """generationimage，using官方推荐of参数"""
         
-        # 设置随机种子
+        # setrandom seed
         if seed is not None:
             torch.manual_seed(seed)
             torch.cuda.manual_seed(seed)
@@ -448,36 +448,36 @@ class ImprovedStableDiffusionPipeline:
         # 编码提示
         text_embeddings = self._encode_prompt(self._parse_kanji_prompt(prompt))
         
-        # 初始化潜在变量
+        # initialization潜in变量
         latent_height = height // 8
         latent_width = width // 8
         latents = torch.randn(1, 4, latent_height, latent_width, device=self.device)
         
-        # 设置时间步
+        # set时间步
         timesteps = self.scheduler.set_timesteps(num_inference_steps)
         timesteps = timesteps.to(self.device)
         
-        # 改进的去噪循环
+        # 改进of去噪循环
         for i, t in enumerate(timesteps):
-            # 扩展潜在变量用于批处理
+            # 扩展潜in变量用于批处理
             latent_model_input = torch.cat([latents] * 2)
             t_expanded = t.expand(2)
             
-            # 预测噪声
+            # predictionnoise
             with torch.no_grad():
                 noise_pred = self.unet(latent_model_input, t_expanded, text_embeddings)
             
-            # 执行classifier-free guidance
+            # executedclassifier-free guidance
             noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
             
-            # 使用官方推荐的guidance scale
+            # using官方推荐ofguidance scale
             guidance_scale = torch.clamp(torch.tensor(guidance_scale), min=1.0, max=20.0)
             noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond)
             
-            # 计算前一个样本
+            # 计算前a样本
             latents = self.scheduler.step(noise_pred, t, latents)
         
-        # 解码潜在变量
+        # decode潜in变量
         with torch.no_grad():
             image = self.vae.decode(latents)
         
@@ -487,7 +487,7 @@ if __name__ == "__main__":
     print("🎌 改进的Stable Diffusion实现")
     print("=" * 50)
     
-    # 测试模型
+    # testmodel
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f"🔧 使用设备: {device}")
     
@@ -495,7 +495,7 @@ if __name__ == "__main__":
         pipeline = ImprovedStableDiffusionPipeline(device=device)
         print("✅ 模型初始化成功")
         
-        # 测试生成
+        # testgeneration
         print("🌊 测试生成...")
         result = pipeline.generate(
             "water",

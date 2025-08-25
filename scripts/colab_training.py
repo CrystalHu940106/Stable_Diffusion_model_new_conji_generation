@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Google Colab优化的Stable Diffusion训练脚本
-专门为Colab GPU环境优化，包含自动检测和性能优化
+Google Colab优化ofStable Diffusiontrainingscript
+专门为Colab GPU环境优化，package含自动检测和性can优化
 """
 
 import torch
@@ -19,7 +19,7 @@ import numpy as np
 from PIL import Image
 import gc
 
-# 添加当前目录到路径
+# addwhen前目录to路径
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from improved_stable_diffusion import (
@@ -31,7 +31,7 @@ from improved_stable_diffusion import (
 
 class ColabOptimizedTrainer:
     """
-    Colab优化的训练器
+    Colab优化oftraining器
     """
     def __init__(self, device='auto'):
         # 自动检测设备
@@ -50,7 +50,7 @@ class ColabOptimizedTrainer:
         else:
             self.device = device
         
-        # 初始化模型
+        # initializationmodel
         self.vae = ImprovedVAE().to(self.device)
         self.unet = ImprovedUNet2DConditionModel(
             in_channels=4,
@@ -62,21 +62,21 @@ class ColabOptimizedTrainer:
         ).to(self.device)
         self.scheduler = ImprovedDDPMScheduler()
         
-        # 优化器设置
+        # 优化器set
         self.optimizer = optim.AdamW([
             {'params': self.vae.parameters(), 'lr': 1e-4},
             {'params': self.unet.parameters(), 'lr': 1e-4}
         ], weight_decay=0.01)
         
-        # 学习率调度器
+        # 学习率scheduling器
         self.scheduler_lr = optim.lr_scheduler.CosineAnnealingLR(
             self.optimizer, T_max=100, eta_min=1e-6
         )
         
-        # 混合精度训练
+        # 混合精度training
         self.scaler = GradScaler()
         
-        # 训练参数
+        # training参数
         self.num_epochs = 50
         self.batch_size = 8  # Colab GPU内存优化
         self.gradient_accumulation_steps = 4
@@ -89,18 +89,18 @@ class ColabOptimizedTrainer:
     
     def create_synthetic_dataset(self, num_samples=1000):
         """
-        创建合成数据集用于演示
-        在实际使用中，这里应该加载真实的汉字数据
+        create合成数据集用于演示
+        in实际using中，这里应该加载真实of汉字数据
         """
         print(f"📊 创建合成数据集 ({num_samples} 样本)...")
         
-        # 创建128x128的合成图像
+        # create128x128of合成image
         images = []
         for i in range(num_samples):
-            # 创建简单的几何图案作为训练数据
+            # create简单of几何图案作为training数据
             img = np.zeros((128, 128, 3), dtype=np.float32)
             
-            # 添加一些随机几何形状
+            # add一些随机几何形状
             if i % 4 == 0:
                 # 圆形
                 y, x = np.ogrid[:128, :128]
@@ -116,14 +116,14 @@ class ColabOptimizedTrainer:
                         if y >= 64 and abs(x - 64) <= (y - 64):
                             img[y, x] = [0.6, 0.6, 0.6]
             else:
-                # 随机噪声
+                # 随机noise
                 img = np.random.rand(128, 128, 3).astype(np.float32) * 0.5
             
-            # 归一化到[-1, 1]
+            # 归一化to[-1, 1]
             img = (img - 0.5) * 2
             images.append(img)
         
-        # 转换为tensor
+        # convert为tensor
         images = torch.tensor(images, dtype=torch.float32).permute(0, 3, 1, 2)
         print(f"✅ 数据集创建完成: {images.shape}")
         
@@ -131,7 +131,7 @@ class ColabOptimizedTrainer:
     
     def train_epoch(self, dataloader, epoch):
         """
-        训练一个epoch
+        trainingaepoch
         """
         self.vae.train()
         self.unet.train()
@@ -147,13 +147,13 @@ class ColabOptimizedTrainer:
                 # VAE编码
                 latents, mu, logvar, kl_loss = self.vae.encode(images)
                 
-                # 添加噪声
+                # addnoise
                 noise = torch.randn_like(latents)
                 timesteps = torch.randint(0, self.scheduler.num_train_timesteps, 
                                        (latents.shape[0],), device=self.device)
                 noisy_latents = self.scheduler.add_noise(latents, noise, timesteps)
                 
-                # UNet预测噪声
+                # UNetpredictionnoise
                 noise_pred = self.unet(noisy_latents, timesteps)
                 
                 # 计算损失
@@ -188,14 +188,14 @@ class ColabOptimizedTrainer:
                       f"Batch {batch_idx+1}/{num_batches}, "
                       f"Loss: {loss.item():.6f}")
         
-        # 学习率调度
+        # 学习率scheduling
         self.scheduler_lr.step()
         
         return total_loss / num_batches
     
     def save_checkpoint(self, epoch, loss, save_dir="colab_checkpoints"):
         """
-        保存检查点
+        保存check点
         """
         os.makedirs(save_dir, exist_ok=True)
         
@@ -213,7 +213,7 @@ class ColabOptimizedTrainer:
         torch.save(checkpoint, checkpoint_path)
         print(f"💾 检查点已保存: {checkpoint_path}")
         
-        # 保存最佳模型
+        # 保存最佳model
         if epoch == 0 or loss < getattr(self, 'best_loss', float('inf')):
             self.best_loss = loss
             best_model_path = os.path.join(save_dir, 'best_model.pth')
@@ -222,7 +222,7 @@ class ColabOptimizedTrainer:
     
     def train(self):
         """
-        主训练循环
+        主training循环
         """
         print(f"\n🎯 开始训练...")
         print(f"   • 设备: {self.device}")
@@ -231,11 +231,11 @@ class ColabOptimizedTrainer:
         print(f"   • 总epochs: {self.num_epochs}")
         print(f"   • 混合精度: {'启用' if self.device == 'cuda' else '禁用'}")
         
-        # 创建数据集
+        # create数据集
         images = self.create_synthetic_dataset()
         dataloader = DataLoader(images, batch_size=self.batch_size, shuffle=True)
         
-        # 训练历史
+        # training历史
         train_losses = []
         start_time = time.time()
         
@@ -246,7 +246,7 @@ class ColabOptimizedTrainer:
                 print(f"\n🔄 Epoch {epoch+1}/{self.num_epochs}")
                 print("-" * 50)
                 
-                # 训练
+                # training
                 loss = self.train_epoch(dataloader, epoch)
                 train_losses.append(loss)
                 
@@ -255,7 +255,7 @@ class ColabOptimizedTrainer:
                 print(f"   📊 平均损失: {loss:.6f}")
                 print(f"   📈 学习率: {self.optimizer.param_groups[0]['lr']:.2e}")
                 
-                # 保存检查点
+                # 保存check点
                 if (epoch + 1) % self.save_every == 0:
                     self.save_checkpoint(epoch, loss)
                 
@@ -264,7 +264,7 @@ class ColabOptimizedTrainer:
                     torch.cuda.empty_cache()
                     gc.collect()
                 
-                # 显示GPU内存使用情况
+                # 显示GPU内存using情况
                 if self.device == 'cuda':
                     memory_allocated = torch.cuda.memory_allocated() / 1e9
                     memory_reserved = torch.cuda.memory_reserved() / 1e9
@@ -278,11 +278,11 @@ class ColabOptimizedTrainer:
             traceback.print_exc()
         
         finally:
-            # 保存最终模型
+            # 保存最终model
             final_loss = train_losses[-1] if train_losses else float('inf')
             self.save_checkpoint(len(train_losses) - 1, final_loss)
             
-            # 训练总结
+            # training总结
             total_time = time.time() - start_time
             print(f"\n🎉 训练完成!")
             print(f"   ⏱️  总耗时: {total_time:.2f}秒")
@@ -294,7 +294,7 @@ class ColabOptimizedTrainer:
     
     def plot_training_curve(self, losses):
         """
-        绘制训练损失曲线
+        绘制training损失曲线
         """
         plt.figure(figsize=(10, 6))
         plt.plot(losses, 'b-', linewidth=2, label='训练损失')
@@ -313,15 +313,15 @@ class ColabOptimizedTrainer:
     
     def test_generation(self, prompt="water"):
         """
-        测试生成功能
+        testgeneration功can
         """
         print(f"\n🧪 测试生成: {prompt}")
         
         try:
-            # 创建pipeline
+            # createpipeline
             pipeline = ImprovedStableDiffusionPipeline(device=self.device)
             
-            # 加载训练好的权重
+            # 加载training好ofweights
             if hasattr(self, 'best_loss'):
                 checkpoint_path = 'colab_checkpoints/best_model.pth'
                 if os.path.exists(checkpoint_path):
@@ -330,7 +330,7 @@ class ColabOptimizedTrainer:
                     pipeline.unet.load_state_dict(checkpoint['unet_state_dict'])
                     print(f"✅ 已加载最佳模型权重")
             
-            # 生成图像
+            # generationimage
             print(f"🌊 生成中...")
             result = pipeline.generate(
                 prompt,
@@ -354,7 +354,7 @@ class ColabOptimizedTrainer:
             pil_image.save(output_path)
             print(f"✅ 生成完成，已保存: {output_path}")
             
-            # 显示图像
+            # 显示image
             plt.figure(figsize=(6, 6))
             plt.imshow(pil_image, cmap='gray')
             plt.title(f'Colab生成: {prompt}', fontsize=14)
@@ -373,7 +373,7 @@ def main():
     print("🚀 Google Colab优化的Stable Diffusion训练器")
     print("=" * 60)
     
-    # 检查Colab环境
+    # checkColab环境
     is_colab = 'COLAB_GPU' in os.environ
     if is_colab:
         print("✅ 检测到Google Colab环境")
@@ -382,13 +382,13 @@ def main():
     else:
         print("💻 本地环境运行")
     
-    # 创建训练器
+    # createtraining器
     trainer = ColabOptimizedTrainer(device='auto')
     
-    # 开始训练
+    # start training
     trainer.train()
     
-    # 测试生成
+    # testgeneration
     trainer.test_generation("water")
 
 if __name__ == "__main__":
