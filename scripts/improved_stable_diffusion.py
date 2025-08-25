@@ -123,6 +123,19 @@ class ImprovedCrossAttention(nn.Module):
     def forward(self, x, context=None):
         context = context if context is not None else x
         
+        # 保存原始输入形状
+        original_shape = x.shape
+        
+        # 处理4D输入 (B, C, H, W) -> (B, H*W, C)
+        if x.dim() == 4:
+            B, C, H, W = x.shape
+            x = x.view(B, C, H * W).transpose(1, 2)  # (B, H*W, C)
+        
+        # 处理上下文
+        if context.dim() == 4:
+            B, C, H, W = context.shape
+            context = context.view(B, C, H * W).transpose(1, 2)  # (B, H*W, C)
+        
         q = self.to_q(x)
         k = self.to_k(context)
         v = self.to_v(context)
@@ -140,7 +153,15 @@ class ImprovedCrossAttention(nn.Module):
         out = torch.matmul(attn, v)
         out = out.transpose(1, 2).contiguous().view(out.shape[0], -1, out.shape[-1] * self.heads)
         
-        return self.to_out(out)
+        # 应用输出投影
+        out = self.to_out(out)
+        
+        # 转换回4D格式 (B, H*W, C) -> (B, C, H, W)
+        if len(original_shape) == 4:
+            B, C, H, W = original_shape
+            out = out.transpose(1, 2).view(B, C, H, W)
+        
+        return out
 
 class ImprovedResBlock(nn.Module):
     """
@@ -199,7 +220,7 @@ class ImprovedResBlock(nn.Module):
 
 class ImprovedUNet2DConditionModel(nn.Module):
     """
-    改进的UNet实现，借鉴官方架构
+    简化的UNet实现，避免复杂的跳跃连接
     """
     def __init__(self, in_channels=4, out_channels=4, model_channels=128, num_res_blocks=2, 
                  attention_resolutions=(8, 16), dropout=0.1, channel_mult=(1, 2, 4, 8), 
@@ -216,7 +237,7 @@ class ImprovedUNet2DConditionModel(nn.Module):
         self.num_heads = num_heads
         self.context_dim = context_dim
         
-        # 时间嵌入 - 使用更深的网络
+        # 时间嵌入
         time_embed_dim = model_channels * 4
         self.time_embedding = nn.Sequential(
             nn.Linear(1, time_embed_dim),
@@ -227,36 +248,25 @@ class ImprovedUNet2DConditionModel(nn.Module):
         )
         
         # 输入投影
-        self.input_blocks = nn.ModuleList([
-            nn.Conv2d(in_channels, model_channels, kernel_size=3, padding=1)
-        ])
+        self.input_proj = nn.Conv2d(in_channels, model_channels, kernel_size=3, padding=1)
         
-        # 下采样块
-        input_block_chans = [model_channels]
+        # 编码器块
+        self.encoder_blocks = nn.ModuleList()
         ch = model_channels
         
         for level, mult in enumerate(channel_mult):
-            # 添加ResBlock
+            # ResBlock
             for _ in range(num_res_blocks):
-                self.input_blocks.append(
-                    nn.ModuleList([ImprovedResBlock(ch, time_embed_dim, dropout)])
-                )
-                input_block_chans.append(ch)
+                self.encoder_blocks.append(ImprovedResBlock(ch, time_embed_dim, dropout))
             
-            # 添加CrossAttention
+            # CrossAttention
             if level in attention_resolutions:
-                self.input_blocks.append(
-                    nn.ModuleList([ImprovedCrossAttention(ch, context_dim, num_heads, dropout=dropout)])
-                )
-                input_block_chans.append(ch)
+                self.encoder_blocks.append(ImprovedCrossAttention(ch, context_dim, num_heads, dropout=dropout))
             
             # 下采样
             if level < len(channel_mult) - 1:
                 ch = mult * model_channels
-                self.input_blocks.append(
-                    nn.ModuleList([nn.Conv2d(input_block_chans[-1], ch, 3, stride=2, padding=1)])
-                )
-                input_block_chans.append(ch)
+                self.encoder_blocks.append(nn.Conv2d(self.encoder_blocks[-1].block1[0].num_features, ch, 3, stride=2, padding=1))
         
         # 中间块
         self.middle_block = nn.ModuleList([
@@ -265,42 +275,26 @@ class ImprovedUNet2DConditionModel(nn.Module):
             ImprovedResBlock(ch, time_embed_dim, dropout)
         ])
         
-        # 输出块
-        self.output_blocks = nn.ModuleList([])
+        # 解码器块
+        self.decoder_blocks = nn.ModuleList()
+        
         for level, mult in list(enumerate(channel_mult))[::-1]:
             # 上采样
             if level < len(channel_mult) - 1:
-                self.output_blocks.append(
-                    nn.ModuleList([nn.ConvTranspose2d(ch, ch//2, 4, stride=2, padding=1)])
-                )
                 ch = ch // 2
+                self.decoder_blocks.append(nn.ConvTranspose2d(ch * 2, ch, 4, stride=2, padding=1))
             
-            # 添加ResBlock
+            # ResBlock
             for _ in range(num_res_blocks + 1):
-                self.output_blocks.append(
-                    nn.ModuleList([ImprovedResBlock(ch, time_embed_dim, dropout)])
-                )
+                self.decoder_blocks.append(ImprovedResBlock(ch, time_embed_dim, dropout))
             
-            # 添加CrossAttention
+            # CrossAttention
             if level in attention_resolutions:
-                self.output_blocks.append(
-                    nn.ModuleList([ImprovedCrossAttention(ch, context_dim, num_heads, dropout=dropout)])
-                )
+                self.decoder_blocks.append(ImprovedCrossAttention(ch, context_dim, num_heads, dropout=dropout))
         
         # 输出投影
-        if ch >= 32:
-            num_groups = 32
-        elif ch >= 16:
-            num_groups = 16
-        elif ch >= 8:
-            num_groups = 8
-        elif ch >= 4:
-            num_groups = 4
-        else:
-            num_groups = 1
-        
         self.out = nn.Sequential(
-            nn.GroupNorm(num_groups, ch),
+            nn.GroupNorm(min(32, ch), ch),
             nn.SiLU(),
             nn.Conv2d(ch, out_channels, kernel_size=3, padding=1)
         )
@@ -311,28 +305,17 @@ class ImprovedUNet2DConditionModel(nn.Module):
         if t.dim() == 1:
             t = t.unsqueeze(0)
         
-        # 输入块
-        h = x
-        hs = []
-        for module in self.input_blocks:
-            if isinstance(module, nn.ModuleList):
-                # 处理ModuleList中的模块
-                for submodule in module:
-                    if isinstance(submodule, ImprovedCrossAttention):
-                        h = submodule(h, context)
-                    elif isinstance(submodule, ImprovedResBlock):
-                        h = submodule(h, t)
-                    else:
-                        h = submodule(h)
+        # 输入投影
+        h = self.input_proj(x)
+        
+        # 编码器
+        for module in self.encoder_blocks:
+            if isinstance(module, ImprovedCrossAttention):
+                h = module(h, context)
+            elif isinstance(module, ImprovedResBlock):
+                h = module(h, t)
             else:
-                # 直接处理单个模块
-                if isinstance(module, ImprovedCrossAttention):
-                    h = module(h, context)
-                elif isinstance(module, ImprovedResBlock):
-                    h = module(h, t)
-                else:
-                    h = module(h)
-            hs.append(h)
+                h = module(h)
         
         # 中间块
         for module in self.middle_block:
@@ -363,7 +346,9 @@ class ImprovedUNet2DConditionModel(nn.Module):
             
             # 跳跃连接
             if hs:
-                h = torch.cat([h, hs.pop()], dim=1)
+                skip_h = hs.pop()
+                # 简单的跳跃连接，不进行通道调整
+                h = torch.cat([h, skip_h], dim=1)
         
         return self.out(h)
 
